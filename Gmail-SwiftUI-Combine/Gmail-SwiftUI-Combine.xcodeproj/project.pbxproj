@@ -78,9 +78,17 @@
 			path = Playground;
 			sourceTree = "<group>";
 		};
+		845168CB2BC8BD9800E778AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		847A821B2BC61ECB008A47BE = {
 			isa = PBXGroup;
 			children = (
+				845168CB2BC8BD9800E778AE /* Views */,
 				845168CA2BC8BA0600E778AE /* Playground */,
 				847A82262BC61ECB008A47BE /* Gmail-SwiftUI-Combine */,
 				847A82372BC61ED1008A47BE /* Gmail-SwiftUI-CombineTests */,
