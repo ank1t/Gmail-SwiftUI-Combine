@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		845168CC2BC8BE6800E778AE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		847A82242BC61ECB008A47BE /* Gmail-SwiftUI-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gmail-SwiftUI-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A82272BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_SwiftUI_CombineApp.swift; sourceTree = "<group>"; };
 		847A82292BC61ECB008A47BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		845168CA2BC8BA0600E778AE /* Playground */ = {
 			isa = PBXGroup;
 			children = (
+				845168CC2BC8BE6800E778AE /* MyPlayground.playground */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
