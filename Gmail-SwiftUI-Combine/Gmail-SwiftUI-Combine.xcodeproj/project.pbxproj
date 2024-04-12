@@ -71,9 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		845168CA2BC8BA0600E778AE /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
 		847A821B2BC61ECB008A47BE = {
 			isa = PBXGroup;
 			children = (
+				845168CA2BC8BA0600E778AE /* Playground */,
 				847A82262BC61ECB008A47BE /* Gmail-SwiftUI-Combine */,
 				847A82372BC61ED1008A47BE /* Gmail-SwiftUI-CombineTests */,
 				847A82412BC61ED1008A47BE /* Gmail-SwiftUI-CombineUITests */,
