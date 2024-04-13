@@ -87,9 +87,33 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		845F8B0D2BCB5E5D00BEAD4C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		845F8B0E2BCB5E6500BEAD4C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		845F8B0F2BCB5E6F00BEAD4C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		847A821B2BC61ECB008A47BE = {
 			isa = PBXGroup;
 			children = (
+				845F8B0F2BCB5E6F00BEAD4C /* Components */,
+				845F8B0E2BCB5E6500BEAD4C /* Utility */,
+				845F8B0D2BCB5E5D00BEAD4C /* Networking */,
 				845168CB2BC8BD9800E778AE /* Views */,
 				845168CA2BC8BA0600E778AE /* Playground */,
 				847A82262BC61ECB008A47BE /* Gmail-SwiftUI-Combine */,
