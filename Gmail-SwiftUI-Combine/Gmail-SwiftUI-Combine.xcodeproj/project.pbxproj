@@ -11,6 +11,7 @@
 		845F8B132BCB646400BEAD4C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B122BCB646400BEAD4C /* Utility.swift */; };
 		845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */; };
 		845F8B172BCB67FA00BEAD4C /* GCCEmailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B162BCB67FA00BEAD4C /* GCCEmailRow.swift */; };
+		845F8B1A2BCDF20000BEAD4C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B192BCDF20000BEAD4C /* Theme.swift */; };
 		847A82282BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82272BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift */; };
 		847A822A2BC61ECB008A47BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82292BC61ECB008A47BE /* ContentView.swift */; };
 		847A822C2BC61ED0008A47BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847A822B2BC61ED0008A47BE /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		845F8B122BCB646400BEAD4C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCHomePage.swift; sourceTree = "<group>"; };
 		845F8B162BCB67FA00BEAD4C /* GCCEmailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCEmailRow.swift; sourceTree = "<group>"; };
+		845F8B192BCDF20000BEAD4C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		847A82242BC61ECB008A47BE /* Gmail-SwiftUI-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gmail-SwiftUI-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A82272BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_SwiftUI_CombineApp.swift; sourceTree = "<group>"; };
 		847A82292BC61ECB008A47BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		845F8B182BCDF1A200BEAD4C /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				845F8B192BCDF20000BEAD4C /* Theme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				845F8B112BCB63EF00BEAD4C /* NetworkingManager.swift in Sources */,
 				847A822A2BC61ECB008A47BE /* ContentView.swift in Sources */,
 				847A82282BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift in Sources */,
+				845F8B1A2BCDF20000BEAD4C /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
