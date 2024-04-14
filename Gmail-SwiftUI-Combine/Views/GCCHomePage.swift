@@ -9,7 +9,12 @@ import Foundation
 import SwiftUI
 
 struct GCCHomePage: View {
+    @Environment(\.colorScheme) private var colorScheme
+    
     var body: some View {
-        Color.green
+        ZStack(alignment: .bottomTrailing) {
+            
+        }
+        .preferredColorScheme(colorScheme)
     }
 }
