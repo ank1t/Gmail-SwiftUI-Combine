@@ -8,13 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct GCCHomePage: View {
-    @Environment(\.colorScheme) private var colorScheme
-    
+struct GCCHomePage: View {    
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            
+            Color.primary
         }
-        .preferredColorScheme(colorScheme)
     }
 }
