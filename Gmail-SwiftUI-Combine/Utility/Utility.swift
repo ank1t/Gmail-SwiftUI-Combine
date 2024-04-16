@@ -10,14 +10,14 @@ import SwiftUI
 
 struct Utility {
     
-    enum Image: String {
+    enum ImageName: String {
         case moreMenu = "more_menu"
         
         var icon: Image {
-            guard let image = Image(self.rawValue) else {
+            guard let image = UIImage(named: self.rawValue) else {
                 return Image(systemName: self.rawValue)
             }
-            return Image
+            return Image(uiImage: image)
         }
     }
 }

@@ -23,10 +23,19 @@ struct GCCHomePage: View {
                         .padding(.horizontal, Constants.Padding.padding15)
                         
                     
-                    TextField("Title", text: $searchText,
-                              prompt: Text("Search in mail").setFont(.callout,
-                                                                     color: .gray))
-                    .padding(.horizontal, Constants.Padding.padding50)
+                    HStack(spacing: Constants.Spacing.spacing10) {
+                        Image(.moreMenu)
+                            .resizable()
+                            .frame(width: Constants.FrameSize.frameSize25.width,
+                                   height: Constants.FrameSize.frameSize25.height)
+                            .padding(.leading, Constants.Padding.padding30)
+                        
+                        TextField("Title", text: $searchText,
+                                  prompt: Text("Search in mail").setFont(.callout,
+                                                                         color: .gray))
+                        .padding(.horizontal, Constants.Padding.padding10)
+                    }
+                    
                 }
                 .frame(height: 50)
                 .padding(.top, Constants.Padding.padding10)

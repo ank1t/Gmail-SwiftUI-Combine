@@ -27,11 +27,18 @@ struct Constants {
     struct Padding {
         static let padding10: CGFloat = 10
         static let padding15: CGFloat = 15
+        static let padding25: CGFloat = 25
+        static let padding30: CGFloat = 30
         static let padding50: CGFloat = 50
     }
     
     struct Corner {
         static let radius5: CGFloat = 5
         static let radius10: CGFloat = 10
+    }
+    
+    struct FrameSize {
+        static let frameSize10: CGSize = CGSize(width: 10, height: 10)
+        static let frameSize25: CGSize = CGSize(width: 25, height: 25)
     }
 }
