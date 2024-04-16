@@ -15,7 +15,7 @@ struct GCCHomePage: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             VStack(alignment: .leading,
-                   spacing: Constants.Spacing.spacing10) {
+                   spacing: Constants.Spacing.spacing20) {
                 
                 ZStack {
                     Theme.textFieldBackground(for: colorScheme)

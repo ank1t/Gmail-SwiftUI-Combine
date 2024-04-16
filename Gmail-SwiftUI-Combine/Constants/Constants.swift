@@ -21,6 +21,7 @@ struct Constants {
     
     struct Spacing {
         static let spacing10: CGFloat = 10
+        static let spacing20: CGFloat = 20
     }
     
     struct Padding {
