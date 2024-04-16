@@ -33,7 +33,7 @@ struct GCCHomePage: View {
                         TextField("Title", text: $searchText,
                                   prompt: Text("Search in mail").setFont(.callout,
                                                                          color: .gray))
-                        .padding(.horizontal, Constants.Padding.padding10)
+                        .padding(.horizontal, Constants.Padding.padding5)
                     }
                     
                 }
