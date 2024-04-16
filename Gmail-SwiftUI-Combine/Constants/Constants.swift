@@ -18,4 +18,19 @@ struct Constants {
     static let lightThemeColorSecondary = Color(red: 49/255.0, green: 54/255.0, blue: 63/255.0)
     static let lightThemeColorTertiary = Color(red: 118/255.0, green: 171/255.0, blue: 174/255.0)
     static let lightThemeColorQuaternary = Color(red: 238/255.0, green: 238/255.0, blue: 238/255.0)
+    
+    struct Spacing {
+        static let spacing10: CGFloat = 10
+    }
+    
+    struct Padding {
+        static let padding10: CGFloat = 10
+        static let padding15: CGFloat = 15
+        static let padding50: CGFloat = 50
+    }
+    
+    struct Corner {
+        static let radius5: CGFloat = 5
+        static let radius10: CGFloat = 10
+    }
 }
