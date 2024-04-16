@@ -26,8 +26,8 @@ struct GCCHomePage: View {
                     HStack(spacing: Constants.Spacing.spacing10) {
                         Image(.moreMenu)
                             .resizable()
-                            .frame(width: Constants.FrameSize.frameSize25.width,
-                                   height: Constants.FrameSize.frameSize25.height)
+                            .frame(width: Constants.Frame.size10,
+                                   height: Constants.Frame.size25)
                             .padding(.leading, Constants.Padding.padding30)
                         
                         TextField("Title", text: $searchText,

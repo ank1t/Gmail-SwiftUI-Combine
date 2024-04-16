@@ -38,8 +38,8 @@ struct Constants {
         static let radius10: CGFloat = 10
     }
     
-    struct FrameSize {
-        static let frameSize10: CGSize = CGSize(width: 10, height: 10)
-        static let frameSize25: CGSize = CGSize(width: 25, height: 25)
+    struct Frame {
+        static let size10: CGFloat = 10
+        static let size25: CGFloat = 25
     }
 }
