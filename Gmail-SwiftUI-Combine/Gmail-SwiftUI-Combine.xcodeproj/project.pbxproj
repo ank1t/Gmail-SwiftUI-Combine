@@ -140,9 +140,25 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		845F8B1E2BCE037500BEAD4C /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		845F8B1F2BCE03A100BEAD4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		847A821B2BC61ECB008A47BE = {
 			isa = PBXGroup;
 			children = (
+				845F8B1F2BCE03A100BEAD4C /* Extensions */,
+				845F8B1E2BCE037500BEAD4C /* ViewModifiers */,
 				845F8B1B2BCDF43200BEAD4C /* Constants */,
 				845F8B182BCDF1A200BEAD4C /* Theme */,
 				845F8B0F2BCB5E6F00BEAD4C /* Components */,
