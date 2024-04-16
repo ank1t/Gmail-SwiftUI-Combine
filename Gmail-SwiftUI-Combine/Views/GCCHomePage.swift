@@ -15,6 +15,6 @@ struct GCCHomePage: View {
         ZStack(alignment: .bottomTrailing) {
             Color.clear
         }
-        .background(colorScheme == .dark ? .black : .white)
+        .background(Theme.primaryColor(for: colorScheme))
     }
 }

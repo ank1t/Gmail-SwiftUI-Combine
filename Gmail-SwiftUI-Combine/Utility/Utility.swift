@@ -6,7 +6,9 @@
 //
         
 import Foundation
+import SwiftUI
 
 struct Utility {
-    
+    private init() { }
+    static let shared = Utility()
 }

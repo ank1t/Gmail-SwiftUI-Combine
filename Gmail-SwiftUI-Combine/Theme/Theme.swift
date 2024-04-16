@@ -8,11 +8,8 @@
 import Foundation
 import SwiftUI
 
-enum Theme {
-    case dark
-    case light
-    
-    var primary: Color {
-        
+struct Theme {
+    static func primaryColor(for theme: ColorScheme) -> Color {
+        theme == .dark ? Constants.darkThemeColorPrimary : Color.clear
     }
 }
