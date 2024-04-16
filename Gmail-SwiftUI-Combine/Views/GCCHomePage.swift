@@ -26,7 +26,7 @@ struct GCCHomePage: View {
                     HStack(spacing: Constants.Spacing.spacing10) {
                         Image(.moreMenu)
                             .resizable()
-                            .frame(width: Constants.Frame.size10,
+                            .frame(width: Constants.Frame.size25,
                                    height: Constants.Frame.size25)
                             .padding(.leading, Constants.Padding.padding30)
                         
@@ -34,6 +34,13 @@ struct GCCHomePage: View {
                                   prompt: Text("Search in mail").setFont(.callout,
                                                                          color: .gray))
                         .padding(.horizontal, Constants.Padding.padding5)
+                        
+                        Text("A")
+                            .setFont(.title3, color: .white)
+                            .padding(Constants.Padding.padding8)
+                            .background(.red)
+                            .clipShape(Circle())
+                            .padding(.trailing, Constants.Padding.padding25)
                     }
                     
                 }
