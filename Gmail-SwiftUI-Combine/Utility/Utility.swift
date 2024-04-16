@@ -9,6 +9,15 @@ import Foundation
 import SwiftUI
 
 struct Utility {
-    private init() { }
-    static let shared = Utility()
+    
+    enum Image: String {
+        case moreMenu = "more_menu"
+        
+        var icon: Image {
+            guard let image = Image(self.rawValue) else {
+                return Image(systemName: self.rawValue)
+            }
+            return Image
+        }
+    }
 }

@@ -34,6 +34,7 @@ struct GCCHomePage: View {
                 
                 Text("INBOX")
                     .setFont(.caption, color: .gray)
+                    .padding(.horizontal, Constants.Padding.padding15)
                 
                 Spacer()
             }
