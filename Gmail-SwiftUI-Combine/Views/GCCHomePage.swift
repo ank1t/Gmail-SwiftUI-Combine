@@ -24,7 +24,8 @@ struct GCCHomePage: View {
                         
                     
                     TextField("Title", text: $searchText,
-                              prompt: Text("Search in mail"))
+                              prompt: Text("Search in mail").setFont(.callout,
+                                                                     color: .gray))
                     .padding(.horizontal, Constants.Padding.padding50)
                 }
                 .frame(height: 50)
@@ -32,6 +33,7 @@ struct GCCHomePage: View {
                 
                 
                 Text("INBOX")
+                    .setFont(.caption, color: .gray)
                 
                 Spacer()
             }
