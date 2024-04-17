@@ -28,7 +28,7 @@ struct GCCHomePage: View {
                             .resizable()
                             .frame(width: Constants.Frame.size25,
                                    height: Constants.Frame.size25)
-                            .padding(.leading, Constants.Padding.padding35)
+                            .padding(.leading, Constants.Padding.padding20)
                         
                         TextField("Title", text: $searchText,
                                   prompt: Text("Search in mail").setFont(.callout,
@@ -40,7 +40,7 @@ struct GCCHomePage: View {
                             .padding(Constants.Padding.padding8)
                             .background(.red)
                             .clipShape(Circle())
-                            .padding(.trailing, Constants.Padding.padding30)
+                            .padding(.trailing, Constants.Padding.padding20)
                         
                     }
                     
@@ -51,12 +51,9 @@ struct GCCHomePage: View {
                 
                 Text("INBOX")
                     .setFont(.caption, color: .gray)
-                    .padding(.horizontal, Constants.Padding.padding15)
                 
-                LazyVStack {
-                    ForEach(0..<10) {_ in
-                        GCCEmailRow(viewModel: GCCEmailRowVM())
-                    }
+                List {
+                    GCCEmailRow(viewModel: GCCEmailRowVM())
                 }
             }
             .padding(.horizontal, Constants.Padding.padding20)
