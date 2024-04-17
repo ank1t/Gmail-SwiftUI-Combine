@@ -19,8 +19,16 @@ struct Constants {
     static let lightThemeColorTertiary = Color(red: 118/255.0, green: 171/255.0, blue: 174/255.0)
     static let lightThemeColorQuaternary = Color(red: 238/255.0, green: 238/255.0, blue: 238/255.0)
     
+    private static let senderIconBGColor: [Color] = [.purple, .green, .orange, .yellow, .red, .pink]
+    static func getSenderImageBGColor() -> Color {
+        return senderIconBGColor.randomElement() ?? .mint
+    }
+    
     struct Spacing {
+        static let spacing2: CGFloat = 2
+        static let spacing5: CGFloat = 5
         static let spacing10: CGFloat = 10
+        static let spacing15: CGFloat = 15
         static let spacing20: CGFloat = 20
     }
     
@@ -29,8 +37,10 @@ struct Constants {
         static let padding8: CGFloat = 8
         static let padding10: CGFloat = 10
         static let padding15: CGFloat = 15
+        static let padding20: CGFloat = 20
         static let padding25: CGFloat = 25
         static let padding30: CGFloat = 30
+        static let padding35: CGFloat = 35
         static let padding50: CGFloat = 50
     }
     
@@ -41,7 +51,11 @@ struct Constants {
     
     struct Frame {
         static let size10: CGFloat = 10
+        static let size15: CGFloat = 15
+        static let size20: CGFloat = 20
         static let size25: CGFloat = 25
+        static let size35: CGFloat = 35
+        static let size40: CGFloat = 40
         static let size50: CGFloat = 50
     }
 }

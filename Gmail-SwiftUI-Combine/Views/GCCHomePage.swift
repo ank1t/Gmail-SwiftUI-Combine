@@ -20,7 +20,7 @@ struct GCCHomePage: View {
                 ZStack {
                     Theme.textFieldBackground(for: colorScheme)
                         .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
-                        .padding(.horizontal, Constants.Padding.padding15)
+                        .padding(.horizontal, Constants.Padding.padding20)
                         
                     
                     HStack(spacing: Constants.Spacing.spacing10) {
@@ -28,7 +28,7 @@ struct GCCHomePage: View {
                             .resizable()
                             .frame(width: Constants.Frame.size25,
                                    height: Constants.Frame.size25)
-                            .padding(.leading, Constants.Padding.padding30)
+                            .padding(.leading, Constants.Padding.padding35)
                         
                         TextField("Title", text: $searchText,
                                   prompt: Text("Search in mail").setFont(.callout,
@@ -40,7 +40,7 @@ struct GCCHomePage: View {
                             .padding(Constants.Padding.padding8)
                             .background(.red)
                             .clipShape(Circle())
-                            .padding(.trailing, Constants.Padding.padding25)
+                            .padding(.trailing, Constants.Padding.padding30)
                             
                     }
                     
@@ -52,6 +52,11 @@ struct GCCHomePage: View {
                 Text("INBOX")
                     .setFont(.caption, color: .gray)
                     .padding(.horizontal, Constants.Padding.padding15)
+                
+                ForEach(0..<1) {_ in 
+                    GCCEmailRow(viewModel: GCCEmailRowVM())
+                }
+                .padding(.horizontal, Constants.Padding.padding20)
                 
                 Spacer()
             }

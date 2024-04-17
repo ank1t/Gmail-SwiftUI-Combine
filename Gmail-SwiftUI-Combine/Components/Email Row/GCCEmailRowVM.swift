@@ -8,11 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct GCCEmailRowVM {
-    let image: Image
-    let senderList: [String]
-    let subject: String
-    let message: String
-    let attachments: [String]
-    let date: String
+struct GCCEmailRowVM: Identifiable {
+//    var image: Image?
+    let senderList: [String] = ["York", "me"]
+    let subject: String = "OSAP documents list"
+    let message: String = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    let attachments: [String] = ["Attachment 1", "Attachment 2"]
+    let date: String = "Apr 12"
+    let id: UUID = UUID()
 }
