@@ -14,14 +14,14 @@ struct GCCHomePage: View {
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
+            ScrollView(showsIndicators: false) {
             VStack(alignment: .leading,
                    spacing: Constants.Spacing.spacing20) {
                 
                 ZStack {
                     Theme.textFieldBackground(for: colorScheme)
                         .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
-                        .padding(.horizontal, Constants.Padding.padding20)
-                        
+                    
                     
                     HStack(spacing: Constants.Spacing.spacing10) {
                         Image(.moreMenu)
@@ -41,7 +41,7 @@ struct GCCHomePage: View {
                             .background(.red)
                             .clipShape(Circle())
                             .padding(.trailing, Constants.Padding.padding30)
-                            
+                        
                     }
                     
                 }
@@ -53,15 +53,13 @@ struct GCCHomePage: View {
                     .setFont(.caption, color: .gray)
                     .padding(.horizontal, Constants.Padding.padding15)
                 
-                ScrollView(showsIndicators: false) {
-                    VStack {
-                        ForEach(0..<10) {_ in
-                            GCCEmailRow(viewModel: GCCEmailRowVM())
-                        }
+                LazyVStack {
+                    ForEach(0..<10) {_ in
+                        GCCEmailRow(viewModel: GCCEmailRowVM())
                     }
                 }
-                
-                .padding(.horizontal, Constants.Padding.padding20)
+            }
+            .padding(.horizontal, Constants.Padding.padding20)
             }
         }
         .background(Theme.screenBackground(for: colorScheme))
