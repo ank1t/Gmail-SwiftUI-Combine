@@ -12,6 +12,7 @@ struct Utility {
     
     enum ImageName: String {
         case moreMenu = "more_menu"
+        case user = "person.circle.fill"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {
