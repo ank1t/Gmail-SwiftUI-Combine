@@ -41,10 +41,11 @@ struct GCCHomePage: View {
                             .background(.red)
                             .clipShape(Circle())
                             .padding(.trailing, Constants.Padding.padding25)
+                            
                     }
                     
                 }
-                .frame(height: 50)
+                .frame(height: Constants.Frame.size50)
                 .padding(.top, Constants.Padding.padding10)
                 
                 

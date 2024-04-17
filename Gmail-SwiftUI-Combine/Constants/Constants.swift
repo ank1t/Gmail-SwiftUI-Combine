@@ -42,5 +42,6 @@ struct Constants {
     struct Frame {
         static let size10: CGFloat = 10
         static let size25: CGFloat = 25
+        static let size50: CGFloat = 50
     }
 }
