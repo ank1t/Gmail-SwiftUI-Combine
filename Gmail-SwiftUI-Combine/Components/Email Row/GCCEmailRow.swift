@@ -32,7 +32,7 @@ struct GCCEmailRow: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
                 
-                HStack(alignment: .center, spacing: Constants.Spacing.spacing15) {
+                HStack(alignment: .top, spacing: Constants.Spacing.spacing15) {
                     Text(viewModel.message)
                         .setFont(.callout, color: .gray)
                         .lineLimit(1)

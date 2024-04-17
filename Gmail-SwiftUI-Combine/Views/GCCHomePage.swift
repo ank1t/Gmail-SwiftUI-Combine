@@ -53,12 +53,15 @@ struct GCCHomePage: View {
                     .setFont(.caption, color: .gray)
                     .padding(.horizontal, Constants.Padding.padding15)
                 
-                ForEach(0..<1) {_ in 
-                    GCCEmailRow(viewModel: GCCEmailRowVM())
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        ForEach(0..<10) {_ in
+                            GCCEmailRow(viewModel: GCCEmailRowVM())
+                        }
+                    }
                 }
-                .padding(.horizontal, Constants.Padding.padding20)
                 
-                Spacer()
+                .padding(.horizontal, Constants.Padding.padding20)
             }
         }
         .background(Theme.screenBackground(for: colorScheme))
