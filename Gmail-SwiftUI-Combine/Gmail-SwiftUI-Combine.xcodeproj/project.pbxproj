@@ -125,6 +125,7 @@
 		845F8B0F2BCB5E6F00BEAD4C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				845F8B292BD4919C00BEAD4C /* Tab bar */,
 				845F8B262BCF4A1000BEAD4C /* Email Row */,
 			);
 			path = Components;
@@ -169,6 +170,13 @@
 				845F8B272BCF4A2900BEAD4C /* GCCEmailRowVM.swift */,
 			);
 			path = "Email Row";
+			sourceTree = "<group>";
+		};
+		845F8B292BD4919C00BEAD4C /* Tab bar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tab bar";
 			sourceTree = "<group>";
 		};
 		847A821B2BC61ECB008A47BE = {
