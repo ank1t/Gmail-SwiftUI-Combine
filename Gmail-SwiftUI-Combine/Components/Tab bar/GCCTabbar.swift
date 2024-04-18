@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GCCTabar: View {
+    @State private var viewModel = ViewModel()
     var body: some View {
         Color.clear
     }

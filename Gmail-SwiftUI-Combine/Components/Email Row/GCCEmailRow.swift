@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GCCEmailRow: View {
-    let viewModel: GCCEmailRowVM
+    @State private var viewModel = ViewModel()
     
     var body: some View {
         HStack(alignment: .top, spacing: Constants.Spacing.spacing15) {

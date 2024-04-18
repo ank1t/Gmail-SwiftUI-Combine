@@ -53,7 +53,7 @@ struct GCCHomePage: View {
                         .setFont(.caption, color: .gray)
                     
                     ForEach(0..<10) { _ in
-                        GCCEmailRow(viewModel: GCCEmailRowVM())
+                        GCCEmailRow()
                             .gesture(
                                 DragGesture()
                                     .onChanged({ gesture in

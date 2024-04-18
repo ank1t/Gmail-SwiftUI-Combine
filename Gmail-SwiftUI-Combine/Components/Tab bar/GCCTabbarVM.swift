@@ -7,6 +7,8 @@
         
 import Foundation
 
-struct GCCTabbarVM {
-    
+extension GCCTabar {
+    class ViewModel: ObservableObject {
+        
+    }
 }
