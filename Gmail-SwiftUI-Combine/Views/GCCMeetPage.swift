@@ -6,3 +6,10 @@
 //
         
 import Foundation
+import SwiftUI
+
+struct GCCMeetPage: View {
+    var body: some View {
+        Color.orange
+    }
+}
