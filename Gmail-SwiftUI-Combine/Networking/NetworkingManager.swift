@@ -11,5 +11,5 @@ class NetworkingManager {
     static let shared = NetworkingManager()
     private init() { }
     
-    func getLatestEmails
+    func getLatestEmails() { }
 }
