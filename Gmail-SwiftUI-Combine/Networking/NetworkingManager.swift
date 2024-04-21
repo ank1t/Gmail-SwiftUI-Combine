@@ -10,4 +10,6 @@ import Foundation
 class NetworkingManager {
     static let shared = NetworkingManager()
     private init() { }
+    
+    func getLatestEmails
 }

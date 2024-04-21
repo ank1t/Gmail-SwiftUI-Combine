@@ -119,6 +119,7 @@
 		845F8B0D2BCB5E5D00BEAD4C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				845F8B322BD4993100BEAD4C /* Models */,
 				845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */,
 			);
 			path = Networking;
@@ -189,6 +190,13 @@
 				845F8B2C2BD491EE00BEAD4C /* GCCTabbarVM.swift */,
 			);
 			path = "Tab bar";
+			sourceTree = "<group>";
+		};
+		845F8B322BD4993100BEAD4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		847A821B2BC61ECB008A47BE = {
