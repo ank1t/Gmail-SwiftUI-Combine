@@ -6,3 +6,10 @@
 //
         
 import Foundation
+import SwiftUI
+
+struct GCCMenuView: View {
+    var body: some View {
+        Color.blue
+    }
+}
