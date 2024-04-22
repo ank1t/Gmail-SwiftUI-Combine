@@ -4,6 +4,7 @@
         "date": "",
         "isStarred": false,
         "logo": null,
+        "labels": "",
         "subject": "",
         "message": "",
         "attachments": ["", ""]
