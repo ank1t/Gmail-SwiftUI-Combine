@@ -16,4 +16,13 @@ struct Theme {
     static func textFieldBackground(for theme: ColorScheme) -> Color {
         theme == .dark ? Constants.darkThemeColorSecondary : Color.clear
     }
+    
+    static func composeBtnTintColor(for theme: ColorScheme) -> Color {
+        //Maintain the same tint for dark and light scenarios
+        return Constants.composeBtnTintColor
+    }
+    
+    static func composeBtnBGColor(for theme: ColorScheme) -> Color {
+        theme == .dark ? Constants.darkThemeComposeBtnBG : Constants.lightThemeComposeBtnBG
+    }
 }

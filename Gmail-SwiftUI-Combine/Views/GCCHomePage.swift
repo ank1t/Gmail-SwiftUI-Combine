@@ -66,10 +66,22 @@ struct GCCHomePage: View {
             }
             
             Button(action: {}) {
-                HStack(alignment: Constants.Spacing.spacing5) {
-                    Image(<#T##imageName: Utility.ImageName##Utility.ImageName#>)
+                HStack(spacing: Constants.Spacing.spacing5) {
+                    Image(.compose)
+                        .resizable()
+                        .frame(width: Constants.Frame.size10,
+                               height: Constants.Frame.size10)
+                    
+                    Text("Compose")
                 }
+                .padding(.vertical, Constants.Padding.padding15)
+                .padding(.leading, Constants.Padding.padding10)
+                .padding(.trailing, Constants.Padding.padding25)
+                .background(Theme.composeBtnBGColor(for: colorScheme))
+                .foregroundColor(Theme.composeBtnTintColor(for: colorScheme))
             }
+            .offset(x: -Constants.Spacing.spacing20,
+                    y: -Constants.Spacing.spacing20)
         }
         .background(Theme.screenBackground(for: colorScheme))
     }
