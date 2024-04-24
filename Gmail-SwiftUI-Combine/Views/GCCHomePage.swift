@@ -66,13 +66,14 @@ struct GCCHomePage: View {
             }
             
             Button(action: {}) {
-                HStack(spacing: Constants.Spacing.spacing5) {
+                HStack(spacing: Constants.Spacing.spacing10) {
                     Image(.compose)
                         .resizable()
-                        .frame(width: Constants.Frame.size10,
+                        .frame(width: Constants.Frame.size15,
                                height: Constants.Frame.size15)
                     
                     Text("Compose")
+                        .font(.subheadline)
                 }
                 .padding(.vertical, Constants.Padding.padding15)
                 .padding(.leading, Constants.Padding.padding10)
