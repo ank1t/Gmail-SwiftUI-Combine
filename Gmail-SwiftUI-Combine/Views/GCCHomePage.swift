@@ -70,7 +70,7 @@ struct GCCHomePage: View {
                     Image(.compose)
                         .resizable()
                         .frame(width: Constants.Frame.size10,
-                               height: Constants.Frame.size10)
+                               height: Constants.Frame.size15)
                     
                     Text("Compose")
                 }
