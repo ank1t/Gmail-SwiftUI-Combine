@@ -79,6 +79,7 @@ struct GCCHomePage: View {
                 .padding(.trailing, Constants.Padding.padding25)
                 .background(Theme.composeBtnBGColor(for: colorScheme))
                 .foregroundColor(Theme.composeBtnTintColor(for: colorScheme))
+                .clipShape(Capsule())
             }
             .offset(x: -Constants.Spacing.spacing20,
                     y: -Constants.Spacing.spacing20)
