@@ -74,6 +74,7 @@ struct GCCHomePage: View {
                     
                     Text("Compose")
                         .font(.subheadline)
+                        .fontWeight(.medium)
                 }
                 .padding(.vertical, Constants.Padding.padding15)
                 .padding(.leading, Constants.Padding.padding10)
