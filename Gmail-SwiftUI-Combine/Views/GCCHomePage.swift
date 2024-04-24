@@ -64,6 +64,12 @@ struct GCCHomePage: View {
                 }
                 .padding(.horizontal, Constants.Padding.padding20)
             }
+            
+            Button(action: {}) {
+                HStack(alignment: Constants.Spacing.spacing5) {
+                    Image(<#T##imageName: Utility.ImageName##Utility.ImageName#>)
+                }
+            }
         }
         .background(Theme.screenBackground(for: colorScheme))
     }
