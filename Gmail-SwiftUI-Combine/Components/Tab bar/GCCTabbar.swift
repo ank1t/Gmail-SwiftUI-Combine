@@ -19,14 +19,16 @@ struct GCCTabar: View {
                 Spacer()
                 Image(.email)
                     .resizable()
-                    .frame(width: Constants.Frame.size25,
-                           height: Constants.Frame.size25)
+                    .frame(width: Constants.Frame.size20,
+                           height: Constants.Frame.size15)
+                    .foregroundColor(Theme.tintColor(for: colorScheme))
+                
                 Spacer()
                 Spacer()
                 Image(.meet)
                     .resizable()
-                    .frame(width: Constants.Frame.size25,
-                           height: Constants.Frame.size25)
+                    .frame(width: Constants.Frame.size20,
+                           height: Constants.Frame.size15)
                 Spacer()
             }
         }
