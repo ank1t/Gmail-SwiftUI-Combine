@@ -14,7 +14,7 @@ struct Constants {
     static let darkThemeColorTertiary = Color(red: 51/255.0, green: 51/255.0, blue: 51/255.0)
     static let darkThemeColorQuaternary = Color(red: 61/255.0, green: 61/255.0, blue: 61/255.0)
     static let darkThemeComposeBtnBG = Color(red: 30/255.0, green: 30/255.0, blue: 30/255.0)
-    static let darkThemeTabbarBG = Color(red: 34/255.0, green: 34/255.0, blue: 34/255.0)
+    static let darkThemeTabbarBG = Color(red: 20/255.0, green: 20/255.0, blue: 20/255.0)
     
     static let lightThemeColorPrimary = Color(red: 34/255.0, green: 40/255.0, blue: 49/255.0)
     static let lightThemeColorSecondary = Color(red: 49/255.0, green: 54/255.0, blue: 63/255.0)
