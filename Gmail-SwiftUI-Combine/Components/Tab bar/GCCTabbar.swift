@@ -16,15 +16,18 @@ struct GCCTabar: View {
             Theme.tabBarBGColor(for: colorScheme)
             
             HStack {
+                Spacer()
                 Image(.email)
                     .resizable()
                     .frame(width: Constants.Frame.size25,
                            height: Constants.Frame.size25)
-                
+                Spacer()
+                Spacer()
                 Image(.meet)
                     .resizable()
                     .frame(width: Constants.Frame.size25,
                            height: Constants.Frame.size25)
+                Spacer()
             }
         }
     }
