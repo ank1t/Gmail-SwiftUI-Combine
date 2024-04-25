@@ -10,6 +10,9 @@ import SwiftUI
 
 extension GCCTabar {
     class ViewModel: ObservableObject {
+        let buttonWidth: CGFloat = Constants.Frame.size20
+        let buttonHeight: CGFloat = Constants.Frame.size15
+        
         func getTintColor(for selectedIndex: Int,
                           tabIndex: Int,
                           colorScheme: ColorScheme) -> Color {

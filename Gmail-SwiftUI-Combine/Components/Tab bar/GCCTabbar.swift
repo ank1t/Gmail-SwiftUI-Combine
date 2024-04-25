@@ -21,8 +21,8 @@ struct GCCTabar: View {
                 Spacer()
                 Image(.email)
                     .resizable()
-                    .frame(width: Constants.Frame.size20,
-                           height: Constants.Frame.size15)
+                    .frame(width: viewModel.buttonWidth,
+                           height: viewModel.buttonHeight)
                     .foregroundColor(viewModel.getTintColor(for: selectedIndex,
                                                             tabIndex: 0,
                                                             colorScheme: colorScheme))
@@ -31,8 +31,8 @@ struct GCCTabar: View {
                 Spacer()
                 Image(.meet)
                     .resizable()
-                    .frame(width: Constants.Frame.size20,
-                           height: Constants.Frame.size15)
+                    .frame(width: viewModel.buttonWidth,
+                           height: viewModel.buttonHeight)
                     .foregroundColor(viewModel.getTintColor(for: selectedIndex,
                                                             tabIndex: 1,
                                                             colorScheme: colorScheme))
