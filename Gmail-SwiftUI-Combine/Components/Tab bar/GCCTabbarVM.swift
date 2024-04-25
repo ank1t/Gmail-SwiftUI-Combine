@@ -6,9 +6,14 @@
 //
         
 import Foundation
+import SwiftUI
 
 extension GCCTabar {
     class ViewModel: ObservableObject {
-        
+        func getTintColor(for selectedIndex: Int,
+                          tabIndex: Int,
+                          colorScheme: ColorScheme) -> Color {
+            selectedIndex == tabIndex ? Theme.tintColor(for: colorScheme) : .white
+        }
     }
 }
