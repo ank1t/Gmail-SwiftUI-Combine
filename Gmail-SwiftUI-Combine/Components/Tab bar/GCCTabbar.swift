@@ -9,9 +9,24 @@ import Foundation
 import SwiftUI
 
 struct GCCTabar: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var viewModel = ViewModel()
     var body: some View {
-        Color.clear
+        ZStack {
+            Theme.tabBarBGColor(for: colorScheme)
+            
+            HStack {
+                Image(.email)
+                    .resizable()
+                    .frame(width: Constants.Frame.size25,
+                           height: Constants.Frame.size25)
+                
+                Image(.meet)
+                    .resizable()
+                    .frame(width: Constants.Frame.size25,
+                           height: Constants.Frame.size25)
+            }
+        }
     }
 }
 

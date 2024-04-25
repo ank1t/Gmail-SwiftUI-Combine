@@ -86,7 +86,8 @@ struct GCCHomePage: View {
             .offset(x: -Constants.Spacing.spacing20,
                     y: -Constants.Spacing.spacing70)
             
-            Color.green.frame(height: Constants.Frame.size50)
+            GCCTabar()
+                .frame(height: Constants.Frame.size50)
         }
         .background(Theme.screenBackground(for: colorScheme))
     }

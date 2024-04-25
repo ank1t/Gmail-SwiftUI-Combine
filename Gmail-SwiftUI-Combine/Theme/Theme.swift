@@ -25,4 +25,8 @@ struct Theme {
     static func composeBtnBGColor(for theme: ColorScheme) -> Color {
         theme == .dark ? Constants.darkThemeComposeBtnBG : Constants.lightThemeComposeBtnBG
     }
+    
+    static func tabBarBGColor(for theme: ColorScheme) -> Color {
+        theme == .dark ? Constants.darkThemeTabbarBG : Constants.lightThemeTabbarBG
+    }
 }
