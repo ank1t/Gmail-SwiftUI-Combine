@@ -11,7 +11,7 @@ import SwiftUI
 struct GCCTabar: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var viewModel = ViewModel()
-    @State var selectedIndex: CGFloat = 0
+    @State var selectedIndex: Int = 0
     
     var body: some View {
         ZStack {
@@ -34,7 +34,7 @@ struct GCCTabar: View {
                     .frame(width: Constants.Frame.size20,
                            height: Constants.Frame.size15)
                     .foregroundColor(viewModel.getTintColor(for: selectedIndex,
-                                                            tabIndex: 0,
+                                                            tabIndex: 1,
                                                             colorScheme: colorScheme))
                 Spacer()
             }
