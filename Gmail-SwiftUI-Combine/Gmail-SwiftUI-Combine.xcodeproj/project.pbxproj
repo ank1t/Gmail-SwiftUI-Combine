@@ -65,7 +65,6 @@
 		845F8B302BD4979A00BEAD4C /* GCCMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCMenu.swift; sourceTree = "<group>"; };
 		845F8B332BD4995D00BEAD4C /* GCCEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCEmail.swift; sourceTree = "<group>"; };
 		845F8B362BD49A1B00BEAD4C /* emails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emails.json; sourceTree = "<group>"; };
-		845F8B382BD7445200BEAD4C /* labels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = labels.json; sourceTree = "<group>"; };
 		847A82242BC61ECB008A47BE /* Gmail-SwiftUI-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gmail-SwiftUI-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A82272BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_SwiftUI_CombineApp.swift; sourceTree = "<group>"; };
 		847A82292BC61ECB008A47BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 		845F8B352BD4997300BEAD4C /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				845F8B382BD7445200BEAD4C /* labels.json */,
 				845F8B362BD49A1B00BEAD4C /* emails.json */,
 			);
 			path = JSON;
