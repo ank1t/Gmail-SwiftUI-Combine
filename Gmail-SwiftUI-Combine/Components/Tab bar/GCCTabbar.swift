@@ -23,10 +23,10 @@ struct GCCTabar: View {
                     .resizable()
                     .frame(width: viewModel.buttonWidth,
                            height: viewModel.buttonHeight)
-                    .foregroundColor(viewModel.getTintColor(for: selectedIndex,
+                    .foregroundColor(viewModel.getTabTintColor(for: selectedIndex,
                                                             tabIndex: 0,
                                                             colorScheme: colorScheme))
-                    .addRippleEffect(with: .blue)
+                    .addRippleEffect(with: viewModel.rippleTintColor)
                 
                 Spacer()
                 Spacer()
@@ -34,10 +34,10 @@ struct GCCTabar: View {
                     .resizable()
                     .frame(width: viewModel.buttonWidth,
                            height: viewModel.buttonHeight)
-                    .foregroundColor(viewModel.getTintColor(for: selectedIndex,
+                    .foregroundColor(viewModel.getTabTintColor(for: selectedIndex,
                                                             tabIndex: 1,
                                                             colorScheme: colorScheme))
-                    .addRippleEffect(with: .green)
+                    .addRippleEffect(with: viewModel.rippleTintColor)
                 Spacer()
             }
         }

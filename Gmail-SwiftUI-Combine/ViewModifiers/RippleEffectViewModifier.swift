@@ -26,7 +26,7 @@ struct RippleEffectViewModifier: ViewModifier {
         GeometryReader { geometry in
             ZStack {
                 Rectangle()
-                    .foregroundColor(.gray.opacity(0.05))
+                    .foregroundColor(.clear)
                 Circle()
                     .foregroundColor(color)
                     .opacity(0.2 * opacityFraction)
