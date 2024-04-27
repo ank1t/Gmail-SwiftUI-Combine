@@ -29,6 +29,7 @@ struct Constants {
     static func getSenderImageBGColor() -> Color {
         return senderIconBGColor.randomElement() ?? .mint
     }
+    static let rippleTintColorOpacity: Double = 0.5
     
     struct Spacing {
         static let spacing2: CGFloat = 2

@@ -20,7 +20,7 @@ extension GCCTabar {
         }
         
         func getRippleTintColor(for colorScheme: ColorScheme) -> Color {
-            Theme.tintColor(for: colorScheme)
+            Theme.tintColor(for: colorScheme).opacity(Constants.rippleTintColorOpacity)
         }
     }
 }
