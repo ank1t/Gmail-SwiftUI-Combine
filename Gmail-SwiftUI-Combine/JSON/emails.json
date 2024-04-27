@@ -1,5 +1,5 @@
 [
-    {
+    "emails": [{
         "participants": ["", ""],
         "date": "",
         "isStarred": false,
@@ -8,5 +8,6 @@
         "subject": "",
         "message": "",
         "attachments": ["", ""]
-    }
+    }],
+    "labels": ["","","","",""]
 ]
