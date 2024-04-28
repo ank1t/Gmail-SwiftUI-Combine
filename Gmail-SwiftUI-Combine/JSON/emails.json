@@ -1,6 +1,6 @@
 [
     "emails": [{
-        "participants": ["", ""],
+        "participants": ["Google", "me"],
         "date": "",
         "isStarred": false,
         "logo": null,
