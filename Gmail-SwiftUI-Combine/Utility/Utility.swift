@@ -17,6 +17,9 @@ struct Utility {
         case compose = "pencil"
         case email = "envelope"
         case meet = "video"
+        case archive = "archivebox"
+        case garbage = "xmark.bin"
+        case unreadMail = "envelope.badge"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {
