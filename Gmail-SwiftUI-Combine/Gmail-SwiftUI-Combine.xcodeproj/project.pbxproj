@@ -25,6 +25,7 @@
 		845F8B3A2BDC8BD300BEAD4C /* RippleEffectViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B392BDC8BD300BEAD4C /* RippleEffectViewModifier.swift */; };
 		845F8B3C2BDC8D6800BEAD4C /* Extensions+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B3B2BDC8D6800BEAD4C /* Extensions+View.swift */; };
 		845F8B3F2BE0803B00BEAD4C /* PositionObservingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B3E2BE0803B00BEAD4C /* PositionObservingView.swift */; };
+		845F8B412BE3048F00BEAD4C /* OffsetObservingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B402BE3048F00BEAD4C /* OffsetObservingScrollView.swift */; };
 		847A82282BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82272BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift */; };
 		847A822A2BC61ECB008A47BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82292BC61ECB008A47BE /* ContentView.swift */; };
 		847A822C2BC61ED0008A47BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847A822B2BC61ED0008A47BE /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		845F8B392BDC8BD300BEAD4C /* RippleEffectViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleEffectViewModifier.swift; sourceTree = "<group>"; };
 		845F8B3B2BDC8D6800BEAD4C /* Extensions+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+View.swift"; sourceTree = "<group>"; };
 		845F8B3E2BE0803B00BEAD4C /* PositionObservingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionObservingView.swift; sourceTree = "<group>"; };
+		845F8B402BE3048F00BEAD4C /* OffsetObservingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetObservingScrollView.swift; sourceTree = "<group>"; };
 		847A82242BC61ECB008A47BE /* Gmail-SwiftUI-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gmail-SwiftUI-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A82272BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_SwiftUI_CombineApp.swift; sourceTree = "<group>"; };
 		847A82292BC61ECB008A47BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				845F8B3E2BE0803B00BEAD4C /* PositionObservingView.swift */,
+				845F8B402BE3048F00BEAD4C /* OffsetObservingScrollView.swift */,
 			);
 			path = ScrollView;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				845F8B3A2BDC8BD300BEAD4C /* RippleEffectViewModifier.swift in Sources */,
 				845F8B3C2BDC8D6800BEAD4C /* Extensions+View.swift in Sources */,
 				845F8B2F2BD4967300BEAD4C /* GCCMeetPage.swift in Sources */,
+				845F8B412BE3048F00BEAD4C /* OffsetObservingScrollView.swift in Sources */,
 				845F8B132BCB646400BEAD4C /* Utility.swift in Sources */,
 				845F8B112BCB63EF00BEAD4C /* NetworkingManager.swift in Sources */,
 				845F8B282BCF4A2900BEAD4C /* GCCEmailRowVM.swift in Sources */,
