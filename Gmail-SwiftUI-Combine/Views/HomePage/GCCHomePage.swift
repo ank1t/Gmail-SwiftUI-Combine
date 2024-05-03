@@ -13,6 +13,7 @@ struct GCCHomePage: View {
     @State private var searchText: String = ""
     @State private var scrollOffset: CGPoint = .zero
     @State private var shouldHideBottomTabBar: Bool = false
+    @State private var viewModel = ViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -23,7 +24,6 @@ struct GCCHomePage: View {
                     ZStack {
                         Theme.textFieldBackground(for: colorScheme)
                             .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
-                        
                         
                         HStack(spacing: Constants.Spacing.spacing10) {
                             Image(.moreMenu)
@@ -55,12 +55,6 @@ struct GCCHomePage: View {
                     
                     ForEach(0..<10) { _ in
                         GCCEmailRow()
-                            .gesture(
-                                DragGesture()
-                                    .onChanged({ gesture in
-                                        print(gesture)
-                                    })
-                            )
                     }
                 }
                 .padding(.horizontal, Constants.Padding.padding20)
@@ -88,15 +82,15 @@ struct GCCHomePage: View {
                 .background(Theme.composeBtnBGColor(for: colorScheme))
                 .foregroundColor(Theme.tintColor(for: colorScheme))
                 .clipShape(shouldHideBottomTabBar ? AnyShape(Circle()) : AnyShape(Capsule()))
-                .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
+                .animation(.easeIn(duration: viewModel.animationDuration), value: shouldHideBottomTabBar)
             }
             .offset(x: -Constants.Spacing.spacing20,
                     y: shouldHideBottomTabBar ? -Constants.Spacing.spacing40 : -Constants.Spacing.spacing70)
-            .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
+            .animation(.easeIn(duration: viewModel.animationDuration), value: shouldHideBottomTabBar)
             
             GCCTabar()
                 .frame(height: shouldHideBottomTabBar ? Constants.Frame.size00 : Constants.Frame.size50)
-                .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
+                .animation(.easeIn(duration: viewModel.animationDuration), value: shouldHideBottomTabBar)
         }
         .background(Theme.screenBackground(for: colorScheme))
     }
