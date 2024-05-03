@@ -84,14 +84,14 @@ struct GCCHomePage: View {
                     }
                 }
                 .padding(.vertical, Constants.Padding.padding15)
-                .padding(.leading, Constants.Padding.padding10)
-                .padding(.trailing, Constants.Padding.padding25)
+                .padding(.leading, shouldHideBottomTabBar ? Constants.Padding.padding15 : Constants.Padding.padding10)
+                .padding(.trailing, shouldHideBottomTabBar ? Constants.Padding.padding15 : Constants.Padding.padding25)
                 .background(Theme.composeBtnBGColor(for: colorScheme))
                 .foregroundColor(Theme.tintColor(for: colorScheme))
                 .clipShape(shouldHideBottomTabBar ? AnyShape(Circle()) : AnyShape(Capsule()))
                 .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
             }
-            .offset(x: shouldHideBottomTabBar ? 0 : -Constants.Spacing.spacing20,
+            .offset(x: -Constants.Spacing.spacing20,
                     y: shouldHideBottomTabBar ? -Constants.Spacing.spacing40 : -Constants.Spacing.spacing70)
             .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
             
