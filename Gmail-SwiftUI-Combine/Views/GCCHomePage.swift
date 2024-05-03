@@ -14,8 +14,8 @@ struct GCCHomePage: View {
     @State private var scrollOffset: CGPoint = .zero
     
     var body: some View {
-        OffsetObservingScrollView(offset: $scrollOffset) {
-            ZStack(alignment: .bottomTrailing) {
+        ZStack(alignment: .bottomTrailing) {
+            OffsetObservingScrollView(offset: $scrollOffset) {
                 VStack(alignment: .leading,
                        spacing: Constants.Spacing.spacing20) {
                     
@@ -64,36 +64,35 @@ struct GCCHomePage: View {
                     }
                 }
                 .padding(.horizontal, Constants.Padding.padding20)
-                .ignoresSafeArea()
-                
-                Button(action: {}) {
-                    HStack(spacing: Constants.Spacing.spacing10) {
-                        Image(.compose)
-                            .resizable()
-                            .frame(width: Constants.Frame.size15,
-                                   height: Constants.Frame.size15)
-                        
-                        Text("Compose")
-                            .font(.subheadline)
-                            .fontWeight(.medium)
-                    }
-                    .padding(.vertical, Constants.Padding.padding15)
-                    .padding(.leading, Constants.Padding.padding10)
-                    .padding(.trailing, Constants.Padding.padding25)
-                    .background(Theme.composeBtnBGColor(for: colorScheme))
-                    .foregroundColor(Theme.tintColor(for: colorScheme))
-                    .clipShape(Capsule())
-                }
-                .offset(x: -Constants.Spacing.spacing20,
-                        y: -Constants.Spacing.spacing70)
-                
-                GCCTabar()
-                    .frame(height: Constants.Frame.size50)
             }
-            .background(Theme.screenBackground(for: colorScheme))
+            .onChange(of: scrollOffset) { newValue in
+                print(newValue)
+            }
+
+            Button(action: {}) {
+                HStack(spacing: Constants.Spacing.spacing10) {
+                    Image(.compose)
+                        .resizable()
+                        .frame(width: Constants.Frame.size15,
+                               height: Constants.Frame.size15)
+                    
+                    Text("Compose")
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                }
+                .padding(.vertical, Constants.Padding.padding15)
+                .padding(.leading, Constants.Padding.padding10)
+                .padding(.trailing, Constants.Padding.padding25)
+                .background(Theme.composeBtnBGColor(for: colorScheme))
+                .foregroundColor(Theme.tintColor(for: colorScheme))
+                .clipShape(Capsule())
+            }
+            .offset(x: -Constants.Spacing.spacing20,
+                    y: -Constants.Spacing.spacing70)
+            
+            GCCTabar()
+                .frame(height: Constants.Frame.size50)
         }
-        .onChange(of: scrollOffset) { newValue in
-            print(newValue)
-        }
+        .background(Theme.screenBackground(for: colorScheme))
     }
 }
