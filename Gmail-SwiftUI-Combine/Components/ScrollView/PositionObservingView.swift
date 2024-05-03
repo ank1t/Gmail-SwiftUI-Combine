@@ -10,11 +10,11 @@ import SwiftUI
 
 struct PositionObservingView<Content: View>: View {
     var coordinateSpace: CoordinateSpace
-    @Binding var position: CGFloat
+    @Binding var position: CGPoint
     @ViewBuilder var content: Content
     
     var body: some View {
-        content()
+        content
             .background(GeometryReader { geometry in
                 Color.clear.preference(
                     key: PreferenceKey.self,

@@ -93,5 +93,8 @@ struct GCCHomePage: View {
             }
             .background(Theme.screenBackground(for: colorScheme))
         }
+        .onChange(of: scrollOffset) { newValue in
+            print(newValue)
+        }
     }
 }
