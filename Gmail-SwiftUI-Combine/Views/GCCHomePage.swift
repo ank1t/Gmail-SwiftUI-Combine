@@ -32,11 +32,10 @@ struct GCCHomePage: View {
                                        height: Constants.Frame.size25)
                                 .padding(.leading, Constants.Padding.padding20)
                             
-                            TextField("Title", text: $searchText,
-                                      prompt: Text("Search in mail").setFont(.callout,
-                                                                             color: .gray))
+                            Text("Search in mail").setFont(.callout,
+                                                           color: .gray)
                             .padding(.horizontal, Constants.Padding.padding5)
-                            
+                            Spacer()
                             Text("A")
                                 .setFont(.title3, color: .white)
                                 .padding(Constants.Padding.padding8)
