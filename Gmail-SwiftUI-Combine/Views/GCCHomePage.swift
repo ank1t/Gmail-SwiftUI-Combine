@@ -12,6 +12,7 @@ struct GCCHomePage: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var searchText: String = ""
     @State private var scrollOffset: CGPoint = .zero
+    @State private var shouldHideBottomTabBar: Bool = false
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -66,7 +67,7 @@ struct GCCHomePage: View {
                 .padding(.horizontal, Constants.Padding.padding20)
             }
             .onChange(of: scrollOffset) { newValue in
-                print(newValue)
+                shouldHideBottomTabBar = newValue.y > 5
             }
 
             Button(action: {}) {
@@ -85,13 +86,16 @@ struct GCCHomePage: View {
                 .padding(.trailing, Constants.Padding.padding25)
                 .background(Theme.composeBtnBGColor(for: colorScheme))
                 .foregroundColor(Theme.tintColor(for: colorScheme))
-                .clipShape(Capsule())
+                .clipShape(shouldHideBottomTabBar ? AnyShape(Circle()) : AnyShape(Capsule()))
+                .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
             }
             .offset(x: -Constants.Spacing.spacing20,
-                    y: -Constants.Spacing.spacing70)
+                    y: shouldHideBottomTabBar ? -Constants.Spacing.spacing40 : -Constants.Spacing.spacing70)
+            .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
             
             GCCTabar()
-                .frame(height: Constants.Frame.size50)
+                .frame(height: shouldHideBottomTabBar ? Constants.Frame.size00 : Constants.Frame.size50)
+                .animation(.easeIn(duration: 0.1), value: shouldHideBottomTabBar)
         }
         .background(Theme.screenBackground(for: colorScheme))
     }
