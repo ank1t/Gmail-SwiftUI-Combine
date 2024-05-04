@@ -12,7 +12,7 @@ struct GCCHomePage: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var searchText: String = ""
     @State private var scrollOffset: CGPoint = .zero
-    @State private var shouldHideBottomTabBar: Bool = false
+    @State private var immersiveReading: Bool = false
     @State private var viewModel = ViewModel()
     
     var body: some View {
@@ -60,7 +60,7 @@ struct GCCHomePage: View {
                 .padding(.horizontal, Constants.Padding.padding20)
             }
             .onChange(of: scrollOffset) { newValue in
-                shouldHideBottomTabBar = newValue.y > 5
+                immersiveReading = newValue.y > 5
             }
 
             Button(action: {}) {
@@ -70,27 +70,27 @@ struct GCCHomePage: View {
                         .frame(width: Constants.Frame.size15,
                                height: Constants.Frame.size15)
                     
-                    if !shouldHideBottomTabBar {
+                    if !immersiveReading {
                         Text("Compose")
                             .font(.subheadline)
                             .fontWeight(.medium)
                     }
                 }
                 .padding(.vertical, Constants.Padding.padding15)
-                .padding(.leading, viewModel.getLeadingPaddingForComposeBtn(shouldHideBottomTabBar))
-                .padding(.trailing, viewModel.getTrailingPaddingForComposeBtn(shouldHideBottomTabBar))
+                .padding(.leading, viewModel.getLeadingPaddingForComposeBtn(immersiveReading))
+                .padding(.trailing, viewModel.getTrailingPaddingForComposeBtn(immersiveReading))
                 .background(Theme.composeBtnBGColor(for: colorScheme))
                 .foregroundColor(Theme.tintColor(for: colorScheme))
-                .clipShape(viewModel.getClipShapeForComposeBtn(shouldHideBottomTabBar))
-                .animation(.easeIn(duration: viewModel.animationDuration), value: shouldHideBottomTabBar)
+                .clipShape(viewModel.getClipShapeForComposeBtn(immersiveReading))
+                .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             }
             .offset(x: -Constants.Spacing.spacing20,
-                    y: shouldHideBottomTabBar ? -Constants.Spacing.spacing40 : -Constants.Spacing.spacing70)
-            .animation(.easeIn(duration: viewModel.animationDuration), value: shouldHideBottomTabBar)
+                    y: immersiveReading ? -Constants.Spacing.spacing40 : -Constants.Spacing.spacing70)
+            .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             
             GCCTabar()
-                .frame(height: shouldHideBottomTabBar ? Constants.Frame.size00 : Constants.Frame.size50)
-                .animation(.easeIn(duration: viewModel.animationDuration), value: shouldHideBottomTabBar)
+                .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
+                .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
         }
         .background(Theme.screenBackground(for: colorScheme))
     }
