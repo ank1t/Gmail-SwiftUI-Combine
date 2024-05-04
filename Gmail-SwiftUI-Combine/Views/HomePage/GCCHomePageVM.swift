@@ -12,16 +12,20 @@ extension GCCHomePage {
     class ViewModel: ObservableObject {
         let animationDuration: CGFloat = 0.1
         
-        func getLeadingPaddingForComposeBtn(_ hideTabBar: Bool) -> CGFloat {
-            hideTabBar ? Constants.Padding.padding15 : Constants.Padding.padding10
+        func getLeadingPaddingForComposeBtn(_ immersiveReading: Bool) -> CGFloat {
+            immersiveReading ? Constants.Padding.padding15 : Constants.Padding.padding10
         }
         
-        func getTrailingPaddingForComposeBtn(_ hideTabBar: Bool) -> CGFloat {
-            hideTabBar ? Constants.Padding.padding15 : Constants.Padding.padding25
+        func getTrailingPaddingForComposeBtn(_ immersiveReading: Bool) -> CGFloat {
+            immersiveReading ? Constants.Padding.padding15 : Constants.Padding.padding25
         }
         
-        func getClipShapeForComposeBtn(_ hideTabBar: Bool) -> AnyShape {
-            hideTabBar ? AnyShape(Circle()) : AnyShape(Capsule())
+        func getClipShapeForComposeBtn(_ immersiveReading: Bool) -> AnyShape {
+            immersiveReading ? AnyShape(Circle()) : AnyShape(Capsule())
+        }
+        
+        func getverticalOffsetForComposeBtn(_ immersiveReading: Bool) -> AnyShape {
+            immersiveReading ? -Constants.Spacing.spacing40 : -Constants.Spacing.spacing70
         }
     }
 }
