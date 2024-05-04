@@ -54,7 +54,7 @@ struct GCCHomePage: View {
                     Text("INBOX")
                         .setFont(.caption, color: .gray)
                     
-                    ForEach(0..<10) { _ in
+                    ForEach(0..<20) { _ in
                         GCCEmailRow()
                     }
                 }
