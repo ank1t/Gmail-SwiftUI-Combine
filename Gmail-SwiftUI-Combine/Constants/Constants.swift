@@ -27,7 +27,7 @@ struct Constants {
     
     private static let senderIconBGColor: [Color] = [.purple, .green, .orange, .yellow, .red, .pink]
     static func getSenderImageBGColor() -> Color {
-        return senderIconBGColor.randomElement() ?? .mint
+        return .blue
     }
     static let rippleTintColorOpacity: Double = 0.3
     

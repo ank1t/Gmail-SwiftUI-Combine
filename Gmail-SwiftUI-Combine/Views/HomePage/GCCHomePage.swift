@@ -77,11 +77,11 @@ struct GCCHomePage: View {
                     }
                 }
                 .padding(.vertical, Constants.Padding.padding15)
-                .padding(.leading, shouldHideBottomTabBar ? Constants.Padding.padding15 : Constants.Padding.padding10)
-                .padding(.trailing, shouldHideBottomTabBar ? Constants.Padding.padding15 : Constants.Padding.padding25)
+                .padding(.leading, viewModel.getLeadingPaddingForComposeBtn(shouldHideBottomTabBar))
+                .padding(.trailing, viewModel.getTrailingPaddingForComposeBtn(shouldHideBottomTabBar))
                 .background(Theme.composeBtnBGColor(for: colorScheme))
                 .foregroundColor(Theme.tintColor(for: colorScheme))
-                .clipShape(shouldHideBottomTabBar ? AnyShape(Circle()) : AnyShape(Capsule()))
+                .clipShape(viewModel.getClipShapeForComposeBtn(shouldHideBottomTabBar))
                 .animation(.easeIn(duration: viewModel.animationDuration), value: shouldHideBottomTabBar)
             }
             .offset(x: -Constants.Spacing.spacing20,
