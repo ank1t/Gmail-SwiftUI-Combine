@@ -12,6 +12,7 @@ struct GCCHomePage: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var searchText: String = ""
     @State private var scrollOffset: CGPoint = .zero
+    @State private var previousYOffset: CGFloat = 0
     @State private var immersiveReading: Bool = false
     @State private var viewModel = ViewModel()
     
@@ -60,7 +61,14 @@ struct GCCHomePage: View {
                 .padding(.horizontal, Constants.Padding.padding20)
             }
             .onChange(of: scrollOffset) { newValue in
-                immersiveReading = newValue.y > 5
+                if previousYOffset > newValue.y, !immersiveReading {
+                    immersiveReading.toggle()
+                } else {
+                    previousYOffset = newValue.y
+                    if immersiveReading {
+                        immersiveReading.toggle()
+                    }
+                }
             }
 
             Button(action: {}) {
