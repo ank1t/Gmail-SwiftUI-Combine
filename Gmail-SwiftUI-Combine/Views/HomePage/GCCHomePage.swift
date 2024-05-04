@@ -61,14 +61,14 @@ struct GCCHomePage: View {
                 .padding(.horizontal, Constants.Padding.padding20)
             }
             .onChange(of: scrollOffset) { newValue in
-                if previousYOffset > newValue.y, !immersiveReading {
-                    immersiveReading.toggle()
-                } else {
-                    previousYOffset = newValue.y
-                    if immersiveReading {
-                        immersiveReading.toggle()
+                if previousYOffset < newValue.y {
+                    if !immersiveReading {
+                        immersiveReading = true
                     }
+                } else if immersiveReading{
+                    immersiveReading = false
                 }
+                previousYOffset = newValue.y
             }
 
             Button(action: {}) {
