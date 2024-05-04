@@ -85,7 +85,7 @@ struct GCCHomePage: View {
                 .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             }
             .offset(x: -Constants.Spacing.spacing20,
-                    y: viewModel.getverticalOffsetForComposeBtn(immersiveReading))
+                    y: viewModel.getVerticalOffsetForComposeBtn(immersiveReading))
             .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             
             GCCTabar()

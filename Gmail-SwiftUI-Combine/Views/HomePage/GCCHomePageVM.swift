@@ -24,7 +24,7 @@ extension GCCHomePage {
             immersiveReading ? AnyShape(Circle()) : AnyShape(Capsule())
         }
         
-        func getverticalOffsetForComposeBtn(_ immersiveReading: Bool) -> AnyShape {
+        func getVerticalOffsetForComposeBtn(_ immersiveReading: Bool) -> AnyShape {
             immersiveReading ? -Constants.Spacing.spacing40 : -Constants.Spacing.spacing70
         }
     }
