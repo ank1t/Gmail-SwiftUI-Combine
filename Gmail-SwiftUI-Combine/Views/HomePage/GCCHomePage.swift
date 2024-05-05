@@ -19,8 +19,8 @@ struct GCCHomePage: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             OffsetObservingScrollView(offset: $scrollOffset) {
-                VStack(alignment: .leading,
-                       spacing: Constants.Spacing.spacing20) {
+                LazyVStack(alignment: .leading,
+                           spacing: Constants.Spacing.spacing20) {
                     
                     ZStack {
                         Theme.textFieldBackground(for: colorScheme)
@@ -54,7 +54,7 @@ struct GCCHomePage: View {
                     Text("INBOX")
                         .setFont(.caption, color: .gray)
                     
-                    ForEach(0..<20) { _ in
+                    ForEach(0..<50) { _ in
                         GCCEmailRow()
                     }
                 }
