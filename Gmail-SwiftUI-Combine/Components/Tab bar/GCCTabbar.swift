@@ -35,7 +35,6 @@ struct GCCTabar: View {
                 Spacer()
                 Button(action: {
                     selectedIndex = 1
-                    print("Hello World")
                 }) {
                     Image(.meet)
                         .resizable()
