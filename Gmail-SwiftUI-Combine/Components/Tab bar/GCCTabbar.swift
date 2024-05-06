@@ -19,32 +19,33 @@ struct GCCTabar: View {
             
             HStack {
                 Spacer()
-                Image(.email)
-                    .resizable()
-                    .frame(width: viewModel.buttonWidth,
-                           height: viewModel.buttonHeight)
-                    .foregroundColor(viewModel.getTabTintColor(for: selectedIndex,
-                                                               tabIndex: 0,
-                                                               colorScheme: colorScheme))
-                    .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
-                    .onTapGesture {
-                        selectedIndex = 0
-                    }
+                Button(action: {
+                    selectedIndex = 0
+                }) {
+                    Image(.email)
+                        .resizable()
+                        .frame(width: viewModel.buttonWidth,
+                               height: viewModel.buttonHeight)
+                        .foregroundColor(viewModel.getTabTintColor(for: selectedIndex,
+                                                                   tabIndex: 0,
+                                                                   colorScheme: colorScheme))
+                        .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
+                }
                 Spacer()
                 Spacer()
-                Image(.meet)
-                    .resizable()
-                    .frame(width: viewModel.buttonWidth,
-                           height: viewModel.buttonHeight)
-                    .foregroundColor(viewModel.getTabTintColor(for: selectedIndex,
-                                                               tabIndex: 1,
-                                                               colorScheme: colorScheme))
-                    .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
-                    .allowsHitTesting(true)
-                    .onTapGesture {
-                        selectedIndex = 1
-                        print("Hello")
-                    }
+                Button(action: {
+                    selectedIndex = 1
+                    print("Hello World")
+                }) {
+                    Image(.meet)
+                        .resizable()
+                        .frame(width: viewModel.buttonWidth,
+                               height: viewModel.buttonHeight)
+                        .foregroundColor(viewModel.getTabTintColor(for: selectedIndex,
+                                                                   tabIndex: 1,
+                                                                   colorScheme: colorScheme))
+                        .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
+                }
                 Spacer()
             }
         }
