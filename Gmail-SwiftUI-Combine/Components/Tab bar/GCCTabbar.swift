@@ -37,8 +37,8 @@ struct GCCTabar: View {
                     .frame(width: viewModel.buttonWidth,
                            height: viewModel.buttonHeight)
                     .foregroundColor(viewModel.getTabTintColor(for: selectedIndex,
-                                                            tabIndex: 1,
-                                                            colorScheme: colorScheme))
+                                                               tabIndex: 1,
+                                                               colorScheme: colorScheme))
                     .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
                     .onTapGesture {
                         selectedIndex = 1
