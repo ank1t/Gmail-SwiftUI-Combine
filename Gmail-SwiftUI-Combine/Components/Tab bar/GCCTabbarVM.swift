@@ -14,8 +14,8 @@ extension GCCTabar {
         let buttonHeight: CGFloat = Constants.Frame.size15
         
         func getTabTintColor(for selectedIndex: Int,
-                          tabIndex: Int,
-                          colorScheme: ColorScheme) -> Color {
+                             tabIndex: Int,
+                             colorScheme: ColorScheme) -> Color {
             selectedIndex == tabIndex ? Theme.tintColor(for: colorScheme) : .white
         }
         
