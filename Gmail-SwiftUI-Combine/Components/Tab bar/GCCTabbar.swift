@@ -30,6 +30,7 @@ struct GCCTabar: View {
                                                                    tabIndex: 0,
                                                                    colorScheme: colorScheme))
                         .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
+                        .allowsHitTesting(false)
                 }
                 Spacer()
                 Spacer()
@@ -44,6 +45,7 @@ struct GCCTabar: View {
                                                                    tabIndex: 1,
                                                                    colorScheme: colorScheme))
                         .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
+                        .allowsHitTesting(false)
                 }
                 Spacer()
             }
