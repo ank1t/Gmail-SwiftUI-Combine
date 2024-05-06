@@ -27,7 +27,9 @@ struct GCCTabar: View {
                                                             tabIndex: 0,
                                                             colorScheme: colorScheme))
                     .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
-                
+                    .onTapGesture {
+                        selectedIndex = 0
+                    }
                 Spacer()
                 Spacer()
                 Image(.meet)
@@ -38,6 +40,9 @@ struct GCCTabar: View {
                                                             tabIndex: 1,
                                                             colorScheme: colorScheme))
                     .addRippleEffect(with: viewModel.getRippleTintColor(for: colorScheme))
+                    .onTapGesture {
+                        selectedIndex = 1
+                    }
                 Spacer()
             }
         }
