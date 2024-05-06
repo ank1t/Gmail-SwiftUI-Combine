@@ -43,9 +43,7 @@ struct GCCHomePage: View {
                                 .background(.red)
                                 .clipShape(Circle())
                                 .padding(.trailing, Constants.Padding.padding20)
-                            
                         }
-                        
                     }
                     .frame(height: Constants.Frame.size50)
                     .padding(.top, Constants.Padding.padding10)
