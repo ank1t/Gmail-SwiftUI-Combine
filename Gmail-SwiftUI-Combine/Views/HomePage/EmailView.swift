@@ -8,7 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct EmailView: View {
+struct GCCEmailView: View {
+    @Environment(\.colorScheme) var colorScheme
+    @State private var scrollOffset: CGPoint = .zero
+    @State private var previousYOffset: CGFloat = 0
+    @State private var immersiveReading: Bool = false
+    @Binding var shouldShowEmailView: Bool
+    @State private var viewModel = ViewModel()
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             OffsetObservingScrollView(offset: $scrollOffset) {
@@ -87,7 +94,7 @@ struct EmailView: View {
                     y: viewModel.getVerticalOffsetForComposeBtn(immersiveReading))
             .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             
-            GCCTabar()
+            GCCTabar(shouldShowEmailView: $shouldShowEmailView)
                 .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
                 .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
         }

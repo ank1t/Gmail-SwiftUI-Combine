@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct GMeetView: View {
+struct GCCGMeetView: View {
     var body: some View {
-        
+        Color.blue
     }
 }

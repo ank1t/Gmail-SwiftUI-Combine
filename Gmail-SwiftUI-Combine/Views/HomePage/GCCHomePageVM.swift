@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension GCCHomePage {
+extension GCCEmailView {
     class ViewModel: ObservableObject {
         let animationDuration: CGFloat = 0.1
         

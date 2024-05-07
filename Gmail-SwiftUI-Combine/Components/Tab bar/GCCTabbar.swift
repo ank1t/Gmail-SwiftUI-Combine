@@ -12,6 +12,7 @@ struct GCCTabar: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var viewModel = ViewModel()
     @State var selectedIndex: Int = 0
+    @Binding var shouldShowEmailView: Bool
     
     var body: some View {
         ZStack {
@@ -21,6 +22,9 @@ struct GCCTabar: View {
                 Spacer()
                 Button(action: {
                     selectedIndex = 0
+                    if !shouldShowEmailView {
+                        shouldShowEmailView.toggle()
+                    }
                 }) {
                     Image(.email)
                         .resizable()
@@ -36,6 +40,9 @@ struct GCCTabar: View {
                 Spacer()
                 Button(action: {
                     selectedIndex = 1
+                    if shouldShowEmailView {
+                        shouldShowEmailView.toggle()
+                    }
                 }) {
                     Image(.meet)
                         .resizable()
