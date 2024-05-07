@@ -34,6 +34,7 @@
 		847A82392BC61ED1008A47BE /* Gmail_SwiftUI_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82382BC61ED1008A47BE /* Gmail_SwiftUI_CombineTests.swift */; };
 		847A82432BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82422BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITests.swift */; };
 		847A82452BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82442BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITestsLaunchTests.swift */; };
+		84D926CF2BEB0E4300787E38 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926CE2BEB0E4300787E38 /* EmailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		847A823E2BC61ED1008A47BE /* Gmail-SwiftUI-CombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gmail-SwiftUI-CombineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A82422BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_SwiftUI_CombineUITests.swift; sourceTree = "<group>"; };
 		847A82442BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_SwiftUI_CombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84D926CE2BEB0E4300787E38 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			children = (
 				845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */,
 				845F8B432BE4714800BEAD4C /* GCCHomePageVM.swift */,
+				84D926CE2BEB0E4300787E38 /* EmailView.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */,
 				845F8B2D2BD491EE00BEAD4C /* GCCTabbarVM.swift in Sources */,
 				845F8B442BE4714800BEAD4C /* GCCHomePageVM.swift in Sources */,
+				84D926CF2BEB0E4300787E38 /* EmailView.swift in Sources */,
 				845F8B172BCB67FA00BEAD4C /* GCCEmailRow.swift in Sources */,
 				845F8B3A2BDC8BD300BEAD4C /* RippleEffectViewModifier.swift in Sources */,
 				845F8B3C2BDC8D6800BEAD4C /* Extensions+View.swift in Sources */,

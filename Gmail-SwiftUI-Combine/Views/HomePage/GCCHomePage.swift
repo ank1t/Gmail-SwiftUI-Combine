@@ -15,7 +15,7 @@ struct GCCHomePage: View {
     @State private var previousYOffset: CGFloat = 0
     @State private var immersiveReading: Bool = false
     @State private var viewModel = ViewModel()
-    
+    @State private var shouldShowEmailView: Bool = true
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             OffsetObservingScrollView(offset: $scrollOffset) {
