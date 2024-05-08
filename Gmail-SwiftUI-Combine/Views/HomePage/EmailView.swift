@@ -12,7 +12,7 @@ struct GCCEmailView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var scrollOffset: CGPoint = .zero
     @State private var previousYOffset: CGFloat = 0
-    @State private var immersiveReading: Bool = false
+    @Binding var immersiveReading: Bool
     @Binding var shouldShowEmailView: Bool
     @State private var viewModel = ViewModel()
     
@@ -93,11 +93,6 @@ struct GCCEmailView: View {
             .offset(x: -Constants.Spacing.spacing20,
                     y: viewModel.getVerticalOffsetForComposeBtn(immersiveReading))
             .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
-            
-            GCCTabar(shouldShowEmailView: $shouldShowEmailView)
-                .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
-                .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
         }
-        .background(Theme.screenBackground(for: colorScheme))
     }
 }

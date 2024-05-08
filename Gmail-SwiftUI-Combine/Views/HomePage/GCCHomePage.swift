@@ -10,8 +10,17 @@ import SwiftUI
 
 struct GCCHomePage: View {    
     @State private var shouldShowEmailView: Bool = true
+    @State private var immersiveReading: Bool = false
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        shouldShowEmailView ? AnyView(GCCEmailView(shouldShowEmailView: $shouldShowEmailView)) : AnyView(GCCGMeetView())
+        ZStack(alignment: .bottomTrailing) {
+            shouldShowEmailView ? AnyView(GCCEmailView(immersiveReading: $immersiveReading,
+                                                       shouldShowEmailView: $shouldShowEmailView)) : AnyView(GCCGMeetView())
+            GCCTabar(shouldShowEmailView: $shouldShowEmailView)
+                .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
+                .animation(.easeIn(duration: Constants.tabBarAnimationDuration), value: immersiveReading)
+        }
+        .background(Theme.screenBackground(for: colorScheme))
     }
 }

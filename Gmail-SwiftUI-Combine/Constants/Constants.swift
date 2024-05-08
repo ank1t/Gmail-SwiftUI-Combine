@@ -30,6 +30,7 @@ struct Constants {
         return .blue
     }
     static let rippleTintColorOpacity: Double = 0.3
+    static let tabBarAnimationDuration: CGFloat = 0.1
     
     struct Spacing {
         static let spacing2: CGFloat = 2
