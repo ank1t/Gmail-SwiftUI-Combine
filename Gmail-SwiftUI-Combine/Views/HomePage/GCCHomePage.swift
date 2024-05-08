@@ -15,12 +15,20 @@ struct GCCHomePage: View {
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            shouldShowEmailView ? AnyView(GCCEmailView(immersiveReading: $immersiveReading,
-                                                       shouldShowEmailView: $shouldShowEmailView)) : AnyView(GCCGMeetView())
+            shouldShowEmailView ? AnyView(emailView) : AnyView(gMeetView)
             GCCTabar(shouldShowEmailView: $shouldShowEmailView)
                 .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
                 .animation(.easeIn(duration: Constants.tabBarAnimationDuration), value: immersiveReading)
         }
         .background(Theme.screenBackground(for: colorScheme))
+    }
+    
+    var emailView: some View {
+        GCCEmailView(immersiveReading: $immersiveReading,
+                     shouldShowEmailView: $shouldShowEmailView)
+    }
+    
+    var gMeetView: some View {
+        GCCGMeetView()
     }
 }
