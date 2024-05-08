@@ -10,7 +10,7 @@ import SwiftUI
 
 extension GCCEmailView {
     class ViewModel: ObservableObject {
-        let animationDuration: CGFloat = 0.1
+        let animationDuration: CGFloat = 0.05
         
         func getLeadingPaddingForComposeBtn(_ immersiveReading: Bool) -> CGFloat {
             immersiveReading ? Constants.Padding.padding15 : Constants.Padding.padding10
