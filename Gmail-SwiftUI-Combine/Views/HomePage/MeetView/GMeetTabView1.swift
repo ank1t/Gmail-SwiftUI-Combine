@@ -19,7 +19,8 @@ struct GMeetTabView1: View {
             
             Text("Get a link you can share")
                 .setFont(.title3, color: .white)
-                .padding()
+                .padding(.horizontal)
+                .padding(.bottom, Constants.Padding.padding10)
             
             HStack {
                 Text("Tap ").setFont(.footnote, color: .white) +
