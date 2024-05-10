@@ -69,6 +69,6 @@ struct Constants {
         static let size35: CGFloat = 35
         static let size40: CGFloat = 40
         static let size50: CGFloat = 50
-        static let size150: CGFloat = 150
+        static let size300: CGFloat = 300
     }
 }
