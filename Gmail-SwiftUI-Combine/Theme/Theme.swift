@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Theme {
-    static func screenBackground(for theme: ColorScheme) -> Color {
+    static func primaryColor(for theme: ColorScheme) -> Color {
         theme == .dark ? Constants.darkThemeColorPrimary : Color.clear
     }
     

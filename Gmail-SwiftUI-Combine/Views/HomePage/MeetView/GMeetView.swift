@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct GCCGMeetView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack {
             HStack {
@@ -21,7 +23,7 @@ struct GCCGMeetView: View {
                 Spacer()
                 Text("Meet")
                     .setFont(.title3,
-                             color: .gray)
+                             color: .white)
                 
                 Spacer()
                 Text("A")
@@ -31,6 +33,9 @@ struct GCCGMeetView: View {
                     .clipShape(Circle())
                     .padding(.trailing, Constants.Padding.padding20)
             }
+            .padding(.top, Constants.Padding.padding15)
+            .padding(.bottom, Constants.Padding.padding8)
+            .background(Theme.primaryColor(for: colorScheme))
             Spacer()
         }
 //        TabView {

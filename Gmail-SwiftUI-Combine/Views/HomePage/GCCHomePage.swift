@@ -20,7 +20,7 @@ struct GCCHomePage: View {
                 .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
                 .animation(.easeIn(duration: Constants.tabBarAnimationDuration), value: immersiveReading)
         }
-        .background(Theme.screenBackground(for: colorScheme))
+        .background(Theme.primaryColor(for: colorScheme))
     }
     
     var emailView: some View {
