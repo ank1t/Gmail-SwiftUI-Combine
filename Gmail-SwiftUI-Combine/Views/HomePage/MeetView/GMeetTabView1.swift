@@ -11,10 +11,10 @@ import SwiftUI
 struct GMeetTabView1: View {
     var body: some View {
         VStack {
-            Image(.shareLink)
+            Image(.shareLink, false)
                 .resizable()
-                .frame(width: Constants.Frame.size50,
-                       height: Constants.Frame.size50)
+                .frame(width: Constants.Frame.size150,
+                       height: Constants.Frame.size150)
                 .padding()
             Spacer()
         }

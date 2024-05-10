@@ -37,6 +37,8 @@ struct GCCGMeetView: View {
             .padding(.bottom, Constants.Padding.padding8)
             .background(Theme.primaryColor(for: colorScheme))
             
+            Divider()
+            
             HStack {
                 Button(action: {}) {
                     Text("New meeting")
@@ -58,7 +60,7 @@ struct GCCGMeetView: View {
             .fixedSize(horizontal: false, vertical: true)
             .padding()
                     TabView {
-                        Color.orange
+                        GMeetTabView1()
                         Color.blue
                         Color.yellow
                     }
