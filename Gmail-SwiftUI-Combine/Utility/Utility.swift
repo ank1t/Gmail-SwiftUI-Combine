@@ -21,6 +21,7 @@ struct Utility {
         case garbage = "xmark.bin"
         case unreadMail = "envelope.badge"
         case shareLink = "share-link"
+        case lock = "lock"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {
