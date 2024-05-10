@@ -36,6 +36,27 @@ struct GCCGMeetView: View {
             .padding(.top, Constants.Padding.padding15)
             .padding(.bottom, Constants.Padding.padding8)
             .background(Theme.primaryColor(for: colorScheme))
+            
+            HStack {
+                Button(action: {}) {
+                    Text("New meeting")
+                        .setFont(.callout, color: .black)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(.blue)
+                        .clipShape(Capsule())
+                }
+                
+                Button(action: {}) {
+                    Text("Join with a code")
+                        .setFont(.callout, color: .blue)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Capsule().stroke(.blue, lineWidth: 1))
+                }
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
             Spacer()
         }
 //        TabView {
