@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GMeetTabView2: View {
     var body: some View {
-        
+        Color.red
     }
 }
 
