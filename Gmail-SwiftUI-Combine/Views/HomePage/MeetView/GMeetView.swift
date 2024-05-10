@@ -61,8 +61,7 @@ struct GCCGMeetView: View {
             .padding()
                     TabView {
                         GMeetTabView1()
-                        Color.blue
-                        Color.yellow
+                        GMeetTabView2()
                     }
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .indexViewStyle(.page(backgroundDisplayMode: .always))

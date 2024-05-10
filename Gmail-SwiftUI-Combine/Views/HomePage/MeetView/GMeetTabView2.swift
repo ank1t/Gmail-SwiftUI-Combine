@@ -24,6 +24,7 @@ struct GMeetTabView2: View {
             
             Text("No one can join a meeting unless invited or admitted by the host").setFont(.footnote, color: .white)
             .padding(.horizontal, Constants.Padding.padding20)
+            .multilineTextAlignment(.center)
             
             Spacer()
         }
