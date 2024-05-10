@@ -35,6 +35,7 @@
 		847A82452BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82442BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITestsLaunchTests.swift */; };
 		84D926CF2BEB0E4300787E38 /* GCCEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926CE2BEB0E4300787E38 /* GCCEmailView.swift */; };
 		84D926D12BEB0EB200787E38 /* GMeetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926D02BEB0EB200787E38 /* GMeetView.swift */; };
+		84D926D42BEDA94C00787E38 /* GMeetTabView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926D32BEDA94C00787E38 /* GMeetTabView1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		847A82442BC61ED1008A47BE /* Gmail_SwiftUI_CombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_SwiftUI_CombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84D926CE2BEB0E4300787E38 /* GCCEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCEmailView.swift; sourceTree = "<group>"; };
 		84D926D02BEB0EB200787E38 /* GMeetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMeetView.swift; sourceTree = "<group>"; };
+		84D926D32BEDA94C00787E38 /* GMeetTabView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMeetTabView1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				84D926D02BEB0EB200787E38 /* GMeetView.swift */,
+				84D926D32BEDA94C00787E38 /* GMeetTabView1.swift */,
 			);
 			path = MeetView;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				845F8B1D2BCDF43D00BEAD4C /* Constants.swift in Sources */,
 				845F8B342BD4995D00BEAD4C /* GCCEmail.swift in Sources */,
 				84D926D12BEB0EB200787E38 /* GMeetView.swift in Sources */,
+				84D926D42BEDA94C00787E38 /* GMeetTabView1.swift in Sources */,
 				845F8B2B2BD491D600BEAD4C /* GCCTabbar.swift in Sources */,
 				845F8B3F2BE0803B00BEAD4C /* PositionObservingView.swift in Sources */,
 			);

@@ -57,15 +57,14 @@ struct GCCGMeetView: View {
             }
             .fixedSize(horizontal: false, vertical: true)
             .padding()
-            Spacer()
+                    TabView {
+                        Color.orange
+                        Color.blue
+                        Color.yellow
+                    }
+                    .tabViewStyle(.page(indexDisplayMode: .always))
+                    .indexViewStyle(.page(backgroundDisplayMode: .always))
+                    .padding(.bottom, 50)
         }
-//        TabView {
-//            Color.orange
-//            Color.blue
-//            Color.yellow
-//        }
-//        .tabViewStyle(.page(indexDisplayMode: .always))
-//        .indexViewStyle(.page(backgroundDisplayMode: .always))
-//        .padding(.bottom, 50)
     }
 }
