@@ -129,8 +129,8 @@
 		845168CB2BC8BD9800E778AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84D926D82BEDB65000787E38 /* Menu */,
 				845F8B422BE4713200BEAD4C /* HomePage */,
-				845F8B302BD4979A00BEAD4C /* GCCMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,10 +242,10 @@
 		845F8B422BE4713200BEAD4C /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				84D926D72BEDB63F00787E38 /* EmailView */,
 				84D926D22BEC5E7D00787E38 /* MeetView */,
 				845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */,
 				845F8B432BE4714800BEAD4C /* GCCHomePageVM.swift */,
-				84D926CE2BEB0E4300787E38 /* GCCEmailView.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -324,6 +324,22 @@
 				84D926D52BEDA96100787E38 /* GMeetTabView2.swift */,
 			);
 			path = MeetView;
+			sourceTree = "<group>";
+		};
+		84D926D72BEDB63F00787E38 /* EmailView */ = {
+			isa = PBXGroup;
+			children = (
+				84D926CE2BEB0E4300787E38 /* GCCEmailView.swift */,
+			);
+			path = EmailView;
+			sourceTree = "<group>";
+		};
+		84D926D82BEDB65000787E38 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				845F8B302BD4979A00BEAD4C /* GCCMenu.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
