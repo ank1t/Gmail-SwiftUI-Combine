@@ -36,6 +36,7 @@
 		84D926CF2BEB0E4300787E38 /* GCCEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926CE2BEB0E4300787E38 /* GCCEmailView.swift */; };
 		84D926D12BEB0EB200787E38 /* GMeetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926D02BEB0EB200787E38 /* GMeetView.swift */; };
 		84D926D42BEDA94C00787E38 /* GMeetTabView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926D32BEDA94C00787E38 /* GMeetTabView1.swift */; };
+		84D926D62BEDA96100787E38 /* GMeetTabView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D926D52BEDA96100787E38 /* GMeetTabView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		84D926CE2BEB0E4300787E38 /* GCCEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCEmailView.swift; sourceTree = "<group>"; };
 		84D926D02BEB0EB200787E38 /* GMeetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMeetView.swift; sourceTree = "<group>"; };
 		84D926D32BEDA94C00787E38 /* GMeetTabView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMeetTabView1.swift; sourceTree = "<group>"; };
+		84D926D52BEDA96100787E38 /* GMeetTabView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMeetTabView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 			children = (
 				84D926D02BEB0EB200787E38 /* GMeetView.swift */,
 				84D926D32BEDA94C00787E38 /* GMeetTabView1.swift */,
+				84D926D52BEDA96100787E38 /* GMeetTabView2.swift */,
 			);
 			path = MeetView;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				845F8B2D2BD491EE00BEAD4C /* GCCTabbarVM.swift in Sources */,
 				845F8B442BE4714800BEAD4C /* GCCHomePageVM.swift in Sources */,
 				84D926CF2BEB0E4300787E38 /* GCCEmailView.swift in Sources */,
+				84D926D62BEDA96100787E38 /* GMeetTabView2.swift in Sources */,
 				845F8B172BCB67FA00BEAD4C /* GCCEmailRow.swift in Sources */,
 				845F8B3A2BDC8BD300BEAD4C /* RippleEffectViewModifier.swift in Sources */,
 				845F8B3C2BDC8D6800BEAD4C /* Extensions+View.swift in Sources */,
