@@ -23,6 +23,7 @@ struct GMeetTabView1: View {
                 .padding(.bottom, Constants.Padding.padding10)
             
             HStack {
+                //This can be used to get an attributed string effect
                 Text("Tap ").setFont(.footnote, color: .white) +
                 Text("New meeting ").font(.system(.footnote, weight: .semibold)).foregroundColor(.white) +
                 Text("to get a link you can send to people you want to meet with").setFont(.footnote, color: .white)
