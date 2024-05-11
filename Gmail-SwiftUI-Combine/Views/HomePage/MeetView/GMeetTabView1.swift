@@ -24,9 +24,9 @@ struct GMeetTabView1: View {
             
             HStack {
                 //This can be used to get an attributed string effect
-                let t = Text("Tap ").setFont(.footnote, color: .white) +
-                Text("New meeting ").font(.system(.footnote, weight: .semibold)).foregroundColor(.white) +
-                Text("to get a link you can send to people you want to meet with").setFont(.footnote, color: .white)
+                let t = Text("Tap ").setFont(.callout, color: .white) +
+                Text("New meeting ").font(.system(.callout, weight: .semibold)).foregroundColor(.white) +
+                Text("to get a link you can send to people you want to meet with").setFont(.callout, color: .white)
                 
                 t.multilineTextAlignment(.center)
             }

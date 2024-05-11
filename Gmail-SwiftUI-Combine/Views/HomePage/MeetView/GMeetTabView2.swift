@@ -22,7 +22,7 @@ struct GMeetTabView2: View {
                 .padding(.horizontal)
                 .padding(.bottom, Constants.Padding.padding10)
             
-            Text("No one can join a meeting unless invited or admitted by the host").setFont(.footnote, color: .white)
+            Text("No one can join a meeting unless invited or admitted by the host").setFont(.callout, color: .white)
             .padding(.horizontal, Constants.Padding.padding20)
             .multilineTextAlignment(.center)
             
