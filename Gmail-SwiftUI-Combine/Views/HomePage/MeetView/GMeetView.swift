@@ -43,7 +43,8 @@ struct GCCGMeetView: View {
                 Button(action: {}) {
                     Text("New meeting")
                         .setFont(.callout, color: .black)
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.vertical, Constants.Padding.padding10)
                         .frame(maxWidth: .infinity)
                         .background(.blue)
                         .clipShape(Capsule())
@@ -52,7 +53,8 @@ struct GCCGMeetView: View {
                 Button(action: {}) {
                     Text("Join with a code")
                         .setFont(.callout, color: .blue)
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.vertical, Constants.Padding.padding10)
                         .frame(maxWidth: .infinity)
                         .background(Capsule().stroke(.blue, lineWidth: 1))
                 }
