@@ -36,6 +36,9 @@ struct GCCEmailView: View {
                             Text("Search in mail").setFont(.callout,
                                                            color: .gray)
                             .padding(.horizontal, Constants.Padding.padding5)
+                            .onTapGesture {
+                                print("Hello")
+                            }
                             Spacer()
                             Text("A")
                                 .setFont(.title3, color: .white)
