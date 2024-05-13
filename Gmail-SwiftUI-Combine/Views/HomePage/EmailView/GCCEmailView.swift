@@ -101,7 +101,7 @@ struct GCCEmailView: View {
             SearchView()
                 .frame(maxWidth: shouldShowSearchView ? .infinity : Constants.Frame.size00,
                        maxHeight: shouldShowSearchView ? .infinity : Constants.Frame.size00)
-                .transition(.scale)
+                .animation(.default, value: shouldShowSearchView)
         }
     }
 }
