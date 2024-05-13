@@ -15,6 +15,7 @@ struct GCCEmailView: View {
     @Binding var immersiveReading: Bool
     @Binding var shouldShowEmailView: Bool
     @State private var viewModel = ViewModel()
+    @State private var shouldShowSearchView: Bool = false
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -37,7 +38,7 @@ struct GCCEmailView: View {
                                                            color: .gray)
                             .padding(.horizontal, Constants.Padding.padding5)
                             .onTapGesture {
-                                print("Hello")
+                                shouldShowSearchView.toggle()
                             }
                             Spacer()
                             Text("A")
@@ -98,6 +99,9 @@ struct GCCEmailView: View {
             .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             
             SearchView()
+                .frame(maxWidth: shouldShowSearchView ? .infinity : Constants.Frame.size00,
+                       maxHeight: shouldShowSearchView ? .infinity : Constants.Frame.size00)
+                .transition(.scale)
         }
     }
 }
