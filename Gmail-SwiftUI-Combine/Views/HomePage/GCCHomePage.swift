@@ -18,7 +18,8 @@ struct GCCHomePage: View {
             shouldShowEmailView ? AnyView(emailView) : AnyView(gMeetView)
             GCCTabar(shouldShowEmailView: $shouldShowEmailView)
                 .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
-                .animation(.easeIn(duration: Constants.tabBarAnimationDuration), value: immersiveReading)
+                .animation(.easeIn(duration: Constants.tabBarAnimationDuration),
+                           value: immersiveReading)
         }
         .background(Theme.primaryColor(for: colorScheme))
     }

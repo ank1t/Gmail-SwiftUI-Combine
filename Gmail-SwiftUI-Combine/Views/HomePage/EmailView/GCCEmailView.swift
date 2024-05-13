@@ -96,6 +96,8 @@ struct GCCEmailView: View {
             .offset(x: -Constants.Spacing.spacing20,
                     y: viewModel.getVerticalOffsetForComposeBtn(immersiveReading))
             .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
+            
+            SearchView()
         }
     }
 }
