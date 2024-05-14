@@ -40,6 +40,10 @@ struct GCCEmailView: View {
                                 .onTapGesture {
                                     shouldShowSearchView.toggle()
                                 }
+                                .onAppear {
+                                    print(geometry.frame(in: .global))
+                                }
+                                
                                 Spacer()
                                 Text("A")
                                     .setFont(.title3, color: .white)
@@ -60,7 +64,7 @@ struct GCCEmailView: View {
                             GCCEmailRow()
                         }
                     }
-                               .padding(.horizontal, Constants.Padding.padding20)
+                    .padding(.horizontal, Constants.Padding.padding20)
                 }
                 .onChange(of: scrollOffset) { newValue in
                     if previousYOffset < newValue.y {
@@ -103,6 +107,6 @@ struct GCCEmailView: View {
                            maxHeight: shouldShowSearchView ? .infinity : Constants.Frame.size00)
                     .animation(.default, value: shouldShowSearchView)
             }
-        }}
+        }
     }
 }
