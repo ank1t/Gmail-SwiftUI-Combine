@@ -16,6 +16,7 @@ struct GCCEmailView: View {
     @Binding var shouldShowEmailView: Bool
     @State private var viewModel = ViewModel()
     @State private var shouldShowSearchView: Bool = false
+    @State private var searchBarFrame: CGRect = .zero
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -23,9 +24,13 @@ struct GCCEmailView: View {
                 LazyVStack(alignment: .leading,
                            spacing: Constants.Spacing.spacing20) {
                     ZStack {
-                        Theme.textFieldBackground(for: colorScheme)
-                            .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
-                        
+                        GeometryReader { reader in
+                            Theme.textFieldBackground(for: colorScheme)
+                                .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
+                                .onAppear {
+                                    searchBarFrame = reader.frame(in: .global)
+                                }
+                        }
                         HStack(spacing: Constants.Spacing.spacing10) {
                             Image(.moreMenu)
                                 .resizable()
