@@ -145,8 +145,10 @@ struct GCCEmailView: View {
             .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             
             SearchView()
-                .frame(maxWidth: shouldShowSearchView ? .infinity : Constants.Frame.size00,
-                       maxHeight: shouldShowSearchView ? .infinity : Constants.Frame.size00)
-                .animation(.default, value: shouldShowSearchView)
+            .offset(x: -(Utility.screenSize.width - searchBarFrame.origin.x),
+                    y: -(Utility.screenSize.height - (searchBarFrame.origin.y + searchBarFrame.size.height)))
+            .frame(maxWidth: shouldShowSearchView ? .infinity : Constants.Frame.size00,
+                   maxHeight: shouldShowSearchView ? .infinity : Constants.Frame.size00)
+            .animation(.default, value: shouldShowSearchView)
     }
 }

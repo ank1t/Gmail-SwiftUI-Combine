@@ -30,4 +30,8 @@ struct Utility {
             return Image(uiImage: image)
         }
     }
+    
+    static var screenSize: CGSize {
+        UIScreen.main.bounds.size
+    }
 }
