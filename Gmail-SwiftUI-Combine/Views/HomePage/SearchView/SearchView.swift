@@ -13,7 +13,8 @@ struct SearchView: View {
     
     var body: some View {
         ZStack {
-            Theme.primaryColor(for: colorScheme)
+            Color.green
+            //Theme.primaryColor(for: colorScheme)
         }
     }
 }
