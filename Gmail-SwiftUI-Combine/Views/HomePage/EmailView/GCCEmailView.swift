@@ -19,7 +19,7 @@ struct GCCEmailView: View {
     @State private var searchBarFrame: CGRect = .zero
     
     var body: some View {
-        ZStack(alignment: .bottomTrailing) {
+        ZStack(alignment: .topLeading) {
             OffsetObservingScrollView(offset: $scrollOffset) {
                 LazyVStack(alignment: .leading,
                            spacing: Constants.Spacing.spacing20) {
@@ -111,8 +111,8 @@ struct GCCEmailView: View {
             SearchView()
                 .frame(maxWidth: shouldShowSearchView ? .infinity : 375,
                        maxHeight: shouldShowSearchView ? .infinity : 1)
-                .position(x: searchBarFrame.origin.x + searchBarFrame.size.width/2,
-                          y: searchBarFrame.origin.y + searchBarFrame.size.height)
+                .position(x: searchBarFrame.origin.x,
+                          y: searchBarFrame.origin.y)
                 .animation(.default, value: shouldShowSearchView)
         }
     }
