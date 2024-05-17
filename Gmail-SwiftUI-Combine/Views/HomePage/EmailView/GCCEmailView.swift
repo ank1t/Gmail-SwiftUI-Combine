@@ -19,7 +19,7 @@ struct GCCEmailView: View {
     @State private var searchBarFrame: CGRect = .zero
     
     var body: some View {
-        ZStack(alignment: .topLeading) {
+        ZStack(alignment: .bottomTrailing) {
             OffsetObservingScrollView(offset: $scrollOffset) {
                 LazyVStack(alignment: .leading,
                            spacing: Constants.Spacing.spacing20) {
@@ -27,7 +27,7 @@ struct GCCEmailView: View {
                         GeometryReader { reader in
                             Theme.textFieldBackground(for: colorScheme)
                                 .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
-                                .onAppear {
+                                .on {
                                     searchBarFrame = reader.frame(in: .global)
                                     print("X coordinate: \(searchBarFrame.origin.x + searchBarFrame.size.width)")
                                     print("Y coordinate: \(searchBarFrame.origin.y + searchBarFrame.size.height)")
@@ -36,6 +36,12 @@ struct GCCEmailView: View {
                                     
                                 }
                         }
+                        /*
+                         X coordinate: 355.0
+                         Y coordinate: 105.0
+                         Search bar frame origin (20.0, 105.0)
+                         Search bar frame size (335.0, 0.0)
+                         */
                         HStack(spacing: Constants.Spacing.spacing10) {
                             Image(.moreMenu)
                                 .resizable()
