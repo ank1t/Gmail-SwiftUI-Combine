@@ -29,8 +29,10 @@ struct GCCEmailView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
                                 .onAppear {
                                     searchBarFrame = reader.frame(in: .global)
-                                    print("X coordinate: \(searchBarFrame.origin.x)")
+                                    print("X coordinate: \(searchBarFrame.origin.x + searchBarFrame.size.width)")
                                     print("Y coordinate: \(searchBarFrame.origin.y + searchBarFrame.size.height)")
+                                    print("Search bar frame origin \(searchBarFrame.origin)")
+                                    print("Search bar frame size \(searchBarFrame.size)")
                                     
                                 }
                         }
@@ -109,7 +111,7 @@ struct GCCEmailView: View {
             SearchView()
                 .frame(maxWidth: shouldShowSearchView ? .infinity : 375,
                        maxHeight: shouldShowSearchView ? .infinity : 1)
-                .position(x: searchBarFrame.origin.x,
+                .position(x: searchBarFrame.origin.x + searchBarFrame.size.width/2,
                           y: searchBarFrame.origin.y + searchBarFrame.size.height)
                 .animation(.default, value: shouldShowSearchView)
         }
