@@ -12,7 +12,7 @@ struct SearchView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        ZStack {
+        VStack {
             Color.green
             //Theme.primaryColor(for: colorScheme)
         }
