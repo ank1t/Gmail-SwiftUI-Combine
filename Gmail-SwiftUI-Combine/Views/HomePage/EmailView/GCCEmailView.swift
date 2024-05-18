@@ -13,6 +13,7 @@ struct GCCEmailView: View {
     @State private var scrollOffset: CGPoint = .zero
     @State private var previousYOffset: CGFloat = 0
     @Binding var immersiveReading: Bool
+    @Binding var hideSearchbarWithoutAnimation: Bool
     @Binding var shouldShowEmailView: Bool
     @State private var viewModel = ViewModel()
     @State private var shouldShowSearchView: Bool = false
@@ -53,6 +54,7 @@ struct GCCEmailView: View {
                                                            color: .gray)
                             .padding(.horizontal, Constants.Padding.padding5)
                             .onTapGesture {
+                                hideSearchbarWithoutAnimation = true
                                 shouldShowSearchView.toggle()
                             }
                             
