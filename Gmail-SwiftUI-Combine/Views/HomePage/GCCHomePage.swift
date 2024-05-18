@@ -29,8 +29,9 @@ struct GCCHomePage: View {
     
     var emailView: some View {
         GCCEmailView(immersiveReading: $immersiveReading,
-                     shouldShowEmailView: $shouldShowEmailView,
-                     hideSearchbarWithoutAnimation: $hideSearchbarWithoutAnimation)
+                     hideSearchbarWithoutAnimation: $hideSearchbarWithoutAnimation,
+                     shouldShowEmailView: $shouldShowEmailView)
+    }
     
     var gMeetView: some View {
         GCCGMeetView()
