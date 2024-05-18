@@ -13,7 +13,7 @@ extension View {
         modifier(RippleEffectViewModifier(with: color))
     }
     
-    func firstAppear(_ action: @escaping () -> ()) -> some View {
+    func onFirstAppear(_ action: @escaping () -> ()) -> some View {
         modifier(FirstAppearModifier(action: action))
     }
 }

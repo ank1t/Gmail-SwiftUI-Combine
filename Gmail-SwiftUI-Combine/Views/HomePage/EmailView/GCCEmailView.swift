@@ -27,7 +27,7 @@ struct GCCEmailView: View {
                         GeometryReader { reader in
                             Theme.textFieldBackground(for: colorScheme)
                                 .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
-                                .on {
+                                .onFirstAppear {
                                     searchBarFrame = reader.frame(in: .global)
                                     print("X coordinate: \(searchBarFrame.origin.x + searchBarFrame.size.width)")
                                     print("Y coordinate: \(searchBarFrame.origin.y + searchBarFrame.size.height)")
