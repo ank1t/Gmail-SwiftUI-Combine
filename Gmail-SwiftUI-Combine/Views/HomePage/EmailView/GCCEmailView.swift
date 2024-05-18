@@ -109,11 +109,13 @@ struct GCCEmailView: View {
                 .background(Theme.composeBtnBGColor(for: colorScheme))
                 .foregroundColor(Theme.tintColor(for: colorScheme))
                 .clipShape(viewModel.getClipShapeForComposeBtn(immersiveReading))
-                .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
+                .animation(.easeIn(duration: viewModel.animationDuration),
+                           value: immersiveReading)
             }
             .offset(x: -Constants.Spacing.spacing20,
                     y: viewModel.getVerticalOffsetForComposeBtn(immersiveReading))
-            .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
+            .animation(.easeIn(duration: viewModel.animationDuration),
+                       value: immersiveReading && !shouldShowSearchView)
             
             VStack {
                 Spacer()
