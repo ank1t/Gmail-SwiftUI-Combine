@@ -114,12 +114,16 @@ struct GCCEmailView: View {
                     y: viewModel.getVerticalOffsetForComposeBtn(immersiveReading))
             .animation(.easeIn(duration: viewModel.animationDuration), value: immersiveReading)
             
-            SearchView()
-                .frame(maxWidth: shouldShowSearchView ? 375 : 375,
-                       maxHeight: shouldShowSearchView ? 670 : 1)
-                .position(x: searchBarFrame.origin.x + searchBarFrame.size.width/2,
-                          y: searchBarFrame.origin.y + searchBarFrame.size.height)
-                .animation(.default, value: shouldShowSearchView)
+            VStack {
+                Spacer()
+                    SearchView()
+                    .frame(maxWidth: shouldShowSearchView ? .infinity : 375,
+                           maxHeight: shouldShowSearchView ? .infinity : 1)
+                    .animation(.default, value: shouldShowSearchView)
+                Spacer()
+            }
+            
+
         }
     }
 }
