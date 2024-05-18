@@ -16,7 +16,7 @@ struct FirstAppearModifier: ViewModifier {
         content
             .onAppear {
                 guard !didShowFirstAppearMsg else { return }
-                didShowFirstAppearMsg.toggle()
+                didShowFirstAppearMsg = true
                 action()
             }
     }
