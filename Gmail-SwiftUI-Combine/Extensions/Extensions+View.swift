@@ -12,4 +12,8 @@ extension View {
     func addRippleEffect(with color: Color = .accentColor.opacity(0.5)) -> some View {
         modifier(RippleEffectViewModifier(with: color))
     }
+    
+    func firstAppear(_ action: @escaping () -> ()) -> some View {
+        modifier(FirstAppearModifier(action: action))
+    }
 }
