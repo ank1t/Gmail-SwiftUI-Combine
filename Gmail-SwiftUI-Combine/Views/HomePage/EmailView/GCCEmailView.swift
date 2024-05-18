@@ -122,8 +122,6 @@ struct GCCEmailView: View {
                     .animation(.default, value: shouldShowSearchView)
                 Spacer()
             }
-            
-
         }
     }
 }

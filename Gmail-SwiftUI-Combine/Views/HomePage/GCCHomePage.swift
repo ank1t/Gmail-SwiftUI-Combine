@@ -11,6 +11,7 @@ import SwiftUI
 struct GCCHomePage: View {    
     @State private var shouldShowEmailView: Bool = true
     @State private var immersiveReading: Bool = false
+    @State private var hideSearchbarWithoutAnimation: Bool = false
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
