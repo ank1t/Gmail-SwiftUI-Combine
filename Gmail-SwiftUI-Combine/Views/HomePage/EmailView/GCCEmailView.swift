@@ -13,7 +13,6 @@ struct GCCEmailView: View {
     @State private var scrollOffset: CGPoint = .zero
     @State private var previousYOffset: CGFloat = 0
     @Binding var immersiveReading: Bool
-    @Binding var hideSearchbarWithoutAnimation: Bool
     @Binding var shouldShowEmailView: Bool
     @State private var viewModel = ViewModel()
     @State private var shouldShowSearchView: Bool = false
@@ -54,8 +53,8 @@ struct GCCEmailView: View {
                                                            color: .gray)
                             .padding(.horizontal, Constants.Padding.padding5)
                             .onTapGesture {
-                                hideSearchbarWithoutAnimation = true
                                 shouldShowSearchView.toggle()
+                                immersiveReading.toggle()
                             }
                             
                             Spacer()
@@ -85,7 +84,7 @@ struct GCCEmailView: View {
                     if !immersiveReading {
                         immersiveReading = true
                     }
-                } else if immersiveReading{
+                } else if immersiveReading {
                     immersiveReading = false
                 }
                 previousYOffset = newValue.y
@@ -118,7 +117,7 @@ struct GCCEmailView: View {
             
             VStack {
                 Spacer()
-                SearchView(hideSearchbarWithoutAnimation: $hideSearchbarWithoutAnimation)
+                SearchView()
                     .frame(maxWidth: shouldShowSearchView ? .infinity : Utility.screenSize.width,
                            maxHeight: shouldShowSearchView ? .infinity : 1)
                     .animation(.default, value: shouldShowSearchView)
