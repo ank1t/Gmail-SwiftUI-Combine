@@ -10,11 +10,12 @@ import SwiftUI
 
 struct SearchView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Binding var hideSearchbarWithoutAnimation: Bool
     
     var body: some View {
         VStack {
-            Color.green
-            //Theme.primaryColor(for: colorScheme)
+            Color.red
+//            Theme.primaryColor(for: colorScheme)
         }
     }
 }

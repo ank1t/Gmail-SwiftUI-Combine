@@ -118,11 +118,13 @@ struct GCCEmailView: View {
             
             VStack {
                 Spacer()
-                    SearchView()
-                    .frame(maxWidth: shouldShowSearchView ? .infinity : 375,
+                SearchView(hideSearchbarWithoutAnimation: $hideSearchbarWithoutAnimation)
+                    .frame(maxWidth: shouldShowSearchView ? .infinity : Utility.screenSize.width,
                            maxHeight: shouldShowSearchView ? .infinity : 1)
                     .animation(.default, value: shouldShowSearchView)
-                Spacer()
+                ///10 to account for top padding
+                Spacer(minLength: !shouldShowSearchView ?
+                       Utility.screenSize.height - (searchBarFrame.origin.y + searchBarFrame.size.height + 10) : 0)
             }
         }
     }
