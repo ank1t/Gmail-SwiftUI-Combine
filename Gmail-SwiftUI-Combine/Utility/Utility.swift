@@ -22,6 +22,8 @@ struct Utility {
         case unreadMail = "envelope.badge"
         case shareLink = "share-link"
         case lock = "lock"
+        case mic = "mic.fill"
+        case backChevron = "chevron.backward"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {
