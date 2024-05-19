@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SearchView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Binding var shouldShowSearchView: Bool
     
     var body: some View {
         ZStack {
@@ -24,7 +25,7 @@ struct SearchView: View {
                     Spacer()
                     Image(.mic)
                         .resizable()
-                        .frame(width: Constants.Frame.size15,
+                        .frame(width: Constants.Frame.size14,
                                height: Constants.Frame.size20)
                         .padding(.trailing, Constants.Padding.padding15)
                 }
