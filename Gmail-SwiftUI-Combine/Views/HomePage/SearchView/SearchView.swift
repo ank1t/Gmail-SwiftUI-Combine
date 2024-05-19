@@ -22,6 +22,7 @@ struct SearchView: View {
                         .frame(width: Constants.Frame.size10,
                                height: Constants.Frame.size15)
                         .padding(.leading, Constants.Padding.padding15)
+                        .rotationEffect(Angle(degrees: 180))
                     Spacer()
                     Image(.mic)
                         .resizable()
