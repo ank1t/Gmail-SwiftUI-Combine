@@ -29,6 +29,8 @@ struct SearchView: View {
                                height: Constants.Frame.size20)
                         .padding(.trailing, Constants.Padding.padding15)
                 }
+                
+                Spacer()
             }
         }
     }
