@@ -12,8 +12,23 @@ struct SearchView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        VStack {
+        ZStack {
             Theme.primaryColor(for: colorScheme)
+            VStack {
+                HStack {
+                    Image(.backChevron)
+                        .resizable()
+                        .frame(width: Constants.Frame.size10,
+                               height: Constants.Frame.size15)
+                        .padding(.leading, Constants.Padding.padding15)
+                    Spacer()
+                    Image(.mic)
+                        .resizable()
+                        .frame(width: Constants.Frame.size15,
+                               height: Constants.Frame.size20)
+                        .padding(.trailing, Constants.Padding.padding15)
+                }
+            }
         }
     }
 }

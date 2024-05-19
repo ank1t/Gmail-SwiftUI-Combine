@@ -121,7 +121,7 @@ struct GCCEmailView: View {
                 Spacer()
                 SearchView()
                     .frame(maxWidth: shouldShowSearchView ? .infinity : Utility.screenSize.width,
-                           maxHeight: shouldShowSearchView ? .infinity : 1)
+                           maxHeight: shouldShowSearchView ? .infinity : 0)
                     .animation(.default, value: shouldShowSearchView)
                 ///10 to account for top padding
                 Spacer(minLength: !shouldShowSearchView ?
