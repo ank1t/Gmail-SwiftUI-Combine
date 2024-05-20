@@ -11,7 +11,8 @@ import SwiftUI
 struct SearchView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var shouldShowSearchView: Bool
-    @State private var rotationAngle: Double = 180
+    @State private var rotationAngle: Double = 0
+    @State private var leadingPadding: Double = Constants.Padding.padding35
     
     var body: some View {
         ZStack {
@@ -22,11 +23,14 @@ struct SearchView: View {
                         .resizable()
                         .frame(width: Constants.Frame.size10,
                                height: Constants.Frame.size15)
-                        .padding(.leading, Constants.Padding.padding15)
+                        .padding(.leading, leadingPadding)
                         .rotationEffect(Angle(degrees: rotationAngle))
                         .animation(.linear(duration: 0.1), value: rotationAngle)
                         .onTapGesture {
-                            rotationAngle += 180
+                            rotationAngle += 90
+                        }
+                        .onAppear {
+                            leadingPadding = Constants.Padding.padding15
                         }
                     Spacer()
                     Image(.mic)
