@@ -32,6 +32,7 @@ struct SearchView: View {
                         .animation(.spring(), value: leadingPadding)
                     
                     TextField("Search in mail", text: $textFieldText)
+                        .padding(.leading, Constants.Padding.padding8)
                     
                     Image(.mic)
                         .resizable()

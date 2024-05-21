@@ -159,6 +159,7 @@
 		845F8B0F2BCB5E6F00BEAD4C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				84B2DE852C00118100A61906 /* Search Options */,
 				845F8B3D2BE0802400BEAD4C /* ScrollView */,
 				845F8B292BD4919C00BEAD4C /* Tab bar */,
 				845F8B262BCF4A1000BEAD4C /* Email Row */,
@@ -328,6 +329,13 @@
 				84B2DE812BF19F6600A61906 /* SearchView.swift */,
 			);
 			path = SearchView;
+			sourceTree = "<group>";
+		};
+		84B2DE852C00118100A61906 /* Search Options */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Search Options";
 			sourceTree = "<group>";
 		};
 		84D926D22BEC5E7D00787E38 /* MeetView */ = {
