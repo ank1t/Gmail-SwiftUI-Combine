@@ -25,23 +25,23 @@ struct SearchView: View {
                                height: Constants.Frame.size15)
                         .padding(.leading, leadingPadding)
                         .rotationEffect(Angle(degrees: rotationAngle))
-                        .animation(.linear(duration: 0.1), value: rotationAngle)
-                        .onTapGesture {
-                            rotationAngle += 90
-                        }
                         .onAppear {
                             leadingPadding = Constants.Padding.padding15
                         }
+                        .animation(.spring(), value: leadingPadding)
                     Spacer()
                     Image(.mic)
                         .resizable()
                         .frame(width: Constants.Frame.size14,
                                height: Constants.Frame.size20)
-                        .padding(.trailing, Constants.Padding.padding15)
+                        .padding(.trailing, Constants.Padding.padding20)
                 }
                 
+                Divider()
+                    .padding(.top, Constants.Padding.padding15)
                 Spacer()
             }
+            .padding(.top, Constants.Padding.padding10)
         }
     }
 }
