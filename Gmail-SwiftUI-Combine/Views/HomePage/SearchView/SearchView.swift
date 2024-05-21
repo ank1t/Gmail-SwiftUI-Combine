@@ -13,6 +13,7 @@ struct SearchView: View {
     @Binding var shouldShowSearchView: Bool
     @State private var rotationAngle: Double = 0
     @State private var leadingPadding: Double = Constants.Padding.padding35
+    @State private var textFieldText: String = ""
     
     var body: some View {
         ZStack {
@@ -29,7 +30,9 @@ struct SearchView: View {
                             leadingPadding = Constants.Padding.padding15
                         }
                         .animation(.spring(), value: leadingPadding)
-                    Spacer()
+                    
+                    TextField("Search in mail", text: $textFieldText)
+                    
                     Image(.mic)
                         .resizable()
                         .frame(width: Constants.Frame.size14,
