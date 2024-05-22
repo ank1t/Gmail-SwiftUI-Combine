@@ -43,7 +43,14 @@ struct SearchView: View {
                 
                 Divider()
                     .padding(.top, Constants.Padding.padding15)
-                Spacer()
+                    .padding(.bottom, Constants.Padding.padding10)
+                
+                
+                ScrollView(.horizontal) {
+                    ForEach(["","","",""]) { title in
+                        SearchOptionsChip()
+                    }
+                }
             }
             .padding(.top, Constants.Padding.padding10)
         }
