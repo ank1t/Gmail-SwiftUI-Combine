@@ -47,8 +47,10 @@ struct SearchView: View {
                 
                 
                 ScrollView(.horizontal) {
-                    ForEach(["","","",""]) { title in
-                        SearchOptionsChip()
+                    HStack {
+                        ForEach(0..<40) { title in
+                            SearchOptionsChip()
+                        }
                     }
                 }
             }
