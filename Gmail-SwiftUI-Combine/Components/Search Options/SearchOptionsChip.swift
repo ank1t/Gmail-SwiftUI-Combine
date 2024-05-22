@@ -10,11 +10,14 @@ import SwiftUI
 
 struct SearchOptionsChip: View {
     let title: String = "title"
-    let shouldShowDropdownArrow: Bool = false
+    let shouldShowDropdownArrow: Bool = true
     
     var body: some View {
         HStack {
-            Text(title)
+            Text(title.capitalized)
+                .setFont(.callout, color: .gray)
+                .padding(.horizontal, Constants.Padding.padding15)
+            
             if shouldShowDropdownArrow {
                 Image(.dropdownArrow)
                     .resizable()

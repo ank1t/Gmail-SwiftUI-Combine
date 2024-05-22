@@ -46,7 +46,7 @@ struct SearchView: View {
                     .padding(.bottom, Constants.Padding.padding10)
                 
                 
-                ScrollView(.horizontal) {
+                ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(0..<40) { title in
                             SearchOptionsChip()
