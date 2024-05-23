@@ -30,7 +30,7 @@ struct SearchOptionsChip: View {
         .padding([.vertical, .horizontal], Constants.Padding.padding5)
         .overlay(
             Capsule()
-                .stroke(.white, lineWidth: 1))
+                .stroke(.gray, lineWidth: 1))
         
     }
 }
