@@ -47,11 +47,13 @@ struct SearchView: View {
                 
                 
                 ScrollView(.horizontal, showsIndicators: false) {
+                    HStack { }
                     HStack(spacing: Constants.Spacing.spacing12) {
                         ForEach(0..<8) { title in
                             SearchOptionsChip()
                         }
                     }
+                    HStack { }
                 }
                 Spacer()
             }
