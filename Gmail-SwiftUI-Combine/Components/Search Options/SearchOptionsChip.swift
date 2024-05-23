@@ -16,19 +16,21 @@ struct SearchOptionsChip: View {
         HStack {
             Text(title.capitalized)
                 .setFont(.callout, color: .gray)
-                .padding(.leading, Constants.Padding.padding8)
+                .padding(.leading, Constants.Padding.padding5)
                 .padding(.trailing, Constants.Padding.padding5)
             
             if shouldShowDropdownArrow {
                 Image(.dropdownArrow)
                     .resizable()
                     .frame(width: Constants.Frame.size8,
-                           height: Constants.Frame.size8)
+                           height: Constants.Frame.size5)
+                    .padding(.trailing, Constants.Padding.padding5)
             }
         }
-        .padding([.vertical, .horizontal], Constants.Padding.padding8)
-        .border(.gray)
-        .clipShape(Capsule())
+        .padding([.vertical, .horizontal], Constants.Padding.padding5)
+        .overlay(
+            Capsule()
+                .stroke(.white, lineWidth: 1))
         
     }
 }

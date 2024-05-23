@@ -47,6 +47,7 @@ struct SearchView: View {
                 
                 
                 ScrollView(.horizontal, showsIndicators: false) {
+                    EmptyView()
                     HStack {
                         ForEach(0..<40) { title in
                             SearchOptionsChip()
