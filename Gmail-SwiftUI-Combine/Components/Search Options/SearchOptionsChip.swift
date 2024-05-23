@@ -16,7 +16,8 @@ struct SearchOptionsChip: View {
         HStack {
             Text(title.capitalized)
                 .setFont(.callout, color: .gray)
-                .padding(.horizontal, Constants.Padding.padding8)
+                .padding(.leading, Constants.Padding.padding8)
+                .padding(.trailing, Constants.Padding.padding5)
             
             if shouldShowDropdownArrow {
                 Image(.dropdownArrow)
@@ -25,7 +26,7 @@ struct SearchOptionsChip: View {
                            height: Constants.Frame.size8)
             }
         }
-        .padding()
+        .padding([.vertical, .horizontal], Constants.Padding.padding8)
         .border(.gray)
         .clipShape(Capsule())
         
