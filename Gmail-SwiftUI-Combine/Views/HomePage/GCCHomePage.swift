@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct GCCHomePage: View {    
-    @State private var shouldShowEmailView: Bool = true
     @State private var immersiveReading: Bool = false
     @Environment(\.colorScheme) var colorScheme
     
@@ -25,8 +24,7 @@ struct GCCHomePage: View {
     }
     
     var emailView: some View {
-        GCCEmailView(immersiveReading: $immersiveReading,
-                     shouldShowEmailView: $shouldShowEmailView)
+        GCCEmailView(immersiveReading: $immersiveReading)
     }
     
     var gMeetView: some View {

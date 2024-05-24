@@ -13,7 +13,6 @@ struct GCCEmailView: View {
     @State private var scrollOffset: CGPoint = .zero
     @State private var previousYOffset: CGFloat = 0
     @Binding var immersiveReading: Bool
-    @Binding var shouldShowEmailView: Bool
     @State private var viewModel = ViewModel()
     @State private var shouldShowSearchView: Bool = false
     @State private var searchBarFrame: CGRect = .zero
@@ -53,8 +52,8 @@ struct GCCEmailView: View {
                                                            color: .gray)
                             .padding(.horizontal, Constants.Padding.padding5)
                             .onTapGesture {
-                                shouldShowSearchView.toggle()
-                                immersiveReading.toggle()
+                                shouldShowSearchView    = true
+                                immersiveReading = true
                             }
                             
                             Spacer()
@@ -115,7 +114,7 @@ struct GCCEmailView: View {
             .offset(x: -Constants.Spacing.spacing20,
                     y: viewModel.getVerticalOffsetForComposeBtn(immersiveReading))
             .animation(.easeIn(duration: viewModel.animationDuration),
-                       value: immersiveReading && !shouldShowSearchView)
+                       value: immersiveReading)
             
             VStack {
                 Spacer()
@@ -124,6 +123,11 @@ struct GCCEmailView: View {
                            maxHeight: shouldShowSearchView ? .infinity : 0)
                     .opacity(shouldShowSearchView ? 1 : 0)
                     .animation(.default, value: shouldShowSearchView)
+                    .onChange(of: shouldShowSearchView) { newValue in
+                        if !newValue {
+                            immersiveReading = false
+                        }
+                    }
                 ///10 to account for top padding
                 Spacer(minLength: !shouldShowSearchView ?
                        Utility.screenSize.height - (searchBarFrame.origin.y + searchBarFrame.size.height + 10) : 0)

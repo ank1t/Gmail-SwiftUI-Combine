@@ -30,7 +30,7 @@ struct SearchView: View {
                             leadingPadding = Constants.Padding.padding15
                         }
                         .onTapGesture {
-                            shouldShowSearchView.toggle()
+                            shouldShowSearchView = false
                         }
                         .animation(.spring(), value: leadingPadding)
                     
