@@ -29,6 +29,9 @@ struct SearchView: View {
                         .onAppear {
                             leadingPadding = Constants.Padding.padding15
                         }
+                        .onTapGesture {
+                            shouldShowSearchView.toggle()
+                        }
                         .animation(.spring(), value: leadingPadding)
                     
                     TextField("Search in mail", text: $textFieldText)

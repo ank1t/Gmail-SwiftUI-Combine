@@ -9,5 +9,5 @@ import Foundation
 import SwiftUI
 
 struct GCCEmail: Codable {
-    
+     
 }
