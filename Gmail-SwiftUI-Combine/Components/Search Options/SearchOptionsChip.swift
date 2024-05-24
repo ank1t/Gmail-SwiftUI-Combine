@@ -22,8 +22,8 @@ struct SearchOptionsChip: View {
             if shouldShowDropdownArrow {
                 Image(.dropdownArrow)
                     .resizable()
-                    .frame(width: Constants.Frame.size8,
-                           height: Constants.Frame.size5)
+                    .frame(width: Constants.Frame.size5,
+                           height: Constants.Frame.size3)
                     .padding(.trailing, Constants.Padding.padding5)
             }
         }
