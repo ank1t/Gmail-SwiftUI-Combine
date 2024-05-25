@@ -10,6 +10,16 @@ import SwiftUI
 
 struct RecentSearches: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(.history)
+                .resizable()
+                .frame(width: Constants.Frame.size20,
+                       height: Constants.Frame.size20)
+                .background(.gray)
+                .clipShape(Circle())
+                .padding(.horizontal, Constants.Padding.padding15)
+            
+            Text("Recent search")
+        }
     }
 }
