@@ -15,7 +15,7 @@ struct GCCEmailView: View {
     @Binding var immersiveReading: Bool
     @State private var viewModel = ViewModel()
     @State private var shouldShowSearchView: Bool = false
-    @State private var searchBarFrame: CGRect = .zero
+    @Binding var searchBarFrame: CGRect
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -28,11 +28,6 @@ struct GCCEmailView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
                                 .onFirstAppear {
                                     searchBarFrame = reader.frame(in: .global)
-                                    print("X coordinate: \(searchBarFrame.origin.x + searchBarFrame.size.width)")
-                                    print("Y coordinate: \(searchBarFrame.origin.y + searchBarFrame.size.height)")
-                                    print("Search bar frame origin \(searchBarFrame.origin)")
-                                    print("Search bar frame size \(searchBarFrame.size)")
-                                    
                                 }
                         }
                         /*
@@ -52,7 +47,7 @@ struct GCCEmailView: View {
                                                            color: .gray)
                             .padding(.horizontal, Constants.Padding.padding5)
                             .onTapGesture {
-                                shouldShowSearchView    = true
+                                shouldShowSearchView = true
                                 immersiveReading = true
                             }
                             

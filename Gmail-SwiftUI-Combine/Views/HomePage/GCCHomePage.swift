@@ -11,6 +11,7 @@ import SwiftUI
 struct GCCHomePage: View {    
     @State private var immersiveReading: Bool = false
     @State private var shouldShowEmailView: Bool = true
+    @State private var searchBarFrame: CGRect = .zero
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -26,7 +27,8 @@ struct GCCHomePage: View {
     }
     
     var emailView: some View {
-        GCCEmailView(immersiveReading: $immersiveReading)
+        GCCEmailView(immersiveReading: $immersiveReading,
+                     searchBarFrame: $searchBarFrame)
     }
     
     var gMeetView: some View {
