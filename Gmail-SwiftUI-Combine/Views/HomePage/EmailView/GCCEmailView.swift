@@ -30,12 +30,6 @@ struct GCCEmailView: View {
                                     searchBarFrame = reader.frame(in: .global)
                                 }
                         }
-                        /*
-                         X coordinate: 355.0
-                         Y coordinate: 105.0
-                         Search bar frame origin (20.0, 105.0)
-                         Search bar frame size (335.0, 0.0)
-                         */
                         HStack(spacing: Constants.Spacing.spacing10) {
                             Image(.moreMenu)
                                 .resizable()
