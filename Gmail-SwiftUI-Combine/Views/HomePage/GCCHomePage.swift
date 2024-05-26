@@ -10,6 +10,8 @@ import SwiftUI
 
 struct GCCHomePage: View {    
     @State private var immersiveReading: Bool = false
+    @State private var shouldShowEmailView: Bool = true
+    
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
