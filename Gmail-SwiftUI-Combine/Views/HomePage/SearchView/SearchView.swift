@@ -63,13 +63,12 @@ struct SearchView: View {
             }
             .padding(.top, Constants.Padding.padding10)
         }
-    }
-    .task {
-        do {
-            let filters = await NetworkingManager.shared.getSerchFilters()
-            
-        } catch {
-            
+        .task {
+            do {
+                let filters = await NetworkingManager.shared.getSearchFilters()
+            } catch {
+                print("Get search filters call failed")
+            }
         }
     }
 }

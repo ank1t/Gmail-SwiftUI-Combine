@@ -13,7 +13,15 @@ class NetworkingManager {
     
     func getLatestEmails() { }
     
-    func getSerchFilters() async ->  {
-        return 
+    func getSearchFilters() async -> SearchFilters? {
+        if let path = Bundle.main.path(forResource: "search_filters", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path))
+                return try JSONDecoder().decode(SearchFilters.self, from: data)
+            } catch {
+                print("Error parsing search filters")
+            }
+        }
+        return nil
     }
 }
