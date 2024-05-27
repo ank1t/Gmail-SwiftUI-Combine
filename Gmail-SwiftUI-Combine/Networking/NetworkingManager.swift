@@ -12,4 +12,8 @@ class NetworkingManager {
     private init() { }
     
     func getLatestEmails() { }
+    
+    func getSerchFilters() async ->  {
+        return 
+    }
 }

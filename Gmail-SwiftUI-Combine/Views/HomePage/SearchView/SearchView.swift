@@ -48,7 +48,6 @@ struct SearchView: View {
                     .padding(.top, Constants.Padding.padding15)
                     .padding(.bottom, Constants.Padding.padding10)
                 
-                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: Constants.Spacing.spacing12) {
                         Color.clear.frame(width: Constants.Frame.size5,
@@ -63,6 +62,14 @@ struct SearchView: View {
                 Spacer()
             }
             .padding(.top, Constants.Padding.padding10)
+        }
+    }
+    .task {
+        do {
+            let filters = await NetworkingManager.shared.getSerchFilters()
+            
+        } catch {
+            
         }
     }
 }

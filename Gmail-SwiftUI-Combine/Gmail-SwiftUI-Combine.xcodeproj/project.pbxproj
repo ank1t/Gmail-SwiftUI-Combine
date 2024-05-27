@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451934F2C055CBF00B1F6AD /* SearchFilters.swift */; };
 		845F8B112BCB63EF00BEAD4C /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */; };
 		845F8B132BCB646400BEAD4C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B122BCB646400BEAD4C /* Utility.swift */; };
 		845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */; };
@@ -62,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		845168CC2BC8BE6800E778AE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8451934E2C055C2300B1F6AD /* search_filters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_filters.json; sourceTree = "<group>"; };
+		8451934F2C055CBF00B1F6AD /* SearchFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilters.swift; sourceTree = "<group>"; };
 		845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		845F8B122BCB646400BEAD4C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCHomePage.swift; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				845F8B332BD4995D00BEAD4C /* GCCEmail.swift */,
+				8451934F2C055CBF00B1F6AD /* SearchFilters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +240,7 @@
 		845F8B352BD4997300BEAD4C /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				8451934E2C055C2300B1F6AD /* search_filters.json */,
 				845F8B362BD49A1B00BEAD4C /* emails.json */,
 			);
 			path = JSON;
@@ -539,6 +544,7 @@
 				845F8B252BCE0C3A00BEAD4C /* Extensions+Image.swift in Sources */,
 				845F8B1A2BCDF20000BEAD4C /* Theme.swift in Sources */,
 				845F8B312BD4979A00BEAD4C /* GCCMenu.swift in Sources */,
+				845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */,
 				845F8B1D2BCDF43D00BEAD4C /* Constants.swift in Sources */,
 				845F8B342BD4995D00BEAD4C /* GCCEmail.swift in Sources */,
 				84D926D12BEB0EB200787E38 /* GMeetView.swift in Sources */,
