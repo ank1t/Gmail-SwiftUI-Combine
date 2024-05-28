@@ -14,6 +14,7 @@ struct SearchView: View {
     @State private var rotationAngle: Double = 0
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
+    @State private var searchFilters: SearchFilters?
     
     var body: some View {
         ZStack {
@@ -52,8 +53,8 @@ struct SearchView: View {
                     HStack(spacing: Constants.Spacing.spacing12) {
                         Color.clear.frame(width: Constants.Frame.size5,
                                           height: Constants.Frame.size10)
-                        ForEach(0..<8) { title in
-                            SearchOptionsChip()
+                        ForEach(searchFilters?.filters ?? [], id: \.self) { title in
+                            SearchOptionsChip(title: title)
                         }
                         Color.clear.frame(width: Constants.Frame.size5,
                                           height: Constants.Frame.size10)
@@ -66,8 +67,7 @@ struct SearchView: View {
         .task {
             do {
                 let filters = await NetworkingManager.shared.getSearchFilters()
-            } catch {
-                print("Get search filters call failed")
+                searchFilters = filters
             }
         }
     }

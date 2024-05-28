@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SearchOptionsChip: View {
-    let title: String = "title"
+    let title: String
     let shouldShowDropdownArrow: Bool = true
     
     var body: some View {

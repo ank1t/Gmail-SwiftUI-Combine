@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451934F2C055CBF00B1F6AD /* SearchFilters.swift */; };
+		845193512C05639100B1F6AD /* search_filters.json in Resources */ = {isa = PBXBuildFile; fileRef = 8451934E2C055C2300B1F6AD /* search_filters.json */; };
 		845F8B112BCB63EF00BEAD4C /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */; };
 		845F8B132BCB646400BEAD4C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B122BCB646400BEAD4C /* Utility.swift */; };
 		845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */; };
@@ -496,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847A822F2BC61ED0008A47BE /* Preview Assets.xcassets in Resources */,
+				845193512C05639100B1F6AD /* search_filters.json in Resources */,
 				847A822C2BC61ED0008A47BE /* Assets.xcassets in Resources */,
 				845F8B372BD49A1B00BEAD4C /* emails.json in Resources */,
 			);

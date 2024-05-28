@@ -1,3 +1,9 @@
-[
-    ""
-]
+{
+    "filters": ["Label",
+                "From",
+                "To",
+                "Attachment",
+                "Date",
+                "isUnread",
+                "Excludes calendar updates"]
+}
