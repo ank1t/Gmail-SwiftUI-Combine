@@ -12,6 +12,12 @@ protocol TitleImageName {
     var icon: String { get }
 }
 
+protocol ImageTitleSubtitle {
+    var title: String { get }
+    var subtitle: String { get }
+    var icon: String { get }
+}
+
 struct SearchFilters: Codable {
     let filters: [SearchFilter]
 }
@@ -24,12 +30,13 @@ struct SearchFilter: Codable, Identifiable {
     let labelOptions: [LabelOptions]?
 }
 
-struct AttachmentOptions: Codable, TitleImageName {
+struct AttachmentLabelOptions: Codable, TitleImageName {
     let title: String
     let icon: String
 }
 
-struct LabelOptions: Codable, TitleImageName {
+struct FromToOptions: Codable, ImageTitleSubtitle {
     let title: String
+    let subtitle: String
     let icon: String
 }
