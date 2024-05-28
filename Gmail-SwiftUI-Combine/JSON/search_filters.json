@@ -1,9 +1,28 @@
 {
-    "filters": ["Label",
-                "From",
-                "To",
-                "Attachment",
-                "Date",
-                "isUnread",
-                "Excludes calendar updates"]
+    "filters": [
+        {
+            "title": "Label",
+            "isDropdown": true
+        },
+        {
+            "title": "From",
+            "isDropdown": true
+        },
+        {
+            "title": "To",
+            "isDropdown": true
+        },
+        {   "title": "Attachment",
+            "isDropdown": true
+        },
+        {   "title": "Date",
+            "isDropdown": true
+        },
+        {   "title": "Is unread",
+            "isDropdown": false
+        },
+        {   "title": "Excludes calendar updates",
+            "isDropdown": false
+        }
+    ]
 }

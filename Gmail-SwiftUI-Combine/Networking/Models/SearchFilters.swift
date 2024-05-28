@@ -8,5 +8,11 @@
 import Foundation
 
 struct SearchFilters: Codable {
-    let filters: [String]
+    let filters: [SearchFilter]
+}
+
+struct SearchFilter: Codable, Identifiable {
+    let id = UUID()
+    let title: String
+    let isDropdown: Bool
 }

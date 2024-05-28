@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SearchOptionsChip: View {
     let title: String
-    let shouldShowDropdownArrow: Bool = true
+    let isDropdown: Bool
     
     var body: some View {
         HStack {
@@ -19,7 +19,7 @@ struct SearchOptionsChip: View {
                 .padding(.leading, Constants.Padding.padding5)
                 .padding(.trailing, Constants.Padding.padding5)
             
-            if shouldShowDropdownArrow {
+            if isDropdown {
                 Image(.dropdownArrow)
                     .resizable()
                     .frame(width: Constants.Frame.size5,

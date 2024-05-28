@@ -53,8 +53,11 @@ struct SearchView: View {
                     HStack(spacing: Constants.Spacing.spacing12) {
                         Color.clear.frame(width: Constants.Frame.size5,
                                           height: Constants.Frame.size10)
-                        ForEach(searchFilters?.filters ?? [], id: \.self) { title in
-                            SearchOptionsChip(title: title)
+                        if let filters = searchFilters?.filters {
+                            ForEach(filters) { filter in
+                                SearchOptionsChip(title: filter.title,
+                                                  isDropdown: filter.isDropdown)
+                            }
                         }
                         Color.clear.frame(width: Constants.Frame.size5,
                                           height: Constants.Frame.size10)
@@ -66,8 +69,7 @@ struct SearchView: View {
         }
         .task {
             do {
-                let filters = await NetworkingManager.shared.getSearchFilters()
-                searchFilters = filters
+                searchFilters = await NetworkingManager.shared.getSearchFilters()
             }
         }
     }
