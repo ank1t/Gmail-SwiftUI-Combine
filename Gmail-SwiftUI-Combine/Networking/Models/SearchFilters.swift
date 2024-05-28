@@ -7,6 +7,11 @@
         
 import Foundation
 
+protocol TitleImageName {
+    var title: String { get }
+    var icon: String { get }
+}
+
 struct SearchFilters: Codable {
     let filters: [SearchFilter]
 }
@@ -16,8 +21,15 @@ struct SearchFilter: Codable, Identifiable {
     let title: String
     let isDropdown: Bool
     let attachmentOptions: [AttachmentOptions]?
+    let labelOptions: [LabelOptions]?
 }
 
-struct AttachmentOptions: Codable {
-    let 
+struct AttachmentOptions: Codable, TitleImageName {
+    let title: String
+    let icon: String
+}
+
+struct LabelOptions: Codable, TitleImageName {
+    let title: String
+    let icon: String
 }

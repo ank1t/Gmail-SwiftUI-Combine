@@ -2,7 +2,48 @@
     "filters": [
         {
             "title": "Label",
-            "isDropdown": true
+            "isDropdown": true,
+            "labelOptions": [
+                {
+                    "icon": "star.circle",
+                    "title": "Starred"
+                },{
+                    "icon": "envelope.circle",
+                    "title": "Scheduled"
+                },
+                {
+                    "icon": "gauge.high",
+                    "title": "Important"
+                },
+                {
+                    "icon": "paperplane.circle",
+                    "title": "Sent"
+                },
+                {
+                    "icon": "clock.arrow.circlepath",
+                    "title": "Snoozed"
+                },
+                {
+                    "icon": "doc.circle",
+                    "title": "Drafts"
+                },
+                {
+                    "icon": "tray.circle",
+                    "title": "All mail"
+                },
+                {
+                    "icon": "airplane.circle",
+                    "title": "Travel"
+                },
+                {
+                    "icon": "cart.circle",
+                    "title": "Purchases"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label"
+                },
+            ]
         },
         {
             "title": "From",
