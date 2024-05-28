@@ -15,6 +15,7 @@ struct SearchView: View {
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
     @State private var searchFilters: SearchFilters?
+    @State private var dropdownSheetIsPresented: Bool = false
     
     var body: some View {
         ZStack {
@@ -57,6 +58,9 @@ struct SearchView: View {
                             ForEach(filters) { filter in
                                 SearchOptionsChip(title: filter.title,
                                                   isDropdown: filter.isDropdown)
+                                .onTapGesture {
+                                    dropdownSheetIsPresented.toggle()
+                                }
                             }
                         }
                         Color.clear.frame(width: Constants.Frame.size5,
@@ -67,6 +71,9 @@ struct SearchView: View {
             }
             .padding(.top, Constants.Padding.padding10)
         }
+        .sheet(isPresented: $dropdownSheetIsPresented, content: {
+            EmptyView()
+        })
         .task {
             do {
                 searchFilters = await NetworkingManager.shared.getSearchFilters()

@@ -14,7 +14,7 @@
         },
         {   "title": "Attachment",
             "isDropdown": true,
-            "dropdownOptions": [
+            "attachmentOptions": [
             {
                 "icon": "paperclip.circle",
                 "title": "Has any attachement"
