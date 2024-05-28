@@ -13,7 +13,36 @@
             "isDropdown": true
         },
         {   "title": "Attachment",
-            "isDropdown": true
+            "isDropdown": true,
+            "dropdownOptions": [
+            {
+                "icon": "paperclip.circle",
+                "title": "Has any attachement"
+            },{
+                "icon": "doc.circle",
+                "title": "Document"
+            },
+            {
+                "icon": "folder.circle",
+                "title": "Presentation"
+            },
+            {
+                "icon": "shekelsign.circle",
+                "title": "Spreadsheet"
+            },
+            {
+                "icon": "photo.circle",
+                "title": "Image"
+            },
+            {
+                "icon": "doc.circle",
+                "title": "PDF"
+            },
+            {
+                "icon": "video.circle",
+                "title": "Video"
+            },
+            ]
         },
         {   "title": "Date",
             "isDropdown": true

@@ -15,4 +15,9 @@ struct SearchFilter: Codable, Identifiable {
     let id = UUID()
     let title: String
     let isDropdown: Bool
+    let dropdownOptions: [DropdownOptions]
+}
+
+struct DropdownOptions: Codable {
+    
 }
