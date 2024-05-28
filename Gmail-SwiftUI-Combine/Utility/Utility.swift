@@ -26,6 +26,7 @@ struct Utility {
         case backChevron = "chevron.backward"
         case dropdownArrow = "arrowtriangle.down.fill"
         case history = "clock.arrow.circlepath"
+        case close = "xmark"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {

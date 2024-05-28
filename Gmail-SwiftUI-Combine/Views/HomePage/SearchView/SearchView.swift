@@ -72,7 +72,7 @@ struct SearchView: View {
             .padding(.top, Constants.Padding.padding10)
         }
         .sheet(isPresented: $dropdownSheetIsPresented, content: {
-            EmptyView()
+            AttachmentLabelOptionsView(title: "Label")
         })
         .task {
             do {
