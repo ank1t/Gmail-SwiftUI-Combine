@@ -8,6 +8,10 @@
 import Foundation
 
 struct SearchFilters: Codable {
-    let name: String
+    let filters: [Filter]
     
+}
+
+struct Filter: Codable {
+    let filterName: String
 }
