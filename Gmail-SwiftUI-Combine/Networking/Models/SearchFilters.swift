@@ -37,7 +37,7 @@ struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
 }
 
 struct FromToOptions: Codable, ImageTitleSubtitle {
-    let title: String
-    let subtitle: String
+    let name: String
+    let email: String
     let icon: String
 }
