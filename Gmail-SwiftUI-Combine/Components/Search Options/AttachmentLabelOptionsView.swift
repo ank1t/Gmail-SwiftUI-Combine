@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AttachmentLabelOptionsView: View {
-    let title: String
+    let type: ViewType
+    @Binding var textFieldText: String
     
     var body: some View {
         VStack {
@@ -19,14 +20,43 @@ struct AttachmentLabelOptionsView: View {
                            height: Constants.Frame.size12)
                     .padding(.horizontal, Constants.Padding.padding20)
                 
-                Text(title)
+                Text(type.title)
                     .setFont(.subheadline, color: .white)
                 
                 Spacer()
             }
             .padding(.vertical, Constants.Padding.padding20)
             
-            Spacer()
+            if let placeholder = type.textfieldPlaceholder {
+                Divider()
+                TextField(placeholder, text: $textFieldText)
+            }
+            Divider()
+        }
+    }
+}
+
+extension AttachmentLabelOptionsView {
+    enum ViewType {
+        case attachments
+        case label
+        
+        var title: String {
+            switch self {
+                case .attachments:
+                    return "Attachment"
+                case .label:
+                    return "Label"
+            }
+        }
+        
+        var textfieldPlaceholder: String? {
+            switch self {
+                case .label:
+                    return "Search labels"
+                default:
+                    return nil
+            }
         }
     }
 }

@@ -14,6 +14,7 @@ struct SearchView: View {
     @State private var rotationAngle: Double = 0
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
+    @State private var labelSearchText: String = ""
     @State private var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
     
@@ -72,7 +73,8 @@ struct SearchView: View {
             .padding(.top, Constants.Padding.padding10)
         }
         .sheet(isPresented: $dropdownSheetIsPresented, content: {
-            AttachmentLabelOptionsView(title: "Label")
+            AttachmentLabelOptionsView(type: .label,
+                                       textFieldText: $labelSearchText)
         })
         .task {
             do {
