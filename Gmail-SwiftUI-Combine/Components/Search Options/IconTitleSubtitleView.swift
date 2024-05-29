@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct IconTitleSubtitleView: View {
+    let icon: String
+    let name: String
+    let email: String
+    
     var body: some View {
         HStack(alignment: .center) {
             Image()

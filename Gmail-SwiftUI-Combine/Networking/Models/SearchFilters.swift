@@ -13,8 +13,8 @@ protocol TitleImageName {
 }
 
 protocol ImageTitleSubtitle {
-    var title: String { get }
-    var subtitle: String { get }
+    var name: String { get }
+    var email: String { get }
     var icon: String { get }
 }
 
