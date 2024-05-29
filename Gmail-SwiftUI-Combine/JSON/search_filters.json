@@ -3,7 +3,7 @@
         {
             "title": "Label",
             "isDropdown": true,
-            "labelOptions": [
+            "attachmentLabelOptions": [
                 {
                     "icon": "star.circle",
                     "title": "Starred"
@@ -55,7 +55,7 @@
         },
         {   "title": "Attachment",
             "isDropdown": true,
-            "attachmentOptions": [
+            "attachmentLabelOptions": [
             {
                 "icon": "paperclip.circle",
                 "title": "Has any attachement"

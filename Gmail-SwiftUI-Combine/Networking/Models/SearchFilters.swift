@@ -29,7 +29,8 @@ struct SearchFilter: Codable, Identifiable {
     let attachmentLabelOptions: [AttachmentLabelOptions]?
 }
 
-struct AttachmentLabelOptions: Codable, TitleImageName {
+struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
+    let id = UUID()
     let title: String
     let icon: String
 }

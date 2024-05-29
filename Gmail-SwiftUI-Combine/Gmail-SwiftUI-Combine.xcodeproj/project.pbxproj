@@ -10,6 +10,7 @@
 		845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451934F2C055CBF00B1F6AD /* SearchFilters.swift */; };
 		845193512C05639100B1F6AD /* search_filters.json in Resources */ = {isa = PBXBuildFile; fileRef = 8451934E2C055C2300B1F6AD /* search_filters.json */; };
 		845193542C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */; };
+		845193562C06ACDF00B1F6AD /* IconTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845193552C06ACDF00B1F6AD /* IconTitleView.swift */; };
 		845F8B112BCB63EF00BEAD4C /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */; };
 		845F8B132BCB646400BEAD4C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B122BCB646400BEAD4C /* Utility.swift */; };
 		845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */; };
@@ -68,6 +69,7 @@
 		8451934E2C055C2300B1F6AD /* search_filters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_filters.json; sourceTree = "<group>"; };
 		8451934F2C055CBF00B1F6AD /* SearchFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilters.swift; sourceTree = "<group>"; };
 		845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentLabelOptionsView.swift; sourceTree = "<group>"; };
+		845193552C06ACDF00B1F6AD /* IconTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleView.swift; sourceTree = "<group>"; };
 		845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		845F8B122BCB646400BEAD4C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCHomePage.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			children = (
 				84B2DE862C0011A300A61906 /* SearchOptionsChip.swift */,
 				845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */,
+				845193552C06ACDF00B1F6AD /* IconTitleView.swift */,
 			);
 			path = "Search Options";
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				847A82282BC61ECB008A47BE /* Gmail_SwiftUI_CombineApp.swift in Sources */,
 				84B2DE822BF19F6600A61906 /* SearchView.swift in Sources */,
 				84B2DE842BFED7E900A61906 /* FirstAppearModifier.swift in Sources */,
+				845193562C06ACDF00B1F6AD /* IconTitleView.swift in Sources */,
 				845F8B252BCE0C3A00BEAD4C /* Extensions+Image.swift in Sources */,
 				845193542C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift in Sources */,
 				845F8B1A2BCDF20000BEAD4C /* Theme.swift in Sources */,

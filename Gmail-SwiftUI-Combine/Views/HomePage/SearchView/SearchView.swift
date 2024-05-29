@@ -73,8 +73,11 @@ struct SearchView: View {
             .padding(.top, Constants.Padding.padding10)
         }
         .sheet(isPresented: $dropdownSheetIsPresented, content: {
-            AttachmentLabelOptionsView(type: .label,
-                                       textFieldText: $labelSearchText)
+            if let options = searchFilters?.filters.first {
+                AttachmentLabelOptionsView(type: .label,
+                                           textFieldText: $labelSearchText,
+                                           options: options.attachmentLabelOptions ?? [])
+            }
         })
         .task {
             do {

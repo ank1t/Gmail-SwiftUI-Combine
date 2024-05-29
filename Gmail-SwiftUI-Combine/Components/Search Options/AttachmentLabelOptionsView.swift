@@ -10,6 +10,7 @@ import SwiftUI
 struct AttachmentLabelOptionsView: View {
     let type: ViewType
     @Binding var textFieldText: String
+    let options: [AttachmentLabelOptions]
     
     var body: some View {
         VStack {
@@ -25,13 +26,24 @@ struct AttachmentLabelOptionsView: View {
                 
                 Spacer()
             }
-            .padding(.vertical, Constants.Padding.padding20)
+            .padding(.top, Constants.Padding.padding20)
+            .padding(.bottom, Constants.Padding.padding10)
             
             if let placeholder = type.textfieldPlaceholder {
                 Divider()
                 TextField(placeholder, text: $textFieldText)
+                    .padding(.leading, Constants.Padding.padding25)
             }
             Divider()
+            
+            ScrollView {
+                VStack {
+                    ForEach(options) { option in
+                        IconTitleView(icon: option.icon,
+                                      title: option.title)
+                    }
+                }
+            }
         }
     }
 }
