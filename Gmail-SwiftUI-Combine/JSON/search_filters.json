@@ -55,11 +55,64 @@
         },
         {
             "title": "From",
-            "isDropdown": true
+            "isDropdown": true,
+            "fromToOptions": [
+                {
+                    "icon": "",
+                    "name": "First Name",
+                    "email": "first.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Second Name",
+                    "email": "second.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Third Name",
+                    "email": "third.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Fourth Name",
+                    "email": "fourth.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Fifth Name",
+                    "email": "fifth.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Sixth Name",
+                    "email": "sixth.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Seventh Name",
+                    "email": "seventh.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Eighth Name",
+                    "email": "eighth.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Ninth Name",
+                    "email": "ninth.name@gmail.com"
+                },
+                {
+                    "icon": "",
+                    "name": "Tenth Name",
+                    "email": "tenth.name@gmail.com"
+                }
+            ]
         },
         {
             "title": "To",
-            "isDropdown": true
+            "isDropdown": true,
+            "fromToOptions": []
         },
         {   "title": "Attachment",
             "isDropdown": true,

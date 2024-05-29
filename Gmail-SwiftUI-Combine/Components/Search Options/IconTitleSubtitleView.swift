@@ -9,6 +9,16 @@ import SwiftUI
 
 struct IconTitleSubtitleView: View {
     var body: some View {
-        Text()
+        HStack(alignment: .center) {
+            Image()
+                .resizable()
+                .frame(width: Constants.Frame.size35,
+                       height: Constants.Frame.size35)
+                .padding(.horizontal, Constants.Padding.padding10)
+            
+            VStack {
+                Text
+            }
+        }
     }
 }
