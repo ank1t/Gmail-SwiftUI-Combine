@@ -41,8 +41,16 @@
                 },
                 {
                     "icon": "tag.circle",
-                    "title": "Custom Label"
+                    "title": "Custom Label 1"
                 },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 2"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 3"
+                }
             ]
         },
         {

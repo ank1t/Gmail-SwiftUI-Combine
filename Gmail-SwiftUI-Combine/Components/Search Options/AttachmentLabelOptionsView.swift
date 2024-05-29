@@ -10,6 +10,7 @@ import SwiftUI
 struct AttachmentLabelOptionsView: View {
     let type: ViewType
     @Binding var textFieldText: String
+    @Binding var shouldHideDropdownSheet: Bool
     let options: [AttachmentLabelOptions]
     
     var body: some View {
@@ -20,6 +21,9 @@ struct AttachmentLabelOptionsView: View {
                     .frame(width: Constants.Frame.size12,
                            height: Constants.Frame.size12)
                     .padding(.horizontal, Constants.Padding.padding20)
+                    .onTapGesture {
+                        shouldHideDropdownSheet.toggle()
+                    }
                 
                 Text(type.title)
                     .setFont(.subheadline, color: .white)

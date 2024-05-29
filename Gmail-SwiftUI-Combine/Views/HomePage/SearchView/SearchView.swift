@@ -76,6 +76,7 @@ struct SearchView: View {
             if let options = searchFilters?.filters.first {
                 AttachmentLabelOptionsView(type: .label,
                                            textFieldText: $labelSearchText,
+                                           shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                            options: options.attachmentLabelOptions ?? [])
             }
         })

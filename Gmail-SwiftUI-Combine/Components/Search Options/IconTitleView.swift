@@ -16,8 +16,8 @@ struct IconTitleView: View {
         HStack {
             Image(systemName: icon)
                 .resizable()
-                .frame(width: Constants.Frame.size12,
-                       height: Constants.Frame.size12)
+                .frame(width: Constants.Frame.size20,
+                       height: Constants.Frame.size20)
                 .padding(.horizontal, Constants.Padding.padding25)
             
             Text(title)
