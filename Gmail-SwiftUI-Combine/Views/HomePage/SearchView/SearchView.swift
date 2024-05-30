@@ -17,7 +17,7 @@ struct SearchView: View {
     @State private var labelSearchText: String = ""
     @State private var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
-    @State private var selectedFilter: FiltersByIndex = .none
+    @State private var selectedFilter: FiltersByIndex? = .none
     
     var body: some View {
         ZStack {
@@ -61,11 +61,11 @@ struct SearchView: View {
                                 SearchOptionsChip(title: filter.title,
                                                   isDropdown: filter.isDropdown)
                                 .onTapGesture {
-                                    if let filter = FiltersByIndex(rawValue: index) {
-                                        selectedFilter = filter
-                                    }
+//                                    if let filter = FiltersByIndex(rawValue: index) {
+//                                        selectedFilter = filter
+//                                    }
+                                    print("Index is \(index)")
                                     dropdownSheetIsPresented.toggle()
-                                    
                                 }
                             }
                         }
@@ -77,9 +77,9 @@ struct SearchView: View {
             }
             .padding(.top, Constants.Padding.padding10)
         }
-        .sheet(isPresented: $dropdownSheetIsPresented, content: {
-            selectFilterOptionsView()
-        })
+        .sheet(item: $selectedFilter) { filter in
+            selectFilterOptionsView(filter)
+        }
         .task {
             do {
                 searchFilters = await NetworkingManager.shared.getSearchFilters()
@@ -87,11 +87,12 @@ struct SearchView: View {
         }
     }
     
-    private func selectFilterOptionsView() -> AnyView {
-        guard selectedFilter != .none else { return AnyView(EmptyView()) }
-        switch selectedFilter {
+    private func selectFilterOptionsView(_ filter: FiltersByIndex) -> AnyView {
+        print("Index is 2 \(selectedFilter)")
+        guard filter != .none else { return AnyView(EmptyView()) }
+        switch filter {
             case .label:
-                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = searchFilters?.filters[filter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .label,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -102,7 +103,7 @@ struct SearchView: View {
             case .to:
                 break
             case .attachment:
-                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = searchFilters?.filters[filter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .attachments,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -114,7 +115,7 @@ struct SearchView: View {
                 break
             case .excludesCalendarUpdates:
                 break
-            case .none:
+            default:
                 break
         }
         return AnyView(EmptyView())
@@ -122,7 +123,10 @@ struct SearchView: View {
 }
 
 extension SearchView {
-    enum FiltersByIndex: Int {
+    enum FiltersByIndex: Int, Identifiable {
+        var id: Self {
+            return self
+        }
         case label = 0
         case from
         case to
