@@ -17,7 +17,7 @@ struct SearchView: View {
     @State private var labelSearchText: String = ""
     @State private var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
-    @State private var selectedFilterIndex: Int = -1
+    @State private var selectedFilter: FiltersByIndex = .none
     
     var body: some View {
         ZStack {
@@ -57,11 +57,13 @@ struct SearchView: View {
                         Color.clear.frame(width: Constants.Frame.size5,
                                           height: Constants.Frame.size10)
                         if let filters = searchFilters?.filters {
-                            ForEach(Array(zip(1..., filters)), id: \.1.id) { index, filter in
+                            ForEach(Array(zip(filters.indices, filters)), id: \.1.id) { index, filter in
                                 SearchOptionsChip(title: filter.title,
                                                   isDropdown: filter.isDropdown)
                                 .onTapGesture {
-                                    selectedFilterIndex = index
+                                    if let filter = FiltersByIndex(rawValue: index) {
+                                        selectedFilter = filter
+                                    }
                                     dropdownSheetIsPresented.toggle()
                                     
                                 }
@@ -86,10 +88,10 @@ struct SearchView: View {
     }
     
     private func selectFilterOptionsView() -> AnyView {
-        guard let filter = FiltersByIndex(rawValue: selectedFilterIndex) else { return AnyView(EmptyView()) }
-        switch filter {
+        guard selectedFilter != .none else { return AnyView(EmptyView()) }
+        switch selectedFilter {
             case .label:
-                if let options = searchFilters?.filters[filter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .label,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -100,7 +102,7 @@ struct SearchView: View {
             case .to:
                 break
             case .attachment:
-                if let options = searchFilters?.filters[filter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .attachments,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -112,6 +114,8 @@ struct SearchView: View {
                 break
             case .excludesCalendarUpdates:
                 break
+            case .none:
+                break
         }
         return AnyView(EmptyView())
     }
@@ -119,12 +123,13 @@ struct SearchView: View {
 
 extension SearchView {
     enum FiltersByIndex: Int {
-        case label = 1
+        case label = 0
         case from
         case to
         case attachment
         case date
         case isRead
         case excludesCalendarUpdates
+        case none
     }
 }
