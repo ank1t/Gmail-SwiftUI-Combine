@@ -15,6 +15,10 @@ struct AttachmentLabelOptionsView: View {
     
     var body: some View {
         VStack {
+            if type == .attachments {
+                Spacer()
+                    .frame(maxHeight: Constants.Frame.size250)
+            }
             HStack(spacing: Constants.Spacing.spacing5) {
                 Image(.close)
                     .resizable()
