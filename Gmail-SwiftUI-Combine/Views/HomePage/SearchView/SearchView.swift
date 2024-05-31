@@ -64,7 +64,6 @@ struct SearchView: View {
                                     if let filter = FiltersByIndex(rawValue: index) {
                                         selectedFilter = filter
                                     }
-                                    print("Index is \(index)")
                                     dropdownSheetIsPresented.toggle()
                                 }
                             }
@@ -88,7 +87,6 @@ struct SearchView: View {
     }
     
     private func selectFilterOptionsView() -> AnyView {
-        print("Index is 2 \(selectedFilter)")
         guard selectedFilter != .none else { return AnyView(EmptyView()) }
         switch selectedFilter {
             case .label:
