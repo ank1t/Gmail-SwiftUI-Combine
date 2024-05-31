@@ -17,7 +17,7 @@ struct SearchView: View {
     @State private var labelSearchText: String = ""
     @State private var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
-    @State private var selectedFilter: FiltersByIndex? = .none
+    @State private var selectedFilter: FiltersByIndex = .none
     
     var body: some View {
         ZStack {
@@ -61,9 +61,9 @@ struct SearchView: View {
                                 SearchOptionsChip(title: filter.title,
                                                   isDropdown: filter.isDropdown)
                                 .onTapGesture {
-//                                    if let filter = FiltersByIndex(rawValue: index) {
-//                                        selectedFilter = filter
-//                                    }
+                                    if let filter = FiltersByIndex(rawValue: index) {
+                                        selectedFilter = filter
+                                    }
                                     print("Index is \(index)")
                                     dropdownSheetIsPresented.toggle()
                                 }
@@ -77,7 +77,7 @@ struct SearchView: View {
             }
             .padding(.top, Constants.Padding.padding10)
         }
-        .sheet(isPresented: dropdownSheetIsPresented) {
+        .sheet(isPresented: $dropdownSheetIsPresented, content: {
             selectFilterOptionsView()
         })
         .task {
@@ -89,11 +89,10 @@ struct SearchView: View {
     
     private func selectFilterOptionsView() -> AnyView {
         print("Index is 2 \(selectedFilter)")
-        guard let filter = selectedFilter,
-              filter != .none else { return AnyView(EmptyView()) }
-        switch filter {
+        guard selectedFilter != .none else { return AnyView(EmptyView()) }
+        switch selectedFilter {
             case .label:
-                if let options = searchFilters?.filters[filter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .label,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -104,7 +103,7 @@ struct SearchView: View {
             case .to:
                 break
             case .attachment:
-                if let options = searchFilters?.filters[filter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .attachments,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
