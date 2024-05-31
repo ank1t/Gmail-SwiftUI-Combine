@@ -17,7 +17,7 @@ struct AttachmentLabelOptionsView: View {
         VStack {
             if type == .attachments {
                 Spacer()
-                    .frame(maxHeight: Constants.Frame.size250)
+                    .frame(maxHeight: Constants.Frame.size225)
             }
             HStack(spacing: Constants.Spacing.spacing5) {
                 Image(.close)
