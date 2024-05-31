@@ -77,9 +77,9 @@ struct SearchView: View {
             }
             .padding(.top, Constants.Padding.padding10)
         }
-        .sheet(item: $selectedFilter) { filter in
-            selectFilterOptionsView(filter)
-        }
+        .sheet(isPresented: dropdownSheetIsPresented) {
+            selectFilterOptionsView()
+        })
         .task {
             do {
                 searchFilters = await NetworkingManager.shared.getSearchFilters()
@@ -87,9 +87,10 @@ struct SearchView: View {
         }
     }
     
-    private func selectFilterOptionsView(_ filter: FiltersByIndex) -> AnyView {
+    private func selectFilterOptionsView() -> AnyView {
         print("Index is 2 \(selectedFilter)")
-        guard filter != .none else { return AnyView(EmptyView()) }
+        guard let filter = selectedFilter,
+              filter != .none else { return AnyView(EmptyView()) }
         switch filter {
             case .label:
                 if let options = searchFilters?.filters[filter.rawValue] {
