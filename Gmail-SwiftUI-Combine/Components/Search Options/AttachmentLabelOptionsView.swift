@@ -30,7 +30,7 @@ struct AttachmentLabelOptionsView: View {
                     }
                 
                 Text(type.title)
-                    .setFont(.subheadline, color: .white)
+                    .setFont(.title3, color: .white)
                 
                 Spacer()
             }
