@@ -77,10 +77,7 @@ struct SearchView: View {
             .padding(.top, Constants.Padding.padding10)
         }
         .sheet(isPresented: $dropdownSheetIsPresented, content: {
-            ZStack {
-                Color.clear.ignoresSafeArea()
-                selectFilterOptionsView()
-            }
+            selectFilterOptionsView()
         })
         .task {
             do {

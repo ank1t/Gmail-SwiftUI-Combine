@@ -50,6 +50,18 @@
                 {
                     "icon": "tag.circle",
                     "title": "Custom Label 3"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 4"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 5"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 6"
                 }
             ]
         },
