@@ -81,10 +81,7 @@ struct SearchView: View {
         })
         .task {
             do {
-                let filters = await NetworkingManager.shared.getSearchFilters()
-                await MainActor.run(body: {
-                    searchFilters = filters
-                })
+                searchFilters = await NetworkingManager.shared.getSearchFilters()
             }
         }
     }
