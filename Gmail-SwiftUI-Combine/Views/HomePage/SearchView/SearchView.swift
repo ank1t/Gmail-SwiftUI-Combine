@@ -15,9 +15,9 @@ struct SearchView: View {
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
     @State private var labelSearchText: String = ""
-    @State private var searchFilters: SearchFilters?
+    @State var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
-    @State private var selectedFilter: FiltersByIndex = .none
+    @State var selectedFilter: FiltersByIndex = .none
     
     var body: some View {
         ZStack {
@@ -77,7 +77,7 @@ struct SearchView: View {
             .padding(.top, Constants.Padding.padding10)
         }
         .sheet(isPresented: $dropdownSheetIsPresented, content: {
-            selectFilterOptionsView()
+            selectFilterOptionsView(filter: selectedFilter)
         })
         .task {
             do {
@@ -86,8 +86,8 @@ struct SearchView: View {
         }
     }
     
-    private func selectFilterOptionsView() -> AnyView {
-        guard selectedFilter != .none else { return AnyView(EmptyView()) }
+    func selectFilterOptionsView(filter: FiltersByIndex) -> AnyView {
+        guard filter != .none else { return AnyView(EmptyView()) }
         switch selectedFilter {
             case .label:
                 if let options = searchFilters?.filters[selectedFilter.rawValue] {
