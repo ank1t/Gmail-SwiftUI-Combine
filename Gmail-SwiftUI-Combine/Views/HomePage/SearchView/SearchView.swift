@@ -17,7 +17,7 @@ struct SearchView: View {
     @State private var labelSearchText: String = ""
     @State var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
-    @State var selectedFilter: FiltersByIndex = .none
+    @State var selectedFilter: FiltersByIndex = .label
     
     var body: some View {
         ZStack {
