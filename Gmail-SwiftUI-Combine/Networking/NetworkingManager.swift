@@ -8,6 +8,13 @@
 import Foundation
 
 class NetworkingManager {
+    enum LoadingState {
+        case idle
+        case loading
+        case fetchedFilters(SearchFilters?)
+        case failed(Error)
+    }
+    
     static let shared = NetworkingManager()
     private init() { }
     
