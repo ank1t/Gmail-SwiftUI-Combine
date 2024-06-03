@@ -18,7 +18,6 @@ struct SearchView: View {
     @State private var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
     @State private var selectedFilter: FiltersByIndex = .none
-    @State private var apiState: NetworkingManager.LoadingState = .idle
     
     var body: some View {
         ZStack {
@@ -76,7 +75,6 @@ struct SearchView: View {
                 Spacer()
             }
             .padding(.top, Constants.Padding.padding10)
-            
         }
         .sheet(isPresented: $dropdownSheetIsPresented, content: {
             selectFilterOptionsView()
