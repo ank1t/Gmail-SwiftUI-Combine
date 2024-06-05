@@ -17,7 +17,7 @@ struct SearchView: View {
     @State private var labelSearchText: String = ""
     @State var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
-    @State var selectedFilter: FiltersByIndex = .label
+    @State var selectedFilter: FiltersByIndex = .attachment
     
     var body: some View {
         ZStack {
@@ -105,7 +105,8 @@ struct SearchView: View {
                     return AnyView(AttachmentLabelOptionsView(type: .attachments,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
-                                               options: options.attachmentLabelOptions ?? []))
+                                               options: options.attachmentLabelOptions ?? [])
+                        .presentationDetents([.height(Constants.Frame.size410)]))
                 }
             case .date:
                 break
