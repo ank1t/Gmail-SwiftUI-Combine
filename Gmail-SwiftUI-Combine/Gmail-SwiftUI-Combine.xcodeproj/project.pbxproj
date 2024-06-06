@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84285C2C2C152BAC00670F68 /* SearchViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84285C2B2C152BAC00670F68 /* SearchViewVM.swift */; };
 		845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451934F2C055CBF00B1F6AD /* SearchFilters.swift */; };
 		845193512C05639100B1F6AD /* search_filters.json in Resources */ = {isa = PBXBuildFile; fileRef = 8451934E2C055C2300B1F6AD /* search_filters.json */; };
 		845193542C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84285C2B2C152BAC00670F68 /* SearchViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewVM.swift; sourceTree = "<group>"; };
 		845168CC2BC8BE6800E778AE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8451934E2C055C2300B1F6AD /* search_filters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_filters.json; sourceTree = "<group>"; };
 		8451934F2C055CBF00B1F6AD /* SearchFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilters.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				84B2DE812BF19F6600A61906 /* SearchView.swift */,
+				84285C2B2C152BAC00670F68 /* SearchViewVM.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B2DE872C0011A300A61906 /* SearchOptionsChip.swift in Sources */,
+				84285C2C2C152BAC00670F68 /* SearchViewVM.swift in Sources */,
 				845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */,
 				845F8B2D2BD491EE00BEAD4C /* GCCTabbarVM.swift in Sources */,
 				845F8B442BE4714800BEAD4C /* GCCHomePageVM.swift in Sources */,
