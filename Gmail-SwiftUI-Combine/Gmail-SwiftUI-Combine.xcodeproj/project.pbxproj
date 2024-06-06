@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84285C2C2C152BAC00670F68 /* SearchViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84285C2B2C152BAC00670F68 /* SearchViewVM.swift */; };
+		84285C2E2C152CB000670F68 /* FromToSearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84285C2D2C152CB000670F68 /* FromToSearchOptionsView.swift */; };
 		845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451934F2C055CBF00B1F6AD /* SearchFilters.swift */; };
 		845193512C05639100B1F6AD /* search_filters.json in Resources */ = {isa = PBXBuildFile; fileRef = 8451934E2C055C2300B1F6AD /* search_filters.json */; };
 		845193542C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		84285C2B2C152BAC00670F68 /* SearchViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewVM.swift; sourceTree = "<group>"; };
+		84285C2D2C152CB000670F68 /* FromToSearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromToSearchOptionsView.swift; sourceTree = "<group>"; };
 		845168CC2BC8BE6800E778AE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8451934E2C055C2300B1F6AD /* search_filters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_filters.json; sourceTree = "<group>"; };
 		8451934F2C055CBF00B1F6AD /* SearchFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilters.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */,
 				845193552C06ACDF00B1F6AD /* IconTitleView.swift */,
 				845193572C06B7FC00B1F6AD /* IconTitleSubtitleView.swift */,
+				84285C2D2C152CB000670F68 /* FromToSearchOptionsView.swift */,
 			);
 			path = "Search Options";
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				845F8B312BD4979A00BEAD4C /* GCCMenu.swift in Sources */,
 				845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */,
 				845F8B1D2BCDF43D00BEAD4C /* Constants.swift in Sources */,
+				84285C2E2C152CB000670F68 /* FromToSearchOptionsView.swift in Sources */,
 				845F8B342BD4995D00BEAD4C /* GCCEmail.swift in Sources */,
 				84D926D12BEB0EB200787E38 /* GMeetView.swift in Sources */,
 				84D926D42BEDA94C00787E38 /* GMeetTabView1.swift in Sources */,
