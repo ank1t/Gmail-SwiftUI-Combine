@@ -9,13 +9,41 @@
 import SwiftUI
 
 struct FromToSearchOptionsView: View {
+    @Binding var shouldHideDropdownSheet: Bool
+    @State private var textFieldText: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack(spacing: Constants.Spacing.spacing5) {
+                Image(.close)
+                    .resizable()
+                    .frame(width: Constants.Frame.size12,
+                           height: Constants.Frame.size12)
+                    .padding(.horizontal, Constants.Padding.padding20)
+                    .onTapGesture {
+                        shouldHideDropdownSheet.toggle()
+                    }
+                
+                Text(type.title)
+                    .setFont(.title3, color: .white)
+                
+                Spacer()
+            }
+            .padding(.top, Constants.Padding.padding20)
+            .padding(.bottom, Constants.Padding.padding10)
+            
+            TextField("Type a name or email", text: $textFieldText)
+                .padding(.leading, Constants.Padding.padding25)
+            
+//            ScrollView {
+//                VStack {
+////                    ForEach(options) { option in
+////                        IconTitleView(icon: option.icon,
+////                                      title: option.title)
+////                    }
+//                }
+//            }
+        }
     }
 }
 
-struct FromToSearchOptionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        FromToSearchOptionsView()
-    }
-}

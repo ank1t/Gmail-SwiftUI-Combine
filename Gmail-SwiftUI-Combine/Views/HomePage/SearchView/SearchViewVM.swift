@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct SearchViewVM: ObservableObject {
+struct SearchViewVM {
     
 }
