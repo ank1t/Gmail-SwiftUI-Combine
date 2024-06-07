@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FromToSearchOptionsView: View {
+    let type: ViewType
     @Binding var shouldHideDropdownSheet: Bool
     @State private var textFieldText: String = ""
     
@@ -34,7 +35,10 @@ struct FromToSearchOptionsView: View {
             
             TextField("Type a name or email", text: $textFieldText)
                 .padding(.leading, Constants.Padding.padding25)
+                .padding(.bottom, Constants.Padding.padding10)
+            Divider()
             
+            Spacer()
 //            ScrollView {
 //                VStack {
 ////                    ForEach(options) { option in
@@ -48,26 +52,12 @@ struct FromToSearchOptionsView: View {
 }
 
 extension FromToSearchOptionsView {
-    enum ViewType {
-        case attachments
-        case label
+    enum ViewType: String {
+        case from
+        case to
         
         var title: String {
-            switch self {
-                case .attachments:
-                    return "Attachment"
-                case .label:
-                    return "Label"
-            }
-        }
-        
-        var textfieldPlaceholder: String? {
-            switch self {
-                case .label:
-                    return "Search labels"
-                default:
-                    return nil
-            }
+            return self.rawValue.capitalized
         }
     }
 }
