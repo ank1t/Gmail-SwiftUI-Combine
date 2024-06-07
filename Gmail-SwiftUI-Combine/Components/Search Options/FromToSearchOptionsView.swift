@@ -47,3 +47,27 @@ struct FromToSearchOptionsView: View {
     }
 }
 
+extension FromToSearchOptionsView {
+    enum ViewType {
+        case attachments
+        case label
+        
+        var title: String {
+            switch self {
+                case .attachments:
+                    return "Attachment"
+                case .label:
+                    return "Label"
+            }
+        }
+        
+        var textfieldPlaceholder: String? {
+            switch self {
+                case .label:
+                    return "Search labels"
+                default:
+                    return nil
+            }
+        }
+    }
+}
