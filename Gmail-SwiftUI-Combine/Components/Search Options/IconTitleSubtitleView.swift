@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct IconTitleSubtitleView: View {
-//    let icon: String
-//    let name: String
-//    let email: String
+    let icon: String?
+    let name: String
+    let email: String
     
     var body: some View {
-//        HStack(alignment: .center) {
-//            Image()
-//                .resizable()
-//                .frame(width: Constants.Frame.size35,
-//                       height: Constants.Frame.size35)
-//                .padding(.horizontal, Constants.Padding.padding10)
-//
-//            VStack {
-//                Text
-//            }
-//        }
+        HStack(alignment: .center) {
+            Image(.user)
+                .resizable()
+                .frame(width: Constants.Frame.size35,
+                       height: Constants.Frame.size35)
+                .padding(.horizontal, Constants.Padding.padding10)
+
+            VStack {
+                Text(name)
+                    .setFont(.title3, color: .white)
+                
+                Text(email)
+                    .setFont(.caption, color: .gray)
+            }
+        }
         Text("")
     }
 }
