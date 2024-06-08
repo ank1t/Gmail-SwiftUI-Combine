@@ -10,6 +10,8 @@ import SwiftUI
 
 struct FromToSearchOptionsView: View {
     let type: ViewType
+    let options: [FromToOptions]
+    
     @Binding var shouldHideDropdownSheet: Bool
     @State private var textFieldText: String = ""
     
@@ -37,16 +39,16 @@ struct FromToSearchOptionsView: View {
                 .padding(.leading, Constants.Padding.padding25)
                 .padding(.bottom, Constants.Padding.padding10)
             Divider()
+        
+            ScrollView {
+                VStack {
+                    ForEach(options) { option in
+                        IconTitleSubtitleView()
+                    }
+                }
+            }
             
             Spacer()
-//            ScrollView {
-//                VStack {
-////                    ForEach(options) { option in
-////                        IconTitleView(icon: option.icon,
-////                                      title: option.title)
-////                    }
-//                }
-//            }
         }
     }
 }

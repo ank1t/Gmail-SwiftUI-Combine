@@ -96,9 +96,18 @@ struct SearchView: View {
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                                options: options.attachmentLabelOptions ?? []))
                 }
-            case .from, .to:
-                return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
-                                               shouldHideDropdownSheet: $dropdownSheetIsPresented))
+            case .from:
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                    return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
+                                                           options: options.fromToOptions ?? [],
+                                                           shouldHideDropdownSheet: $dropdownSheetIsPresented))
+                }
+            case .to:
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                    return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
+                                                           options: options.fromToOptions ?? [],
+                                                           shouldHideDropdownSheet: $dropdownSheetIsPresented))
+                }
             case .attachment:
                 if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .attachments,

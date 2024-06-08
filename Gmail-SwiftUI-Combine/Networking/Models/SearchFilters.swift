@@ -36,7 +36,8 @@ struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
     let icon: String
 }
 
-struct FromToOptions: Codable, ImageTitleSubtitle {
+struct FromToOptions: Codable, ImageTitleSubtitle, Identifiable {
+    let id = UUID()
     let name: String
     let email: String
     let icon: String
