@@ -43,7 +43,9 @@ struct FromToSearchOptionsView: View {
             ScrollView {
                 VStack {
                     ForEach(options) { option in
-                        IconTitleSubtitleView()
+                        IconTitleSubtitleView(icon: option.icon,
+                                              name: option.name,
+                                              email: option.email)
                     }
                 }
             }

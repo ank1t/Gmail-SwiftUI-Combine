@@ -13,21 +13,23 @@ struct IconTitleSubtitleView: View {
     let email: String
     
     var body: some View {
-        HStack(alignment: .center) {
+        HStack {
             Image(.user)
                 .resizable()
-                .frame(width: Constants.Frame.size35,
-                       height: Constants.Frame.size35)
+                .frame(width: Constants.Frame.size30,
+                       height: Constants.Frame.size30)
                 .padding(.horizontal, Constants.Padding.padding10)
 
-            VStack {
+            VStack(alignment: .leading) {
                 Text(name)
-                    .setFont(.title3, color: .white)
+                    .setFont(.system(size: Constants.Font.font16), color: .white)
                 
                 Text(email)
-                    .setFont(.caption, color: .gray)
+                    .setFont(.system(size: Constants.Font.font14), color: .gray)
             }
+            
+            Spacer()
         }
-        Text("")
+        .padding(.vertical, Constants.Padding.padding10)
     }
 }

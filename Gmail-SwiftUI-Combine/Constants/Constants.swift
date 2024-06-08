@@ -62,6 +62,13 @@ struct Constants {
         static let radius10: CGFloat = 10
     }
     
+    struct Font {
+        static let font12: CGFloat = 12
+        static let font14: CGFloat = 14
+        static let font16: CGFloat = 16
+        
+    }
+    
     struct Frame {
         static let size00: CGFloat = 0
         static let size1: CGFloat = 1
@@ -74,6 +81,7 @@ struct Constants {
         static let size15: CGFloat = 15
         static let size20: CGFloat = 20
         static let size25: CGFloat = 25
+        static let size30: CGFloat = 30
         static let size35: CGFloat = 35
         static let size40: CGFloat = 40
         static let size50: CGFloat = 50
