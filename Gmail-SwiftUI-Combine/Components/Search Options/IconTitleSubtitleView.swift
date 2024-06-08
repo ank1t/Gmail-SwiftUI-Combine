@@ -27,9 +27,9 @@ struct IconTitleSubtitleView: View {
                 Text(email)
                     .setFont(.system(size: Constants.Font.font14), color: .gray)
             }
-            
             Spacer()
         }
-        .padding(.vertical, Constants.Padding.padding10)
+        .padding(.vertical, Constants.Padding.padding5)
+        .padding(.leading, Constants.Padding.padding10)
     }
 }
