@@ -27,6 +27,7 @@ struct Utility {
         case dropdownArrow = "arrowtriangle.down.fill"
         case history = "clock.arrow.circlepath"
         case close = "xmark"
+        case info = "info.circle"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {

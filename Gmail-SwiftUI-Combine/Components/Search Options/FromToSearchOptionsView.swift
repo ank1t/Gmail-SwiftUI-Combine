@@ -40,6 +40,20 @@ struct FromToSearchOptionsView: View {
                 .padding(.bottom, Constants.Padding.padding10)
             Divider()
         
+            HStack {
+                Text("Suggestions")
+                    .setFont(.caption, color: .gray)
+                    .padding(.leading, Constants.Padding.padding10)
+                
+                Image(.info)
+                    .resizable()
+                    .frame(width: Constants.Frame.size12, height: Constants.Frame.size12)
+                
+                Spacer()
+            }
+            .padding(.top, Constants.Padding.padding10)
+            .padding(.bottom, Constants.Padding.padding4)
+            
             ScrollView {
                 LazyVStack {
                     ForEach(options) { option in
