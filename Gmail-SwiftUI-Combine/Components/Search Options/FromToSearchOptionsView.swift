@@ -41,8 +41,13 @@ struct FromToSearchOptionsView: View {
             Divider()
         
             ScrollView {
-                VStack {
+                LazyVStack {
                     ForEach(options) { option in
+                        if !textFieldText.isEmpty, (option.name.contains(textFieldText) || option.email.contains(textFieldText)) {
+                            IconTitleSubtitleView(icon: option.icon,
+                                                         name: option.name,
+                                                         email: option.email)
+                        }
                         IconTitleSubtitleView(icon: option.icon,
                                               name: option.name,
                                               email: option.email)
