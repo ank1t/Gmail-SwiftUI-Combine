@@ -58,6 +58,7 @@ struct Constants {
         static let padding40: CGFloat = 40
         static let padding50: CGFloat = 50
         static let padding75: CGFloat = 75
+        static let padding80: CGFloat = 80
     }
     
     struct Corner {

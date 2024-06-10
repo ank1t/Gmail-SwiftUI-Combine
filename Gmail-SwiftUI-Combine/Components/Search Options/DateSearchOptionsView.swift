@@ -42,7 +42,7 @@ struct DateSearchOptionsView: View {
                     }
                     Text("Custom range")
                         .setFont(.callout, color: .red)
-                        .padding(.leading, Constants.Padding.padding25)
+                        .padding(.leading, Constants.Padding.padding80)
                 }
             }
         }
