@@ -41,8 +41,8 @@ struct DateSearchOptionsView: View {
                                       title: option.capitalized)
                     }
                     Text("Custom range")
-                        .setFont(.callout, color: .orange)
-                        .padding(.leading, Constants.Padding.padding20)
+                        .setFont(.callout, color: .red)
+                        .padding(.leading, Constants.Padding.padding25)
                 }
             }
         }

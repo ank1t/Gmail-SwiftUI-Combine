@@ -51,6 +51,7 @@ struct Constants {
         static let padding10: CGFloat = 10
         static let padding15: CGFloat = 15
         static let padding20: CGFloat = 20
+        static let padding22: CGFloat = 22
         static let padding25: CGFloat = 25
         static let padding30: CGFloat = 30
         static let padding35: CGFloat = 35
