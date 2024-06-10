@@ -28,6 +28,7 @@ struct Utility {
         case history = "clock.arrow.circlepath"
         case close = "xmark"
         case info = "info.circle"
+        case check = "checkmark.circle"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {

@@ -14,6 +14,7 @@
 		845193542C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */; };
 		845193562C06ACDF00B1F6AD /* IconTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845193552C06ACDF00B1F6AD /* IconTitleView.swift */; };
 		845193582C06B7FC00B1F6AD /* IconTitleSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845193572C06B7FC00B1F6AD /* IconTitleSubtitleView.swift */; };
+		845286C02C1684BB00A5AF8E /* DateSearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845286BF2C1684BB00A5AF8E /* DateSearchOptionsView.swift */; };
 		845F8B112BCB63EF00BEAD4C /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */; };
 		845F8B132BCB646400BEAD4C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B122BCB646400BEAD4C /* Utility.swift */; };
 		845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */; };
@@ -76,6 +77,7 @@
 		845193532C06A38E00B1F6AD /* AttachmentLabelOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentLabelOptionsView.swift; sourceTree = "<group>"; };
 		845193552C06ACDF00B1F6AD /* IconTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleView.swift; sourceTree = "<group>"; };
 		845193572C06B7FC00B1F6AD /* IconTitleSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleSubtitleView.swift; sourceTree = "<group>"; };
+		845286BF2C1684BB00A5AF8E /* DateSearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSearchOptionsView.swift; sourceTree = "<group>"; };
 		845F8B102BCB63EF00BEAD4C /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		845F8B122BCB646400BEAD4C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCHomePage.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				845193552C06ACDF00B1F6AD /* IconTitleView.swift */,
 				845193572C06B7FC00B1F6AD /* IconTitleSubtitleView.swift */,
 				84285C2D2C152CB000670F68 /* FromToSearchOptionsView.swift */,
+				845286BF2C1684BB00A5AF8E /* DateSearchOptionsView.swift */,
 			);
 			path = "Search Options";
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */,
 				845F8B2D2BD491EE00BEAD4C /* GCCTabbarVM.swift in Sources */,
 				845F8B442BE4714800BEAD4C /* GCCHomePageVM.swift in Sources */,
+				845286C02C1684BB00A5AF8E /* DateSearchOptionsView.swift in Sources */,
 				84D926CF2BEB0E4300787E38 /* GCCEmailView.swift in Sources */,
 				84D926D62BEDA96100787E38 /* GMeetTabView2.swift in Sources */,
 				845F8B172BCB67FA00BEAD4C /* GCCEmailRow.swift in Sources */,

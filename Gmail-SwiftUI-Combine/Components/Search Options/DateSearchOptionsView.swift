@@ -9,13 +9,42 @@
 import SwiftUI
 
 struct DateSearchOptionsView: View {
+    @Binding var shouldHideDropdownSheet: Bool
+    let options: [String]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct DateSearchOptionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        DateSearchOptionsView()
+        VStack {
+            HStack(spacing: Constants.Spacing.spacing5) {
+                Image(.close)
+                    .resizable()
+                    .frame(width: Constants.Frame.size12,
+                           height: Constants.Frame.size12)
+                    .padding(.horizontal, Constants.Padding.padding20)
+                    .onTapGesture {
+                        shouldHideDropdownSheet.toggle()
+                    }
+                
+                Text("Date")
+                    .setFont(.title3, color: .white)
+                
+                Spacer()
+            }
+            .padding(.top, Constants.Padding.padding20)
+            .padding(.bottom, Constants.Padding.padding10)
+            
+            Divider()
+            
+            ScrollView {
+                LazyVStack(alignment: .leading) {
+                    ForEach(options, id: \.self) { option in
+                        IconTitleView(utilityIcon: .check,
+                                      title: option.capitalized)
+                    }
+                    Text("Custom range")
+                        .setFont(.callout, color: .orange)
+                        .padding(.leading, Constants.Padding.padding20)
+                }
+            }
+        }
     }
 }

@@ -9,12 +9,13 @@
 import SwiftUI
 
 struct IconTitleView: View {
-    let icon: String
+    var icon: String?
+    var utilityIcon: Utility.ImageName?
     let title: String
     
     var body: some View {
         HStack {
-            Image(systemName: icon)
+            getImage()
                 .resizable()
                 .frame(width: Constants.Frame.size20,
                        height: Constants.Frame.size20)
@@ -26,5 +27,14 @@ struct IconTitleView: View {
             Spacer()
         }
         .padding(.vertical, Constants.Padding.padding10)
+    }
+    
+    private func getImage() -> Image {
+        if let icon {
+            return Image(systemName: icon)
+        } else if let utilityIcon {
+            return Image(utilityIcon)
+        }
+        return Image(systemName: "questionmark.circle")
     }
 }

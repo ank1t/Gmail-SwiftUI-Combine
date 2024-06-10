@@ -310,7 +310,14 @@
             ]
         },
         {   "title": "Date",
-            "isDropdown": true
+            "isDropdown": true,
+            "dateOptions": [
+                "Anytime",
+                "Older than a week",
+                "Older than a month",
+                "Older than 6 months",
+                "Older than a year"
+            ]
         },
         {   "title": "Is unread",
             "isDropdown": false

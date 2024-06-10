@@ -54,7 +54,9 @@ struct Constants {
         static let padding25: CGFloat = 25
         static let padding30: CGFloat = 30
         static let padding35: CGFloat = 35
+        static let padding40: CGFloat = 40
         static let padding50: CGFloat = 50
+        static let padding75: CGFloat = 75
     }
     
     struct Corner {
@@ -87,6 +89,7 @@ struct Constants {
         static let size50: CGFloat = 50
         static let size200: CGFloat = 200
         static let size225: CGFloat = 225
+        static let size350: CGFloat = 350
         static let size410: CGFloat = 410
     }
 }
