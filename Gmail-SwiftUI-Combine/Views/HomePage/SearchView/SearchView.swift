@@ -118,9 +118,10 @@ struct SearchView: View {
                 }
             case .date:
                 if let options = searchFilters?.filters[selectedFilter.rawValue] {
-                    return AnyView(DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
-                                                         options: options.dateOptions ?? [])
-                        .presentationDetents([.height(Constants.Frame.size350)]))
+                    return AnyView(
+                        DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
+                                              options: options.dateOptions ?? []))
+                    .presentationDetents([.height(Constants.Frame.size350)])
                 }
             case .isRead:
                 break

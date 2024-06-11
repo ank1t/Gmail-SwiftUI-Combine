@@ -14,6 +14,9 @@ struct DateSearchOptionsView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+                .frame(maxHeight: 350)
+            
             HStack(spacing: Constants.Spacing.spacing5) {
                 Image(.close)
                     .resizable()
@@ -46,5 +49,6 @@ struct DateSearchOptionsView: View {
                 }
             }
         }
+        .background(.clear)
     }
 }
