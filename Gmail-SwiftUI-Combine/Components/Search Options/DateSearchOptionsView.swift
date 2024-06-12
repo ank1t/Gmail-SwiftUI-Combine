@@ -11,6 +11,7 @@ import SwiftUI
 struct DateSearchOptionsView: View {
     @Binding var shouldHideDropdownSheet: Bool
     let options: [String]
+    @State private var shouldShowDatePicker = false
     
     var body: some View {
         VStack {
@@ -43,6 +44,15 @@ struct DateSearchOptionsView: View {
                     Text("Custom range")
                         .setFont(.callout, color: .red)
                         .padding(.leading, Constants.Padding.padding80)
+                        .onTapGesture {
+                            withAnimation {
+                                shouldShowDatePicker.toggle()
+                            }
+                        }
+                    
+                    if shouldShowDatePicker {
+                        Color.green.frame(height: 50)
+                    }
                 }
             }
         }

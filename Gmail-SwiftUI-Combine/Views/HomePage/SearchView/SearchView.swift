@@ -18,6 +18,7 @@ struct SearchView: View {
     @State var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
     @State var selectedFilter: FiltersByIndex = .attachment
+    @State var increaseHeight: Bool = false
     
     var body: some View {
         ZStack {
@@ -84,6 +85,9 @@ struct SearchView: View {
                 searchFilters = await NetworkingManager.shared.getSearchFilters()
             }
         }
+        .onChange(of: increaseHeight) { newValue in
+            
+        }
     }
     
     func selectFilterOptionsView(filter: FiltersByIndex) -> AnyView {
@@ -114,14 +118,14 @@ struct SearchView: View {
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                                options: options.attachmentLabelOptions ?? [])
-                        .presentationDetents([.height(Constants.Frame.size410)]))
+                        .presentationDetents([.height(410), .height(500), .height(600)]))
                 }
             case .date:
                 if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(
                         DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                               options: options.dateOptions ?? [])
-                        .presentationDetents([.height(Constants.Frame.size350)]
+                        .presentationDetents([.large ,.height(Constants.Frame.size350)]
                     ))
                 }
             case .isRead:
@@ -148,5 +152,12 @@ extension SearchView {
         case isRead
         case excludesCalendarUpdates
         case none
+    }
+}
+
+extension SearchView {
+    enum DetentHeights {
+        case withoutDate
+        case withDate
     }
 }
