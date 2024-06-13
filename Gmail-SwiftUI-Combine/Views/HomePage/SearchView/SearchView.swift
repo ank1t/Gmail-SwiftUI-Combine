@@ -21,7 +21,10 @@ struct SearchView: View {
     @State private var dropdownSheetIsPresented: Bool = false
     @State var selectedFilter: FiltersByIndex = .attachment
     @State var isShowingDatePickerForCustomRange: Bool = false
-    @State var dateFilterPresentationDetent: PresentationDetent = .height(350)
+    @State var dateFilterPresentationDetent: PresentationDetent = .height(Constants.Frame.size350)
+    
+    let dateFilterPresentationDetents: Set<PresentationDetent> = [.height(Constants.Frame.size350),
+                                                                  .height(Constants.Frame.size450)]
     
     var body: some View {
         ZStack {
@@ -88,11 +91,9 @@ struct SearchView: View {
                 searchFilters = await NetworkingManager.shared.getSearchFilters()
             }
         }
-        .onChange(of: isShowingDatePickerForCustomRange) { newValue in
-            let detent: PresentationDetent = isShowingDatePickerForCustomRange ? .height(450) : .height(350)
-            withAnimation {
-                dateFilterPresentationDetent = detent
-            }
+        .onChange(of: isShowingDatePickerForCustomRange) { value in
+            let detent: PresentationDetent = value ? .height(450) : .height(350)
+            dateFilterPresentationDetent = detent
         }
     }
     
@@ -124,7 +125,7 @@ struct SearchView: View {
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                                options: options.attachmentLabelOptions ?? [])
-                        .presentationDetents([.height(410), .height(500), .height(600)]))
+                        .presentationDetents([.height(Constants.Frame.size410)]))
                 }
             case .date:
                 if let options = searchFilters?.filters[selectedFilter.rawValue] {
@@ -132,8 +133,9 @@ struct SearchView: View {
                         DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                               options: options.dateOptions ?? [],
                                               isShowingDatePickerForCustomRange: $isShowingDatePickerForCustomRange)
-                        .presentationDetents([dateFilterPresentationDetent]
-                    ))
+                        .presentationDetents(dateFilterPresentationDetents,
+                                             selection: $dateFilterPresentationDetent)
+                    )
                 }
             case .isRead:
                 break
