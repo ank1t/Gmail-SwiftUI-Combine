@@ -10,7 +10,9 @@ import SwiftUI
 
 struct SearchView: View {
     @Environment(\.colorScheme) var colorScheme
+    
     @Binding var shouldShowSearchView: Bool
+    
     @State private var rotationAngle: Double = 0
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
@@ -18,8 +20,8 @@ struct SearchView: View {
     @State var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
     @State var selectedFilter: FiltersByIndex = .attachment
+    @State var isShowingDatePickerForCustomRange: Bool = false
     @State var dateFilterPresentationDetent: PresentationDetent = .height(350)
-    let dateFilterPresentationHeightDetents: [PresentationDetent] = [.height(350), .height(400)]
     
     var body: some View {
         ZStack {
@@ -86,8 +88,12 @@ struct SearchView: View {
                 searchFilters = await NetworkingManager.shared.getSearchFilters()
             }
         }
-        .onChange(of: increaseHeight) { newValue in
-            
+        .onChange(of: isShowingDatePickerForCustomRange) { newValue in
+            if isShowingDatePickerForCustomRange {
+                withAnimation {
+                    dateFilterPresentationDetent = .height(450)
+                }
+            }
         }
     }
     
@@ -125,7 +131,8 @@ struct SearchView: View {
                 if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(
                         DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
-                                              options: options.dateOptions ?? [])
+                                              options: options.dateOptions ?? [],
+                                              isShowingDatePickerForCustomRange: $isShowingDatePickerForCustomRange)
                         .presentationDetents([dateFilterPresentationDetent]
                     ))
                 }
