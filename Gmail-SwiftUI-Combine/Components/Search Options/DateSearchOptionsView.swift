@@ -11,7 +11,7 @@ import SwiftUI
 struct DateSearchOptionsView: View {
     @Binding var shouldHideDropdownSheet: Bool
     let options: [String]
-    @Binding private var isShowingDatePickerForCustomRange = false
+    @Binding var isShowingDatePickerForCustomRange: Bool
     
     var body: some View {
         VStack {

@@ -89,10 +89,9 @@ struct SearchView: View {
             }
         }
         .onChange(of: isShowingDatePickerForCustomRange) { newValue in
-            if isShowingDatePickerForCustomRange {
-                withAnimation {
-                    dateFilterPresentationDetent = .height(450)
-                }
+            let detent: PresentationDetent = isShowingDatePickerForCustomRange ? .height(450) : .height(350)
+            withAnimation {
+                dateFilterPresentationDetent = detent
             }
         }
     }
