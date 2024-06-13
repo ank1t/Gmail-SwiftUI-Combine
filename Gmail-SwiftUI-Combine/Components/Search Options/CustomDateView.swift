@@ -9,8 +9,25 @@
 import SwiftUI
 
 struct CustomDateView: View {
+    @State private var fromDate = Date.now
+    @State private var toDate = Date.now
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+        //From date
+        HStack {
+            DatePicker(selection: $fromDate, in: ...Date.now, displayedComponents: .date) {
+                Text("From date")
+            }
+            .padding(.horizontal, Constants.Padding.padding15)
+        }
+            
+        HStack {
+            DatePicker(selection: $fromDate, in: ...Date.now, displayedComponents: .date) {
+                Text("To date")
+            }
+            .padding(.horizontal, Constants.Padding.padding15)
+        }
     }
 }
 

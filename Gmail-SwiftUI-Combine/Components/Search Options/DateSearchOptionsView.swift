@@ -49,6 +49,10 @@ struct DateSearchOptionsView: View {
                                 isShowingDatePickerForCustomRange.toggle()
                             }
                         }
+                    
+                    if isShowingDatePickerForCustomRange {
+                        CustomDateView()
+                    }
                 }
             }
         }
