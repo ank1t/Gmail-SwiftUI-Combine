@@ -18,7 +18,8 @@ struct SearchView: View {
     @State var searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
     @State var selectedFilter: FiltersByIndex = .attachment
-    @State var increaseHeight: Bool = false
+    @State var dateFilterPresentationDetent: PresentationDetent = .height(350)
+    let dateFilterPresentationHeightDetents: [PresentationDetent] = [.height(350), .height(400)]
     
     var body: some View {
         ZStack {
@@ -125,7 +126,7 @@ struct SearchView: View {
                     return AnyView(
                         DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                               options: options.dateOptions ?? [])
-                        .presentationDetents([.large ,.height(Constants.Frame.size350)]
+                        .presentationDetents([dateFilterPresentationDetent]
                     ))
                 }
             case .isRead:
@@ -152,12 +153,5 @@ extension SearchView {
         case isRead
         case excludesCalendarUpdates
         case none
-    }
-}
-
-extension SearchView {
-    enum DetentHeights {
-        case withoutDate
-        case withDate
     }
 }
