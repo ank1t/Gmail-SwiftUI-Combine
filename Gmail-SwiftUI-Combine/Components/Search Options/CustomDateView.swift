@@ -14,19 +14,20 @@ struct CustomDateView: View {
     
     var body: some View {
         VStack {
-        //From date
-        HStack {
-            DatePicker(selection: $fromDate, in: ...Date.now, displayedComponents: .date) {
-                Text("From date")
+            //From date
+            HStack {
+                DatePicker(selection: $fromDate, in: ...Date.now, displayedComponents: .date) {
+                    Text("From date")
+                }
+                .padding(.horizontal, Constants.Padding.padding15)
             }
-            .padding(.horizontal, Constants.Padding.padding15)
-        }
             
-        HStack {
-            DatePicker(selection: $fromDate, in: ...Date.now, displayedComponents: .date) {
-                Text("To date")
+            HStack {
+                DatePicker(selection: $fromDate, in: ...Date.now, displayedComponents: .date) {
+                    Text("To date")
+                }
+                .padding(.horizontal, Constants.Padding.padding15)
             }
-            .padding(.horizontal, Constants.Padding.padding15)
         }
     }
 }

@@ -43,7 +43,7 @@ struct DateSearchOptionsView: View {
                     }
                     Text("Custom range")
                         .setFont(.callout, color: .red)
-                        .padding(.leading, Constants.Padding.padding80)
+                        .padding(.leading, Constants.Padding.padding20)
                         .onTapGesture {
                             withAnimation {
                                 isShowingDatePickerForCustomRange.toggle()
