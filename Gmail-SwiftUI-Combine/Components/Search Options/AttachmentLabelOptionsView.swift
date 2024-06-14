@@ -43,8 +43,15 @@ struct AttachmentLabelOptionsView: View {
             ScrollView {
                 VStack {
                     ForEach(options) { option in
-                        IconTitleView(icon: option.icon,
-                                      title: option.title)
+                        if !textFieldText.isEmpty {
+                            if option.title.contains(textFieldText) {
+                                IconTitleView(icon: option.icon,
+                                              title: option.title)
+                            }
+                        } else {
+                            IconTitleView(icon: option.icon,
+                                          title: option.title)
+                        }
                     }
                 }
             }
