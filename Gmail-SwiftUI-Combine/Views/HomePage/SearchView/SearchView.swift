@@ -135,6 +135,7 @@ struct SearchView: View {
                                               isShowingDatePickerForCustomRange: $isShowingDatePickerForCustomRange)
                         .presentationDetents(dateFilterPresentationDetents,
                                              selection: $dateFilterPresentationDetent)
+                        .presentationDragIndicator(.hidden)
                     )
                 }
             case .isRead:
