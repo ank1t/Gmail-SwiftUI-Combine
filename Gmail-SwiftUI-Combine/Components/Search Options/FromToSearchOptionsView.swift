@@ -79,9 +79,9 @@ struct FromToSearchOptionsView: View {
             
             Spacer()
         }
-        .fullScreenCover(isPresented: $isModalShown, content: {
+        .sheet(isPresented: $isModalShown, content: {
             ModalView(isModalShown: $isModalShown)
-                .background(.clear)
+                .presentationDetents([.height(400)])
         })
     }
 }

@@ -13,8 +13,7 @@ struct ModalView: View {
     
     var body: some View {
         ZStack {
-            Color.black
-                .opacity(0.5)
+            Color.clear
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: Constants.Spacing.spacing15) {
@@ -34,7 +33,6 @@ struct ModalView: View {
             }
             .padding(.vertical, Constants.Padding.padding15)
             .padding(.horizontal, Constants.Padding.padding35)
-            .background(.red)
         }
     }
 }
