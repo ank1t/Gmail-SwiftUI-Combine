@@ -14,6 +14,7 @@ struct FromToSearchOptionsView: View {
     
     @Binding var shouldHideDropdownSheet: Bool
     @State private var textFieldText: String = ""
+    @State private var isModalViewShown: Bool = true
     
     var body: some View {
         VStack {
@@ -38,41 +39,49 @@ struct FromToSearchOptionsView: View {
             TextField("Type a name or email", text: $textFieldText)
                 .padding(.leading, Constants.Padding.padding25)
                 .padding(.bottom, Constants.Padding.padding10)
-            Divider()
-        
-            HStack {
-                Text("Suggestions")
-                    .setFont(.caption, color: .gray)
-                    .padding(.leading, Constants.Padding.padding10)
                 
-                Image(.info)
-                    .resizable()
-                    .frame(width: Constants.Frame.size12, height: Constants.Frame.size12)
+                TextField("Type a name or email", text: $textFieldText)
+                    .padding(.leading, Constants.Padding.padding25)
+                    .padding(.bottom, Constants.Padding.padding10)
+                Divider()
                 
-                Spacer()
-            }
-            .padding(.top, Constants.Padding.padding10)
-            .padding(.bottom, Constants.Padding.padding4)
-            
-            ScrollView {
-                LazyVStack {
-                    ForEach(options) { option in
-                        if !textFieldText.isEmpty {
-                            if (option.name.contains(textFieldText) || option.email.contains(textFieldText)) {
+                HStack {
+                    Text("Suggestions")
+                        .setFont(.caption, color: .gray)
+                        .padding(.leading, Constants.Padding.padding10)
+                    
+                    Image(.info)
+                        .resizable()
+                        .frame(width: Constants.Frame.size12, height: Constants.Frame.size12)
+                    
+                    Spacer()
+                }
+                .padding(.top, Constants.Padding.padding10)
+                .padding(.bottom, Constants.Padding.padding4)
+                
+                ScrollView {
+                    LazyVStack {
+                        ForEach(options) { option in
+                            if !textFieldText.isEmpty {
+                                if (option.name.contains(textFieldText) || option.email.contains(textFieldText)) {
+                                    IconTitleSubtitleView(icon: option.icon,
+                                                          name: option.name,
+                                                          email: option.email)
+                                }
+                            } else {
                                 IconTitleSubtitleView(icon: option.icon,
                                                       name: option.name,
                                                       email: option.email)
                             }
-                        } else {
-                            IconTitleSubtitleView(icon: option.icon,
-                                                  name: option.name,
-                                                  email: option.email)
                         }
                     }
                 }
+                
+                Spacer()
             }
-            
-            Spacer()
+            .fullScreenCover(isPresented: $isModalViewShown, content: {
+                ModalView()
+            })
         }
     }
 }
