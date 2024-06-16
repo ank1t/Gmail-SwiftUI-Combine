@@ -14,7 +14,7 @@ struct FromToSearchOptionsView: View {
     
     @Binding var shouldHideDropdownSheet: Bool
     @State private var textFieldText: String = ""
-    @State private var isModalViewShown: Bool = false
+    @State private var isModalShown: Bool = false
     
     var body: some View {
         VStack {
@@ -51,7 +51,7 @@ struct FromToSearchOptionsView: View {
                     .resizable()
                     .frame(width: Constants.Frame.size12, height: Constants.Frame.size12)
                     .onTapGesture {
-                        isModalViewShown.toggle()
+                        isModalShown.toggle()
                     }
                 
                 Spacer()
@@ -79,8 +79,9 @@ struct FromToSearchOptionsView: View {
             
             Spacer()
         }
-        .fullScreenCover(isPresented: $isModalViewShown, content: {
-            ModalView()
+        .fullScreenCover(isPresented: $isModalShown, content: {
+            ModalView(isModalShown: $isModalShown)
+                .background(.clear)
         })
     }
 }
