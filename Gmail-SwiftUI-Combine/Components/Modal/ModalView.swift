@@ -16,7 +16,7 @@ struct ModalView: View {
             Text("About suggested people")
                 .multilineTextAlignment(.leading)
                 .font(.headline)
-                .padding(.top, Constants.Padding.padding15)
+                .padding(.top, Constants.Padding.padding20)
             
             Text("To make sharing easier, Google suggests people to share with based on your interactions")
                 .font(.subheadline)
@@ -29,11 +29,11 @@ struct ModalView: View {
                     isModalShown.toggle()
                 }
                 .padding(.horizontal, Constants.Padding.padding15)
-                .padding(.bottom, Constants.Padding.padding15)
+                .padding(.bottom, Constants.Padding.padding20)
             }
         }
-        .background(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
         .background(Constants.darkThemeColorTertiary)
+        .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
         .padding(.vertical, Constants.Padding.padding15)
         .padding(.horizontal, Constants.Padding.padding35)
         
