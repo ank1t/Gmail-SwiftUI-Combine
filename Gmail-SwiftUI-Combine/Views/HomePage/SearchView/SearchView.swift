@@ -83,10 +83,13 @@ struct SearchView: View {
                 .padding(.bottom, Constants.Padding.padding15)
                 
                 VStack {
-                    Text("RECENT MAIL SEARCHES")
-                        .font(.caption)
-                        .padding(.bottom, Constants.Padding.padding15)
-                        .padding(.leading, Constants.Padding.padding15)
+                    HStack {
+                        Text("RECENT MAIL SEARCHES")
+                            .font(.caption)
+                            .padding(.bottom, Constants.Padding.padding15)
+                            .padding(.leading, Constants.Padding.padding15)
+                        Spacer()
+                    }
                     
                     ScrollView {
                         VStack {
