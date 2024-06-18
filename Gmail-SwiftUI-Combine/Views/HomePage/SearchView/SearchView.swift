@@ -115,26 +115,26 @@ struct SearchView: View {
         guard filter != .none else { return AnyView(EmptyView()) }
         switch selectedFilter {
             case .label:
-                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .label,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                                options: options.attachmentLabelOptions ?? []))
                 }
             case .from:
-                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
                                                            options: options.fromToOptions ?? [],
                                                            shouldHideDropdownSheet: $dropdownSheetIsPresented))
                 }
             case .to:
-                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
                                                            options: options.fromToOptions ?? [],
                                                            shouldHideDropdownSheet: $dropdownSheetIsPresented))
                 }
             case .attachment:
-                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .attachments,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -142,7 +142,7 @@ struct SearchView: View {
                         .presentationDetents([.height(Constants.Frame.size410)]))
                 }
             case .date:
-                if let options = searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(
                         DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                               options: options.dateOptions ?? [],

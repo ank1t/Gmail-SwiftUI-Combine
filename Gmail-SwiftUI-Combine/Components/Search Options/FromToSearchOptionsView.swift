@@ -85,7 +85,10 @@ struct FromToSearchOptionsView: View {
                 ZStack {
                     Color.black
                         .opacity(bgOpacity)
-                    ModalView(isModalShown: $isModalShown)
+                    ModalView(title: "About suggested people",
+                              subtitle: "To make sharing easier, Google suggests people to share with based on your interactions",
+                              ctaText: "OK",
+                              isModalShown: $isModalShown)
                 }
             }
         }

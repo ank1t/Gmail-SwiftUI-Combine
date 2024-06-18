@@ -9,23 +9,27 @@
 import SwiftUI
 
 struct ModalView: View {
+    let title: String
+    let subtitle: String
+    let ctaText: String
+    
     @Binding var isModalShown: Bool
     
     var body: some View {
         VStack(spacing: Constants.Spacing.spacing15) {
-            Text("About suggested people")
+            Text(title)
                 .multilineTextAlignment(.leading)
                 .font(.headline)
                 .padding(.top, Constants.Padding.padding20)
             
-            Text("To make sharing easier, Google suggests people to share with based on your interactions")
+            Text(subtitle)
                 .font(.subheadline)
                 .padding(.horizontal, Constants.Padding.padding15)
             
             HStack {
                 Spacer()
                 
-                Button("OK") {
+                Button(ctaText) {
                     isModalShown.toggle()
                 }
                 .padding(.horizontal, Constants.Padding.padding15)
