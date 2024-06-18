@@ -13,7 +13,7 @@ struct SearchView: View {
     
     @Binding var shouldShowSearchView: Bool
     
-    @State private var viewModel = ViewModel()
+    @StateObject private var viewModel = ViewModel()
     @State private var rotationAngle: Double = 0
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
@@ -64,7 +64,7 @@ struct SearchView: View {
                     HStack(spacing: Constants.Spacing.spacing12) {
                         Color.clear.frame(width: Constants.Frame.size5,
                                           height: Constants.Frame.size10)
-                        if let filters = searchFilters?.filters {
+                        if let filters = viewModel.searchFilters?.filters {
                             ForEach(Array(zip(filters.indices, filters)), id: \.1.id) { index, filter in
                                 SearchOptionsChip(title: filter.title,
                                                   isDropdown: filter.isDropdown)
@@ -86,6 +86,7 @@ struct SearchView: View {
                     Text("RECENT MAIL SEARCHES")
                         .font(.caption)
                         .padding(.bottom, Constants.Padding.padding15)
+                        .padding(.leading, Constants.Padding.padding15)
                     
                     ScrollView {
                         VStack {
@@ -102,9 +103,7 @@ struct SearchView: View {
             selectFilterOptionsView(filter: selectedFilter)
         })
         .task {
-            do {
-                searchFilters = 
-            }
+            await viewModel.getSearchFilters()
         }
         .onChange(of: isShowingDatePickerForCustomRange) { value in
             let detent: PresentationDetent = value ? .height(450) : .height(350)

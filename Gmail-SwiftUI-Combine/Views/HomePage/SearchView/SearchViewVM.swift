@@ -11,10 +11,13 @@ import Foundation
 extension SearchView {
     
     class ViewModel: ObservableObject {
-        private(set) var filters: SearchFilters?
+        @Published var searchFilters: SearchFilters?
         
         func getSearchFilters() async {
-            filters = await NetworkingManager.shared.getSearchFilters()
+            let filters = await NetworkingManager.shared.getSearchFilters()
+            DispatchQueue.main.async { [weak self] in
+                self?.searchFilters = filters
+            }
         }
     }
 }
