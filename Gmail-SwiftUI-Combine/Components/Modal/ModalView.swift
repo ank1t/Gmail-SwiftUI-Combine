@@ -12,28 +12,29 @@ struct ModalView: View {
     @Binding var isModalShown: Bool
     
     var body: some View {
-        ZStack {
-            Color.clear
-                .edgesIgnoringSafeArea(.all)
+        VStack(spacing: Constants.Spacing.spacing15) {
+            Text("About suggested people")
+                .multilineTextAlignment(.leading)
+                .font(.title3)
+                .padding(.top, Constants.Padding.padding15)
             
-            VStack(spacing: Constants.Spacing.spacing15) {
-                Text("About suggested people")
-                    .multilineTextAlignment(.leading)
-                    .font(.title3)
+            Text("To make sharing easier, Google suggests people to share with based on your interactions")
+                .padding(.horizontal, Constants.Padding.padding15)
+            
+            HStack {
+                Spacer()
                 
-                Text("To make sharing easier, Google suggests people to share with based on your interactions")
-                
-                HStack {
-                    Spacer()
-                    
-                    Button("OK") {
-                        isModalShown.toggle()
-                    }
+                Button("OK") {
+                    isModalShown.toggle()
                 }
+                .padding(.horizontal, Constants.Padding.padding10)
+                .padding(.bottom, Constants.Padding.padding10)
             }
-            .padding(.vertical, Constants.Padding.padding15)
-            .padding(.horizontal, Constants.Padding.padding35)
         }
+        .background(.gray)
+        .padding(.vertical, Constants.Padding.padding15)
+        .padding(.horizontal, Constants.Padding.padding35)
+        .background(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
     }
 }
 

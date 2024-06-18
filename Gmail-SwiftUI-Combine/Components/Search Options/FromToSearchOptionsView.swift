@@ -11,9 +11,11 @@ import SwiftUI
 struct FromToSearchOptionsView: View {
     let type: ViewType
     let options: [FromToOptions]
+    let bgOpacity: CGFloat = 0.2
     
     @Binding var shouldHideDropdownSheet: Bool
     @State private var textFieldText: String = ""
+    @State private var isModalShown = false
     
     var body: some View {
         ZStack {
@@ -77,6 +79,14 @@ struct FromToSearchOptionsView: View {
                     }
                 }
                 Spacer()
+            }
+            
+            if isModalShown {
+                ZStack {
+                    Color.black
+                        .opacity(bgOpacity)
+                    ModalView(isModalShown: $isModalShown)
+                }
             }
         }
     }
