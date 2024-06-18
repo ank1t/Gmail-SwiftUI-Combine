@@ -13,6 +13,7 @@ struct SearchView: View {
     
     @Binding var shouldShowSearchView: Bool
     
+    @State private var viewModel = ViewModel()
     @State private var rotationAngle: Double = 0
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
@@ -80,7 +81,20 @@ struct SearchView: View {
                     }
                 }
                 .padding(.bottom, Constants.Padding.padding15)
-                Color.blue
+                
+                VStack {
+                    Text("RECENT MAIL SEARCHES")
+                        .font(.caption)
+                        .padding(.bottom, Constants.Padding.padding15)
+                    
+                    ScrollView {
+                        VStack {
+                            
+                        }
+                    }
+                }
+                
+                Spacer()
             }
             .padding(.top, Constants.Padding.padding10)
         }
@@ -89,7 +103,7 @@ struct SearchView: View {
         })
         .task {
             do {
-                searchFilters = await NetworkingManager.shared.getSearchFilters()
+                searchFilters = 
             }
         }
         .onChange(of: isShowingDatePickerForCustomRange) { value in

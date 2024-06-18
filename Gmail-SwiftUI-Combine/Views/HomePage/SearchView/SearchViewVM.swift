@@ -8,6 +8,13 @@
 
 import Foundation
 
-struct SearchViewVM {
+extension SearchView {
     
+    class ViewModel: ObservableObject {
+        private(set) var filters: SearchFilters?
+        
+        func getSearchFilters() async {
+            filters = await NetworkingManager.shared.getSearchFilters()
+        }
+    }
 }
