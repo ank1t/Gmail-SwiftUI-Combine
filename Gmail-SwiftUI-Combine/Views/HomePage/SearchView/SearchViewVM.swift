@@ -14,10 +14,8 @@ extension SearchView {
         @Published var searchFilters: SearchFilters?
         
         func getSearchFilters() async {
-            DispatchQueue.main.async { [weak self] in
-                Task {
-                    self?.searchFilters = await NetworkingManager.shared.getSearchFilters()
-                }
+            Task { @MainActor in
+                self.searchFilters = await NetworkingManager.shared.getSearchFilters()
             }
         }
     }
