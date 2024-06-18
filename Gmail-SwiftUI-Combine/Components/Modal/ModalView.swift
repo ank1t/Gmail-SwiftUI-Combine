@@ -27,14 +27,15 @@ struct ModalView: View {
                 Button("OK") {
                     isModalShown.toggle()
                 }
-                .padding(.horizontal, Constants.Padding.padding10)
+                .padding(.horizontal, Constants.Padding.padding25)
                 .padding(.bottom, Constants.Padding.padding10)
             }
         }
-        .background(.gray)
+        .background(Constants.darkThemeColorTertiary)
+        .background(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
         .padding(.vertical, Constants.Padding.padding15)
         .padding(.horizontal, Constants.Padding.padding35)
-        .background(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
+        
     }
 }
 
