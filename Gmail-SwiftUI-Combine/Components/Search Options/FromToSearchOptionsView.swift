@@ -85,6 +85,13 @@ struct FromToSearchOptionsView: View {
                 ZStack {
                     Color.black
                         .opacity(bgOpacity)
+                        .onTapGesture {
+                            /*
+                             Dismiss the modal view if the user taps on the
+                             black background
+                             */
+                            isModalShown.toggle()
+                        }
                     ModalView(title: "About suggested people",
                               subtitle: "To make sharing easier, Google suggests people to share with based on your interactions",
                               ctaText: "OK",
