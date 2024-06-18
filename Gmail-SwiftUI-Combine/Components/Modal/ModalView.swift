@@ -15,10 +15,11 @@ struct ModalView: View {
         VStack(spacing: Constants.Spacing.spacing15) {
             Text("About suggested people")
                 .multilineTextAlignment(.leading)
-                .font(.title3)
+                .font(.headline)
                 .padding(.top, Constants.Padding.padding15)
             
             Text("To make sharing easier, Google suggests people to share with based on your interactions")
+                .font(.subheadline)
                 .padding(.horizontal, Constants.Padding.padding15)
             
             HStack {
@@ -27,12 +28,12 @@ struct ModalView: View {
                 Button("OK") {
                     isModalShown.toggle()
                 }
-                .padding(.horizontal, Constants.Padding.padding25)
-                .padding(.bottom, Constants.Padding.padding10)
+                .padding(.horizontal, Constants.Padding.padding15)
+                .padding(.bottom, Constants.Padding.padding15)
             }
         }
-        .background(Constants.darkThemeColorTertiary)
         .background(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
+        .background(Constants.darkThemeColorTertiary)
         .padding(.vertical, Constants.Padding.padding15)
         .padding(.horizontal, Constants.Padding.padding35)
         
