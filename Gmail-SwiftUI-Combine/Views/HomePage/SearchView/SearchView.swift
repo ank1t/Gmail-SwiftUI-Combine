@@ -79,7 +79,8 @@ struct SearchView: View {
                                           height: Constants.Frame.size10)
                     }
                 }
-                Spacer()
+                .padding(.bottom, Constants.Padding.padding15)
+                Color.blue
             }
             .padding(.top, Constants.Padding.padding10)
         }
