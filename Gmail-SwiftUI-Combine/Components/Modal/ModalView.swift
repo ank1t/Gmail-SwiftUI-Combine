@@ -24,7 +24,7 @@ struct ModalView: View {
             
             Text(subtitle)
                 .font(.subheadline)
-                .padding(.horizontal, Constants.Padding.padding15)
+                .padding(.horizontal, Constants.Padding.padding20)
             
             HStack {
                 Spacer()
@@ -37,7 +37,7 @@ struct ModalView: View {
             }
         }
         .background(Constants.darkThemeColorTertiary)
-        .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius5))
+        .clipShape(RoundedRectangle(cornerRadius: Constants.Corner.radius10))
         .padding(.vertical, Constants.Padding.padding15)
         .padding(.horizontal, Constants.Padding.padding35)
         
