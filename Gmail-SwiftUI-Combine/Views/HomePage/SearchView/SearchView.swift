@@ -122,19 +122,22 @@ struct SearchView: View {
                     return AnyView(AttachmentLabelOptionsView(type: .label,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
-                                               options: options.attachmentLabelOptions ?? []))
+                                               options: options.attachmentLabelOptions ?? [])
+                        .presentationDetents([.large]))
                 }
             case .from:
                 if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
                                                            options: options.fromToOptions ?? [],
-                                                           shouldHideDropdownSheet: $dropdownSheetIsPresented))
+                                                           shouldHideDropdownSheet: $dropdownSheetIsPresented)
+                        .presentationDetents([.large]))
                 }
             case .to:
                 if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
                                                            options: options.fromToOptions ?? [],
-                                                           shouldHideDropdownSheet: $dropdownSheetIsPresented))
+                                                           shouldHideDropdownSheet: $dropdownSheetIsPresented)
+                        .presentationDetents([.large]))
                 }
             case .attachment:
                 if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
