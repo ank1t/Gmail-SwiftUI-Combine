@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		841B38A82C2664D8006E4495 /* SlidingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38A72C2664D8006E4495 /* SlidingMenu.swift */; };
 		841B38AB2C27AEAC006E4495 /* FullScreenEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */; };
+		841B38AE2C2900B3006E4495 /* NewLabelPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */; };
 		84285C2C2C152BAC00670F68 /* SearchViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84285C2B2C152BAC00670F68 /* SearchViewVM.swift */; };
 		84285C2E2C152CB000670F68 /* FromToSearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84285C2D2C152CB000670F68 /* FromToSearchOptionsView.swift */; };
 		845193502C055CBF00B1F6AD /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451934F2C055CBF00B1F6AD /* SearchFilters.swift */; };
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		841B38A72C2664D8006E4495 /* SlidingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenu.swift; sourceTree = "<group>"; };
 		841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenEmailView.swift; sourceTree = "<group>"; };
+		841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabelPopup.swift; sourceTree = "<group>"; };
 		84285C2B2C152BAC00670F68 /* SearchViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewVM.swift; sourceTree = "<group>"; };
 		84285C2D2C152CB000670F68 /* FromToSearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromToSearchOptionsView.swift; sourceTree = "<group>"; };
 		845168CC2BC8BE6800E778AE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -166,6 +168,14 @@
 			path = FullScreenEmailView;
 			sourceTree = "<group>";
 		};
+		841B38AC2C290094006E4495 /* NewLabelPopup */ = {
+			isa = PBXGroup;
+			children = (
+				841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */,
+			);
+			path = NewLabelPopup;
+			sourceTree = "<group>";
+		};
 		845168CA2BC8BA0600E778AE /* Playground */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +213,7 @@
 		845F8B0F2BCB5E6F00BEAD4C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				841B38AC2C290094006E4495 /* NewLabelPopup */,
 				841B38A92C27AE93006E4495 /* FullScreenEmailView */,
 				841B38A62C2664C5006E4495 /* Sliding Menu */,
 				8493D5CD2C1E7CF1000A3DE6 /* Modal */,
@@ -582,6 +593,7 @@
 				84285C2C2C152BAC00670F68 /* SearchViewVM.swift in Sources */,
 				845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */,
 				845F8B2D2BD491EE00BEAD4C /* GCCTabbarVM.swift in Sources */,
+				841B38AE2C2900B3006E4495 /* NewLabelPopup.swift in Sources */,
 				845F8B442BE4714800BEAD4C /* GCCHomePageVM.swift in Sources */,
 				845286C02C1684BB00A5AF8E /* DateSearchOptionsView.swift in Sources */,
 				84D926CF2BEB0E4300787E38 /* GCCEmailView.swift in Sources */,
