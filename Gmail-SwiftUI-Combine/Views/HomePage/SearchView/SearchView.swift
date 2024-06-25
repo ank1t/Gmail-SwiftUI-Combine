@@ -26,6 +26,7 @@ struct SearchView: View {
     
     let dateFilterPresentationDetents: Set<PresentationDetent> = [.height(Constants.Frame.size350),
                                                                   .height(Constants.Frame.size450)]
+    let scrollViewID = UUID()
     
     var body: some View {
         ZStack {
@@ -44,7 +45,6 @@ struct SearchView: View {
                         .onTapGesture {
                             shouldShowSearchView = false
                         }
-                        .animation(.spring(), value: leadingPadding)
                     
                     TextField("Search in mail", text: $textFieldText)
                         .padding(.leading, Constants.Padding.padding8)
@@ -60,32 +60,27 @@ struct SearchView: View {
                     .padding(.top, Constants.Padding.padding15)
                     .padding(.bottom, Constants.Padding.padding10)
                 
-                ScrollViewReader { reader in 
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: Constants.Spacing.spacing12) {
-                            Color.clear.frame(width: Constants.Frame.size5,
-                                              height: Constants.Frame.size10)
-                            if let filters = viewModel.searchFilters?.filters {
-                                ForEach(Array(zip(filters.indices, filters)), id: \.1.id) { index, filter in
-                                    SearchOptionsChip(title: filter.title,
-                                                      isDropdown: filter.isDropdown)
-                                    .onTapGesture {
-                                        if let filter = FiltersByIndex(rawValue: index) {
-                                            selectedFilter = filter
-                                        }
-                                        dropdownSheetIsPresented.toggle()
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: Constants.Spacing.spacing12) {
+                        Color.clear.frame(width: Constants.Frame.size5,
+                                          height: Constants.Frame.size10)
+                        if let filters = viewModel.searchFilters?.filters {
+                            ForEach(Array(zip(filters.indices, filters)), id: \.1.id) { index, filter in
+                                SearchOptionsChip(title: filter.title,
+                                                  isDropdown: filter.isDropdown)
+                                .onTapGesture {
+                                    if let filter = FiltersByIndex(rawValue: index) {
+                                        selectedFilter = filter
                                     }
+                                    dropdownSheetIsPresented.toggle()
                                 }
                             }
-                            Color.clear.frame(width: Constants.Frame.size5,
-                                              height: Constants.Frame.size10)
                         }
+                        Color.clear.frame(width: Constants.Frame.size5,
+                                          height: Constants.Frame.size10)
                     }
                 }
                 .padding(.bottom, Constants.Padding.padding15)
-                .onDisappear {
-                    
-                }
                 
                 VStack {
                     HStack {
