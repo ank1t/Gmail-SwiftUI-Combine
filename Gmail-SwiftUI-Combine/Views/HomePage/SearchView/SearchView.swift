@@ -112,6 +112,7 @@ struct SearchView: View {
                                         .onTapGesture {
                                             textFieldText = searchItem
                                             Task {
+                                                try await Task.sleep(nanoseconds: 1_000_000_000)
                                                 await viewModel.getEmailsContaining(keyword: searchItem)
                                             }
                                         }
@@ -120,13 +121,15 @@ struct SearchView: View {
                                     .frame(height: Constants.Frame.size20)
                             }
                         }
-                    } else {
+                    } else if !textFieldText.isEmpty && viewModel.searchedEmails != nil {
                         LazyVStack {
                             ForEach(0..<100) {_ in
                                 GCCEmailRow(shouldBoldTitleAndSubtitle: true)
                             }
                         }
                         .padding(.horizontal, Constants.Spacing.spacing20)
+                    } else {
+                        Spacer()
                     }
                 }
             }
