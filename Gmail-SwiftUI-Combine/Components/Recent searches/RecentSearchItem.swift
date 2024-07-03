@@ -1,5 +1,5 @@
 //
-//  RecentSearches.swift
+//  RecentSearchItem.swift
 //  Gmail-SwiftUI-Combine
 //
 //  Created by Singh, Ankit on 2024-05-23
@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct RecentSearches: View {
+struct RecentSearchItem: View {
+    let searchText: String
     var body: some View {
         HStack {
             Image(.history)
@@ -19,7 +20,7 @@ struct RecentSearches: View {
                 .clipShape(Circle())
                 .padding(.horizontal, Constants.Padding.padding15)
             
-            Text("Recent search")
+            Text(searchText)
         }
     }
 }
