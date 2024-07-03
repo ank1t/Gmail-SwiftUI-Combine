@@ -93,8 +93,8 @@ struct SearchView: View {
                     
                     ScrollView {
                         VStack {
-                            ForEach(0..<viewModel.searchFilters?.recentSearches?.count ?? 0) { _ in
-                                
+                            ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
+                                RecentSearchItem(searchText: searchItem)
                             }
                         }
                     }
