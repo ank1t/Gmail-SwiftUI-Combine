@@ -82,7 +82,7 @@ struct SearchView: View {
                 }
                 .padding(.bottom, Constants.Padding.padding15)
                 
-                VStack {
+                ScrollView {
                     HStack {
                         Text("RECENT MAIL SEARCHES")
                             .font(.caption)
@@ -91,16 +91,13 @@ struct SearchView: View {
                         Spacer()
                     }
                     
-                    ScrollView {
-                        VStack {
-                            ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
-                                RecentSearchItem(searchText: searchItem)
-                            }
+                    VStack {
+                        ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
+                            RecentSearchItem(searchText: searchItem)
+                                .padding(.leading, Constants.Frame.size20)
                         }
                     }
                 }
-                
-                Spacer()
             }
             .padding(.top, Constants.Padding.padding10)
         }
