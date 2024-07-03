@@ -49,7 +49,7 @@ struct SearchView: View {
                     TextField("Search in mail", text: $textFieldText)
                         .padding(.leading, Constants.Padding.padding8)
                     
-                    Image(.mic)
+                    Image(textFieldText.isEmpty ? .mic : .close)
                         .resizable()
                         .frame(width: Constants.Frame.size14,
                                height: Constants.Frame.size20)
@@ -82,26 +82,30 @@ struct SearchView: View {
                 }
                 .padding(.bottom, Constants.Padding.padding15)
                 
-                ScrollView {
-                    HStack {
-                        Text("RECENT MAIL SEARCHES")
-                            .font(.caption)
-                            .padding(.bottom, Constants.Padding.padding15)
-                            .padding(.leading, Constants.Padding.padding15)
-                        Spacer()
-                    }
-                    
-                    VStack {
-                        ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
-                            RecentSearchItem(searchText: searchItem)
-                                .padding(.leading, Constants.Frame.size20)
-                                .onTapGesture {
-                                    textFieldText = searchItem
-                                }
+                if textFieldText.isEmpty {
+                    ScrollView {
+                        HStack {
+                            Text("RECENT MAIL SEARCHES")
+                                .font(.caption)
+                                .padding(.bottom, Constants.Padding.padding15)
+                                .padding(.leading, Constants.Padding.padding15)
+                            Spacer()
                         }
-                        Spacer()
-                            .frame(height: Constants.Frame.size20)
+                        
+                        VStack {
+                            ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
+                                RecentSearchItem(searchText: searchItem)
+                                    .padding(.leading, Constants.Frame.size20)
+                                    .onTapGesture {
+                                        textFieldText = searchItem
+                                    }
+                            }
+                            Spacer()
+                                .frame(height: Constants.Frame.size20)
+                        }
                     }
+                } else {
+                    Spacer()
                 }
             }
             .padding(.top, Constants.Padding.padding10)
