@@ -49,7 +49,7 @@ struct SearchView: View {
                     TextField("Search in mail", text: $textFieldText)
                         .padding(.leading, Constants.Padding.padding8)
                     
-                    if !textFieldText.isEmpty {
+                    if !textFieldText.isEmpty && viewModel.searchedEmails == nil {
                         ProgressView()
                             .padding(.horizontal, Constants.Spacing.spacing5)
                             .tint(.blue)
@@ -120,7 +120,7 @@ struct SearchView: View {
                             }
                         }
                     } else {
-                        VStack {
+                        LazyVStack {
                             ForEach(0..<100) {_ in
                                 GCCEmailRow(shouldBoldTitleAndSubtitle: true)
                             }
