@@ -1,4 +1,4 @@
-[
+{
     "emails": [{
         "participants": ["Google", "me"],
         "date": "",
@@ -10,4 +10,4 @@
         "attachments": ["", ""]
     }],
     "labels": ["","","","",""]
-]
+}
