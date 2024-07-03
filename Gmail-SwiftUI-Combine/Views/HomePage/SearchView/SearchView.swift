@@ -63,6 +63,7 @@ struct SearchView: View {
                         .onTapGesture {
                             if !textFieldText.isEmpty {
                                 textFieldText = ""
+                                viewModel.searchedEmails = nil
                             }
                         }
                 }
