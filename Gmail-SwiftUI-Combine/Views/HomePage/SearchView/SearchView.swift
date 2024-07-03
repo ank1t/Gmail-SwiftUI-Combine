@@ -96,6 +96,8 @@ struct SearchView: View {
                             RecentSearchItem(searchText: searchItem)
                                 .padding(.leading, Constants.Frame.size20)
                         }
+                        Spacer()
+                            .frame(height: Constants.Frame.size20)
                     }
                 }
             }
