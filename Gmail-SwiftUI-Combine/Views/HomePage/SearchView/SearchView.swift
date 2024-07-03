@@ -52,7 +52,7 @@ struct SearchView: View {
                     Image(textFieldText.isEmpty ? .mic : .close)
                         .resizable()
                         .frame(width: Constants.Frame.size14,
-                               height: Constants.Frame.size20)
+                               height: textFieldText.isEmpty ? Constants.Frame.size20 : Constants.Frame.size14)
                         .padding(.trailing, Constants.Padding.padding20)
                 }
                 
