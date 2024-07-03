@@ -93,33 +93,40 @@ struct SearchView: View {
                 }
                 .padding(.bottom, Constants.Padding.padding15)
                 
-                if textFieldText.isEmpty {
-                    ScrollView {
-                        HStack {
-                            Text("RECENT MAIL SEARCHES")
-                                .font(.caption)
-                                .padding(.bottom, Constants.Padding.padding15)
-                                .padding(.leading, Constants.Padding.padding15)
-                            Spacer()
-                        }
-                        
-                        VStack {
-                            ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
-                                RecentSearchItem(searchText: searchItem)
-                                    .padding(.leading, Constants.Frame.size20)
-                                    .onTapGesture {
-                                        textFieldText = searchItem
-                                        Task {
-                                            await viewModel.getEmailsContaining(keyword: searchItem)
-                                        }
-                                    }
+                ScrollView {
+                    if textFieldText.isEmpty {
+                        Group {
+                            HStack {
+                                Text("RECENT MAIL SEARCHES")
+                                    .font(.caption)
+                                    .padding(.bottom, Constants.Padding.padding15)
+                                    .padding(.leading, Constants.Padding.padding15)
+                                Spacer()
                             }
-                            Spacer()
-                                .frame(height: Constants.Frame.size20)
+                            
+                            VStack {
+                                ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
+                                    RecentSearchItem(searchText: searchItem)
+                                        .padding(.leading, Constants.Frame.size20)
+                                        .onTapGesture {
+                                            textFieldText = searchItem
+                                            Task {
+                                                await viewModel.getEmailsContaining(keyword: searchItem)
+                                            }
+                                        }
+                                }
+                                Spacer()
+                                    .frame(height: Constants.Frame.size20)
+                            }
                         }
+                    } else {
+                        VStack {
+                            ForEach(0..<100) {_ in
+                                GCCEmailRow(shouldBoldTitleAndSubtitle: true)
+                            }
+                        }
+                        .padding(.horizontal, Constants.Spacing.spacing20)
                     }
-                } else {
-                    Spacer()
                 }
             }
             .padding(.top, Constants.Padding.padding10)

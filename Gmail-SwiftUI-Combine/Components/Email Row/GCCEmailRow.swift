@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GCCEmailRow: View {
+    var shouldBoldTitleAndSubtitle: Bool = false
     @State private var viewModel = ViewModel()
     
     var body: some View {
