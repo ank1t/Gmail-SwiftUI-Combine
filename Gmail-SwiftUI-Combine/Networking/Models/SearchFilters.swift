@@ -20,6 +20,7 @@ protocol ImageTitleSubtitle {
 
 struct SearchFilters: Codable {
     let filters: [SearchFilter]
+    let recentSearches: [String]?
 }
 
 struct SearchFilter: Codable, Identifiable {

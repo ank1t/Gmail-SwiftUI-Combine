@@ -325,5 +325,6 @@
         {   "title": "Excludes calendar updates",
             "isDropdown": false
         }
-    ]
+    ],
+    "recentSearches": ["debate", "facebook", "shopping deals", "UPS", "TD"]
 }
