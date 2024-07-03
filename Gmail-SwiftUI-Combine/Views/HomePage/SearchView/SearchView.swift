@@ -60,6 +60,11 @@ struct SearchView: View {
                         .frame(width: Constants.Frame.size14,
                                height: textFieldText.isEmpty ? Constants.Frame.size20 : Constants.Frame.size14)
                         .padding(.trailing, Constants.Padding.padding20)
+                        .onTapGesture {
+                            if !textFieldText.isEmpty {
+                                textFieldText = ""
+                            }
+                        }
                 }
                 
                 Divider()
@@ -104,6 +109,9 @@ struct SearchView: View {
                                     .padding(.leading, Constants.Frame.size20)
                                     .onTapGesture {
                                         textFieldText = searchItem
+                                        Task {
+                                            await viewModel.getEmailsContaining(keyword: searchItem)
+                                        }
                                     }
                             }
                             Spacer()
