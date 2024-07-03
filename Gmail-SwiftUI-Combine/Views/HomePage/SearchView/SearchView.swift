@@ -95,6 +95,9 @@ struct SearchView: View {
                         ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
                             RecentSearchItem(searchText: searchItem)
                                 .padding(.leading, Constants.Frame.size20)
+                                .onTapGesture {
+                                    textFieldText = searchItem
+                                }
                         }
                         Spacer()
                             .frame(height: Constants.Frame.size20)
