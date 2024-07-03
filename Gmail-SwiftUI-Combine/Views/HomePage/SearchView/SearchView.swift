@@ -49,6 +49,12 @@ struct SearchView: View {
                     TextField("Search in mail", text: $textFieldText)
                         .padding(.leading, Constants.Padding.padding8)
                     
+                    if !textFieldText.isEmpty {
+                        ProgressView()
+                            .padding(.horizontal, Constants.Spacing.spacing5)
+                            .tint(.blue)
+                    }
+                    
                     Image(textFieldText.isEmpty ? .mic : .close)
                         .resizable()
                         .frame(width: Constants.Frame.size14,
