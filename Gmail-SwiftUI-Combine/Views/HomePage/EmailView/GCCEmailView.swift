@@ -15,7 +15,7 @@ struct GCCEmailView: View {
     @Binding var immersiveReading: Bool
     @State private var viewModel = ViewModel()
     @State private var shouldShowSearchView: Bool = false
-    @State private var slidingMenuIsShowing: Bool = false
+    @Binding var slidingMenuIsShowing: Bool
     @Binding var searchBarFrame: CGRect
     
     var body: some View {
@@ -124,10 +124,6 @@ struct GCCEmailView: View {
                 ///10 to account for top padding
                 Spacer(minLength: !shouldShowSearchView ?
                        Utility.screenSize.height - (searchBarFrame.origin.y + searchBarFrame.size.height + 10) : 0)
-            }
-            
-            if slidingMenuIsShowing {
-                SlidingMenu(isShowing: $slidingMenuIsShowing, content: AnyView(Color.blue))
             }
         }
     }
