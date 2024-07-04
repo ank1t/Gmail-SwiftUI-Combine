@@ -15,6 +15,7 @@ struct GCCEmailView: View {
     @Binding var immersiveReading: Bool
     @State private var viewModel = ViewModel()
     @State private var shouldShowSearchView: Bool = false
+    @State private var slidingMenuIsShowing: Bool = false
     @Binding var searchBarFrame: CGRect
     
     var body: some View {
@@ -36,6 +37,9 @@ struct GCCEmailView: View {
                                 .frame(width: Constants.Frame.size25,
                                        height: Constants.Frame.size25)
                                 .padding(.leading, Constants.Padding.padding20)
+                                .onTapGesture {
+                                    slidingMenuIsShowing.toggle()
+                                }
                             
                             Text("Search in mail").setFont(.callout,
                                                            color: .gray)
@@ -120,6 +124,10 @@ struct GCCEmailView: View {
                 ///10 to account for top padding
                 Spacer(minLength: !shouldShowSearchView ?
                        Utility.screenSize.height - (searchBarFrame.origin.y + searchBarFrame.size.height + 10) : 0)
+            }
+            
+            if slidingMenuIsShowing {
+                SlidingMenu(isShowing: $slidingMenuIsShowing, content: AnyView(Color.blue))
             }
         }
     }
