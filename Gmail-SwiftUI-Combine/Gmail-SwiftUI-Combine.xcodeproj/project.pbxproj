@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840C0E8A2C376CF30096CFCE /* SlidingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0E892C376CF30096CFCE /* SlidingMenuView.swift */; };
 		841B38A82C2664D8006E4495 /* SlidingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38A72C2664D8006E4495 /* SlidingMenu.swift */; };
 		841B38AB2C27AEAC006E4495 /* FullScreenEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */; };
 		841B38AE2C2900B3006E4495 /* NewLabelPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840C0E892C376CF30096CFCE /* SlidingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuView.swift; sourceTree = "<group>"; };
 		841B38A72C2664D8006E4495 /* SlidingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenu.swift; sourceTree = "<group>"; };
 		841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenEmailView.swift; sourceTree = "<group>"; };
 		841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabelPopup.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				841B38A72C2664D8006E4495 /* SlidingMenu.swift */,
+				840C0E892C376CF30096CFCE /* SlidingMenuView.swift */,
 			);
 			path = "Sliding Menu";
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840C0E8A2C376CF30096CFCE /* SlidingMenuView.swift in Sources */,
 				84B2DE872C0011A300A61906 /* SearchOptionsChip.swift in Sources */,
 				84285C2C2C152BAC00670F68 /* SearchViewVM.swift in Sources */,
 				845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */,
