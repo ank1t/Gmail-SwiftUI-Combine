@@ -31,7 +31,7 @@ struct SearchView: View {
     var body: some View {
         ZStack {
             Theme.primaryColor(for: colorScheme)
-            VStack {
+            VStack(spacing: 0) {
                 HStack {
                     Image(.backChevron)
                         .resizable()
@@ -53,21 +53,31 @@ struct SearchView: View {
                     
                     if !textFieldText.isEmpty && viewModel.searchedEmails == nil {
                         ProgressView()
-                            .padding(.horizontal, Constants.Spacing.spacing5)
                             .tint(.blue)
+                            .frame(width: Constants.Frame.size14,
+                                   height: Constants.Frame.size14)
+                            .padding(.horizontal, Constants.Spacing.spacing10)
                     }
                     
-                    Image(textFieldText.isEmpty ? .mic : .close)
-                        .resizable()
-                        .frame(width: Constants.Frame.size14,
-                               height: textFieldText.isEmpty ? Constants.Frame.size20 : Constants.Frame.size14)
-                        .padding(.trailing, Constants.Padding.padding20)
-                        .onTapGesture {
-                            if !textFieldText.isEmpty {
-                                textFieldText = ""
-                                viewModel.searchedEmails = nil
+                    if textFieldText.isEmpty {
+                        Image(.mic)
+                            .resizable()
+                            .frame(width: Constants.Frame.size14,
+                                   height: Constants.Frame.size20)
+                            .padding(.trailing, Constants.Padding.padding20)
+                    } else {
+                        Image(.close)
+                            .resizable()
+                            .frame(width: Constants.Frame.size14,
+                                   height: Constants.Frame.size14)
+                            .padding(.trailing, Constants.Padding.padding20)
+                            .onTapGesture {
+                                if !textFieldText.isEmpty {
+                                    textFieldText = ""
+                                    viewModel.searchedEmails = nil
+                                }
                             }
-                        }
+                    }
                 }
                 
                 Divider()
