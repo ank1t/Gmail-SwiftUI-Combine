@@ -44,6 +44,8 @@ struct SearchView: View {
                         }
                         .onTapGesture {
                             shouldShowSearchView = false
+                            textFieldText = ""
+                            viewModel.searchedEmails = nil
                         }
                     
                     TextField("Search in mail", text: $textFieldText)
