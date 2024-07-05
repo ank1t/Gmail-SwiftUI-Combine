@@ -23,7 +23,7 @@ struct GCCHomePage: View {
                 .frame(height: immersiveReading ? Constants.Frame.size00 : Constants.Frame.size50)
                 .animation(.easeIn(duration: Constants.tabBarAnimationDuration),
                            value: immersiveReading)
-            SlidingMenu(isShowing: $slidingMenuIsShowing,content: AnyView(Color.blue.onTapGesture(perform: {
+            SlidingMenu(isShowing: $slidingMenuIsShowing,content: AnyView(SlidingMenuView().onTapGesture(perform: {
                 slidingMenuIsShowing.toggle()
             })))
         }

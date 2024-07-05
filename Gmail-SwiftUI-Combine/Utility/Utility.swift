@@ -13,7 +13,7 @@ struct Utility {
     enum ImageName: String {
         case moreMenu = "more_menu"
         case user = "person.circle.fill"
-        case star = "star"
+        case star
         case compose = "pencil"
         case email = "envelope"
         case meet = "video"
@@ -21,7 +21,7 @@ struct Utility {
         case garbage = "xmark.bin"
         case unreadMail = "envelope.badge"
         case shareLink = "share-link"
-        case lock = "lock"
+        case lock
         case mic = "mic.fill"
         case backChevron = "chevron.backward"
         case dropdownArrow = "arrowtriangle.down.fill"
@@ -29,6 +29,7 @@ struct Utility {
         case close = "xmark"
         case info = "info.circle"
         case check = "checkmark.circle"
+        case gmail
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {

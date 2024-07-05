@@ -9,7 +9,13 @@
 import SwiftUI
 
 struct SlidingMenuView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Theme.composeBtnBGColor(for: colorScheme)
+                .frame(width: Utility.screenSize.width * 0.85)
+            Spacer()
+        }
     }
 }
