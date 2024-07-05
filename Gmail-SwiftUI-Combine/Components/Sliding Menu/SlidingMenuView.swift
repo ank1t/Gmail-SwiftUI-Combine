@@ -13,8 +13,28 @@ struct SlidingMenuView: View {
     
     var body: some View {
         HStack {
-            Theme.composeBtnBGColor(for: colorScheme)
-                .frame(width: Utility.screenSize.width * 0.85)
+            ZStack {
+                Theme.composeBtnBGColor(for: colorScheme)
+                VStack {
+                    VStack {
+                        HStack {
+                            Image(.gmail, false)
+                                .resizable()
+                                .frame(width: Constants.Frame.size35, height: Constants.Frame.size25)
+                                .padding(.leading, Constants.Spacing.spacing15)
+                            
+                            Text("Gmail")
+                                .setFont(.title3, color: .white)
+                            
+                            Spacer()
+                        }
+                        Divider()
+                    }
+                    .padding(.top, Constants.Spacing.spacing20)
+                    Spacer()
+                }
+            }
+            .frame(width: Utility.screenSize.width * 0.85)
             Spacer()
         }
     }
