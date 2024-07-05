@@ -20,8 +20,8 @@ struct SlidingMenuView: View {
                         HStack {
                             Image(.gmail, false)
                                 .resizable()
-                                .frame(width: Constants.Frame.size35, height: Constants.Frame.size25)
-                                .padding(.leading, Constants.Spacing.spacing15)
+                                .frame(width: Constants.Frame.size25, height: Constants.Frame.size20)
+                                .padding(.leading, Constants.Spacing.spacing30)
                             
                             Text("Gmail")
                                 .setFont(.title3, color: .white)
@@ -30,8 +30,12 @@ struct SlidingMenuView: View {
                         }
                         Divider()
                     }
-                    .padding(.top, Constants.Spacing.spacing20)
-                    Spacer()
+                    .padding(.top, Constants.Spacing.spacing40)
+                    ScrollView {
+                        VStack {
+                            Spacer()
+                        }
+                    }
                 }
             }
             .frame(width: Utility.screenSize.width * 0.85)

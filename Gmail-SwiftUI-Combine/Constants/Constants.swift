@@ -40,6 +40,7 @@ struct Constants {
         static let spacing12: CGFloat = 12
         static let spacing15: CGFloat = 15
         static let spacing20: CGFloat = 20
+        static let spacing30: CGFloat = 30
         static let spacing40: CGFloat = 40
         static let spacing70: CGFloat = 70
     }
