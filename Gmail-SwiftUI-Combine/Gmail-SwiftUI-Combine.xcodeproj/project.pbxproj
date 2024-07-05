@@ -78,6 +78,7 @@
 /* Begin PBXFileReference section */
 		840C0E892C376CF30096CFCE /* SlidingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuView.swift; sourceTree = "<group>"; };
 		840C0E8B2C37724A0096CFCE /* SlidingMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuRowView.swift; sourceTree = "<group>"; };
+		840C0E8D2C3773990096CFCE /* menu_options.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = menu_options.json; sourceTree = "<group>"; };
 		841B38A72C2664D8006E4495 /* SlidingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenu.swift; sourceTree = "<group>"; };
 		841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenEmailView.swift; sourceTree = "<group>"; };
 		841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabelPopup.swift; sourceTree = "<group>"; };
@@ -298,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				8451934E2C055C2300B1F6AD /* search_filters.json */,
+				840C0E8D2C3773990096CFCE /* menu_options.json */,
 				845F8B362BD49A1B00BEAD4C /* emails.json */,
 			);
 			path = JSON;

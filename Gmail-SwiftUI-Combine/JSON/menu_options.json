@@ -1,0 +1,68 @@
+{
+    "menu": [
+        {
+            "options": [
+                {
+                    "icon": "star.circle",
+                    "title": "Starred"
+                },
+                {
+                    "icon": "envelope.circle",
+                    "title": "Scheduled"
+                },
+                {
+                    "icon": "gauge.high",
+                    "title": "Important"
+                },
+                {
+                    "icon": "paperplane.circle",
+                    "title": "Sent"
+                },
+                {
+                    "icon": "clock.arrow.circlepath",
+                    "title": "Snoozed"
+                },
+                {
+                    "icon": "doc.circle",
+                    "title": "Drafts"
+                },
+                {
+                    "icon": "tray.circle",
+                    "title": "All mail"
+                },
+                {
+                    "icon": "airplane.circle",
+                    "title": "Travel"
+                },
+                {
+                    "icon": "cart.circle",
+                    "title": "Purchases"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 1"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 2"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 3"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 4"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 5"
+                },
+                {
+                    "icon": "tag.circle",
+                    "title": "Custom Label 6"
+                }
+            ]
+        }
+    ]
+}

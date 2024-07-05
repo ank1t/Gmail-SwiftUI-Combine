@@ -8,8 +8,9 @@
 import Foundation
 import SwiftUI
 
+typealias ImageName = Utility.ImageName
+
 struct Utility {
-    
     enum ImageName: String {
         case moreMenu = "more_menu"
         case user = "person.circle.fill"
