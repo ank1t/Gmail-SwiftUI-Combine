@@ -33,7 +33,13 @@ struct SlidingMenuView: View {
                     .padding(.top, Constants.Spacing.spacing40)
                     ScrollView {
                         VStack {
-                            Spacer()
+                            ForEach(0..<100, id: \.self) { _ in
+                                HStack {
+                                    Spacer()
+                                    SlidingMenuRowView()
+                                    Spacer()
+                                }
+                            }
                         }
                     }
                 }
