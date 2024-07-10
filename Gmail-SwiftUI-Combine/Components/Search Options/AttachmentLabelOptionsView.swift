@@ -7,7 +7,6 @@
         
 import SwiftUI
 
-@MainActor
 struct AttachmentLabelOptionsView: View {
     let type: ViewType
     @Binding var textFieldText: String
