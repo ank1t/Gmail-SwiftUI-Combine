@@ -11,14 +11,8 @@ import Foundation
 extension SearchView {
     
     class ViewModel: ObservableObject {
-        @Published var searchFilters: SearchFilters?
-        @Published var searchedEmails: GCCEmail?
         
-        func getSearchFilters() async {
-            Task { @MainActor in
-                self.searchFilters = await NetworkingManager.shared.getSearchFilters()
-            }
-        }
+        @Published var searchedEmails: GCCEmail?
         
         func getEmailsContaining(keyword q: String) async {
             Task { @MainActor in

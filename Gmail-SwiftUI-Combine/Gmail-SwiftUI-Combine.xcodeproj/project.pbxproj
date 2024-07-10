@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		840C0E8A2C376CF30096CFCE /* SlidingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0E892C376CF30096CFCE /* SlidingMenuView.swift */; };
 		840C0E8C2C37724A0096CFCE /* SlidingMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0E8B2C37724A0096CFCE /* SlidingMenuRowView.swift */; };
+		8413F1C82C3E17670045D0E5 /* GCCHomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F1C72C3E17670045D0E5 /* GCCHomePageVM.swift */; };
 		841B38A82C2664D8006E4495 /* SlidingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38A72C2664D8006E4495 /* SlidingMenu.swift */; };
 		841B38AB2C27AEAC006E4495 /* FullScreenEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */; };
 		841B38AE2C2900B3006E4495 /* NewLabelPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */; };
@@ -79,6 +80,7 @@
 		840C0E892C376CF30096CFCE /* SlidingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuView.swift; sourceTree = "<group>"; };
 		840C0E8B2C37724A0096CFCE /* SlidingMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuRowView.swift; sourceTree = "<group>"; };
 		840C0E8D2C3773990096CFCE /* menu_options.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = menu_options.json; sourceTree = "<group>"; };
+		8413F1C72C3E17670045D0E5 /* GCCHomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCHomePageVM.swift; sourceTree = "<group>"; };
 		841B38A72C2664D8006E4495 /* SlidingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenu.swift; sourceTree = "<group>"; };
 		841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenEmailView.swift; sourceTree = "<group>"; };
 		841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabelPopup.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				84D926D72BEDB63F00787E38 /* EmailView */,
 				84D926D22BEC5E7D00787E38 /* MeetView */,
 				845F8B142BCB64B600BEAD4C /* GCCHomePage.swift */,
+				8413F1C72C3E17670045D0E5 /* GCCHomePageVM.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				84B2DE8B2C00246B00A61906 /* RecentSearchItem.swift in Sources */,
 				845F8B132BCB646400BEAD4C /* Utility.swift in Sources */,
 				841B38AB2C27AEAC006E4495 /* FullScreenEmailView.swift in Sources */,
+				8413F1C82C3E17670045D0E5 /* GCCHomePageVM.swift in Sources */,
 				845F8B112BCB63EF00BEAD4C /* NetworkingManager.swift in Sources */,
 				845F8B282BCF4A2900BEAD4C /* GCCEmailRowVM.swift in Sources */,
 				847A822A2BC61ECB008A47BE /* ContentView.swift in Sources */,
