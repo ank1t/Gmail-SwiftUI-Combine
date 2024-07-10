@@ -7,65 +7,100 @@
                 {
                     "icon": "star.circle",
                     "title": "Starred",
-                    "count": 10
+                    "count": 10,
+                    "isSearchFilter": true
                 },{
                     "icon": "envelope.circle",
-                    "title": "Scheduled"
+                    "title": "Scheduled",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "gauge.high",
-                    "title": "Important"
+                    "title": "Important",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "paperplane.circle",
-                    "title": "Sent"
+                    "title": "Sent",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "clock.arrow.circlepath",
-                    "title": "Snoozed"
+                    "title": "Snoozed",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "doc.circle",
                     "title": "Drafts",
-                    "count": 3
+                    "count": 3,
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tray.circle",
-                    "title": "All mail"
+                    "title": "All mail",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "airplane.circle",
-                    "title": "Travel"
+                    "title": "Travel",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "cart.circle",
                     "title": "Purchases",
-                    "count": 89
+                    "count": 89,
+                    "isSearchFilter": true
+                },
+                {
+                    "icon": "airplane",
+                    "title": "Travel",
+                    "isSearchFilter": true
+                },
+                {
+                    "icon": "dollarsign",
+                    "title": "Purchases",
+                    "isSearchFilter": true
+                },
+                {
+                    "icon": "exclamationmark.octagon",
+                    "title": "Spam",
+                    "isSearchFilter": false
+                },
+                {
+                    "icon": "trash",
+                    "title": "Trash",
+                    "isSearchFilter": false
                 },
                 {
                     "icon": "tag.circle",
-                    "title": "Custom Label 1"
+                    "title": "Custom Label 1",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
-                    "title": "Custom Label 2"
+                    "title": "Custom Label 2",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
-                    "title": "Custom Label 3"
+                    "title": "Custom Label 3",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
-                    "title": "Custom Label 4"
+                    "title": "Custom Label 4",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
-                    "title": "Custom Label 5"
+                    "title": "Custom Label 5",
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
                     "title": "Custom Label 6",
-                    "count": 4
+                    "count": 4,
+                    "isSearchFilter": true
                 }
             ]
         },

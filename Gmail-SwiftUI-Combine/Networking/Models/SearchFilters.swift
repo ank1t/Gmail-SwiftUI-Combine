@@ -51,9 +51,10 @@ struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
     let title: String
     let icon: String
     let count: Int?
+    let isSearchFilter: Bool
     
     private enum CodingKeys: String, CodingKey {
-        case id, title, icon, count
+        case id, title, icon, count, isSearchFilter
     }
     
     init(from decoder: Decoder) throws {
@@ -62,6 +63,7 @@ struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
         self.title = try container.decode(String.self, forKey: .title)
         self.icon = try container.decode(String.self, forKey: .icon)
         self.count = try container.decodeIfPresent(Int.self, forKey: .count)
+        self.isSearchFilter = try container.decodeIfPresent(Bool.self, forKey: .count) ?? false
     }
 }
 
