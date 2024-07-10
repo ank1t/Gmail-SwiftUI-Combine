@@ -18,6 +18,7 @@ struct GCCEmailView: View {
     @Binding var slidingMenuIsShowing: Bool
     @Binding var searchBarFrame: CGRect
     let edgeTransition: AnyTransition = .move(edge: .top)
+    let searchFilters: SearchFilters?
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -112,7 +113,8 @@ struct GCCEmailView: View {
             
             VStack {
                 Spacer()
-                SearchView(shouldShowSearchView: $shouldShowSearchView)
+                SearchView(shouldShowSearchView: $shouldShowSearchView,
+                           searchFilters: searchFilters)
                     .frame(maxWidth: Utility.screenSize.width,
                            maxHeight: shouldShowSearchView ? Utility.screenSize.height : 0)
                     .transition(edgeTransition)

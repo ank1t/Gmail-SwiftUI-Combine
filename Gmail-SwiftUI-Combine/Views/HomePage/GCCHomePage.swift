@@ -14,6 +14,8 @@ struct GCCHomePage: View {
     @State private var searchBarFrame: CGRect = .zero
     @State private var slidingMenuIsShowing: Bool = false
     
+    @StateObject private var viewModel = ViewModel()
+    
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -28,12 +30,16 @@ struct GCCHomePage: View {
             })))
         }
         .background(Theme.primaryColor(for: colorScheme))
+        .task {
+            await viewModel.getSearchFilters()
+        }
     }
     
     var emailView: some View {
         GCCEmailView(immersiveReading: $immersiveReading,
                      slidingMenuIsShowing: $slidingMenuIsShowing,
-                     searchBarFrame: $searchBarFrame)
+                     searchBarFrame: $searchBarFrame,
+                     searchFilters: viewModel.searchFilters)
     }
     
     var gMeetView: some View {

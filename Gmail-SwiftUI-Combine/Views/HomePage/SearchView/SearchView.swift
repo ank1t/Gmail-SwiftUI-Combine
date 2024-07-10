@@ -18,7 +18,7 @@ struct SearchView: View {
     @State private var leadingPadding: Double = Constants.Padding.padding35
     @State private var textFieldText: String = ""
     @State private var labelSearchText: String = ""
-    @State var searchFilters: SearchFilters?
+    let searchFilters: SearchFilters?
     @State private var dropdownSheetIsPresented: Bool = false
     @State var selectedFilter: FiltersByIndex = .attachment
     @State var isShowingDatePickerForCustomRange: Bool = false
@@ -88,7 +88,7 @@ struct SearchView: View {
                     HStack(spacing: Constants.Spacing.spacing12) {
                         Color.clear.frame(width: Constants.Frame.size5,
                                           height: Constants.Frame.size10)
-                        if let filters = viewModel.searchFilters?.filters {
+                        if let filters = searchFilters?.filters {
                             ForEach(Array(zip(filters.indices, filters)), id: \.1.id) { index, filter in
                                 SearchOptionsChip(title: filter.title,
                                                   isDropdown: filter.isDropdown)
@@ -118,7 +118,7 @@ struct SearchView: View {
                             }
                             
                             VStack {
-                                ForEach(viewModel.searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
+                                ForEach(searchFilters?.recentSearches ?? [], id: \.self) { searchItem in
                                     RecentSearchItem(searchText: searchItem)
                                         .padding(.leading, Constants.Frame.size20)
                                         .onTapGesture {
@@ -150,9 +150,6 @@ struct SearchView: View {
         .sheet(isPresented: $dropdownSheetIsPresented, content: {
             selectFilterOptionsView(filter: selectedFilter)
         })
-        .task {
-            await viewModel.getSearchFilters()
-        }
         .onChange(of: isShowingDatePickerForCustomRange) { value in
             let detent: PresentationDetent = value ? .height(450) : .height(350)
             dateFilterPresentationDetent = detent
@@ -163,7 +160,7 @@ struct SearchView: View {
         guard filter != .none else { return AnyView(EmptyView()) }
         switch selectedFilter {
             case .label:
-                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .label,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -171,21 +168,21 @@ struct SearchView: View {
                         .presentationDetents([.large]))
                 }
             case .from:
-                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
                                                            options: options.fromToOptions ?? [],
                                                            shouldHideDropdownSheet: $dropdownSheetIsPresented)
                         .presentationDetents([.large]))
                 }
             case .to:
-                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(FromToSearchOptionsView(type: selectedFilter == .from ? .from : .to,
                                                            options: options.fromToOptions ?? [],
                                                            shouldHideDropdownSheet: $dropdownSheetIsPresented)
                         .presentationDetents([.large]))
                 }
             case .attachment:
-                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(AttachmentLabelOptionsView(type: .attachments,
                                                textFieldText: $labelSearchText,
                                                shouldHideDropdownSheet: $dropdownSheetIsPresented,
@@ -193,7 +190,7 @@ struct SearchView: View {
                         .presentationDetents([.height(Constants.Frame.size410)]))
                 }
             case .date:
-                if let options = viewModel.searchFilters?.filters[selectedFilter.rawValue] {
+                if let options = searchFilters?.filters[selectedFilter.rawValue] {
                     return AnyView(
                         DateSearchOptionsView(shouldHideDropdownSheet: $dropdownSheetIsPresented,
                                               options: options.dateOptions ?? [],
