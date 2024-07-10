@@ -24,7 +24,7 @@ struct SearchFilters: Codable {
 }
 
 struct SearchFilter: Codable, Identifiable {
-    let id = UUID()
+    var id = UUID()
     let title: String
     let isDropdown: Bool
     let attachmentLabelOptions: [AttachmentLabelOptions]?
@@ -33,13 +33,14 @@ struct SearchFilter: Codable, Identifiable {
 }
 
 struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
-    let id = UUID()
+    var id = UUID()
     let title: String
     let icon: String
+    let count: Int?
 }
 
 struct FromToOptions: Codable, ImageTitleSubtitle, Identifiable {
-    let id = UUID()
+    var id = UUID()
     let name: String
     let email: String
     let icon: String

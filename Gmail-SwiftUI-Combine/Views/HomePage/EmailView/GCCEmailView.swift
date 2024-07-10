@@ -70,7 +70,7 @@ struct GCCEmailView: View {
                         GCCEmailRow()
                     }
                 }
-                           .padding(.horizontal, Constants.Padding.padding20)
+                .padding(.horizontal, Constants.Padding.padding20)
             }
             .onChange(of: scrollOffset) { newValue in
                 if previousYOffset < newValue.y {

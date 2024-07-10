@@ -6,7 +6,8 @@
             "attachmentLabelOptions": [
                 {
                     "icon": "star.circle",
-                    "title": "Starred"
+                    "title": "Starred",
+                    "count": 10
                 },{
                     "icon": "envelope.circle",
                     "title": "Scheduled"
@@ -25,7 +26,8 @@
                 },
                 {
                     "icon": "doc.circle",
-                    "title": "Drafts"
+                    "title": "Drafts",
+                    "count": 3
                 },
                 {
                     "icon": "tray.circle",
@@ -37,7 +39,8 @@
                 },
                 {
                     "icon": "cart.circle",
-                    "title": "Purchases"
+                    "title": "Purchases",
+                    "count": 89
                 },
                 {
                     "icon": "tag.circle",
@@ -61,7 +64,8 @@
                 },
                 {
                     "icon": "tag.circle",
-                    "title": "Custom Label 6"
+                    "title": "Custom Label 6",
+                    "count": 4
                 }
             ]
         },
