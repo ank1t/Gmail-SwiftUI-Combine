@@ -66,9 +66,21 @@ struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
 }
 
 struct FromToOptions: Codable, ImageTitleSubtitle, Identifiable {
-    let id = UUID()
+    let id: UUID
     let name: String
     let email: String
     let icon: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, name, email, icon
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        self.name = try container.decode(String.self, forKey: .name)
+        self.email = try container.decode(String.self, forKey: .email)
+        self.icon = try container.decode(String.self, forKey: .icon)
+    }
 }
 
