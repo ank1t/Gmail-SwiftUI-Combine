@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SlidingMenuView: View {
     @Environment(\.colorScheme) var colorScheme
+    let searchFilters: SearchFilters?
     
     var body: some View {
         HStack {
@@ -33,11 +34,14 @@ struct SlidingMenuView: View {
                     .padding(.top, Constants.Spacing.spacing40)
                     ScrollView {
                         VStack {
-                            ForEach(0..<100, id: \.self) { _ in
-                                HStack {
-                                    Spacer()
-                                    SlidingMenuRowView()
-                                    Spacer()
+                            if let options = searchFilters?.filters.first?.attachmentLabelOptions {
+                                ForEach(options, id: \.id) { option in
+                                    HStack {
+                                        Spacer()
+                                        SlidingMenuRowView()
+                                        Text(option.title)
+                                        Spacer()
+                                    }
                                 }
                             }
                         }
