@@ -7,6 +7,7 @@
         
 import SwiftUI
 
+@MainActor
 struct AttachmentLabelOptionsView: View {
     let type: ViewType
     @Binding var textFieldText: String
@@ -43,16 +44,20 @@ struct AttachmentLabelOptionsView: View {
             ScrollView {
                 VStack {
                     ForEach(options) { option in
-                        if !textFieldText.isEmpty {
-                            if option.title.contains(textFieldText) {
+                        if option.isSearchFilter {
+                            if !textFieldText.isEmpty {
+                                if option.title.contains(textFieldText) {
+                                    IconTitleView(icon: option.icon,
+                                                  title: option.title)
+                                }
+                            } else {
                                 IconTitleView(icon: option.icon,
                                               title: option.title)
                             }
-                        } else {
-                            IconTitleView(icon: option.icon,
-                                          title: option.title)
                         }
                     }
+                    Spacer()
+                        .frame(height: Constants.Frame.size8)
                 }
             }
         }

@@ -52,12 +52,12 @@
                     "isSearchFilter": true
                 },
                 {
-                    "icon": "airplane",
+                    "icon": "suitcase.cart",
                     "title": "Travel",
                     "isSearchFilter": true
                 },
                 {
-                    "icon": "dollarsign",
+                    "icon": "dollarsign.arrow.circlepath",
                     "title": "Purchases",
                     "isSearchFilter": true
                 },

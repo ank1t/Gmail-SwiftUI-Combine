@@ -63,7 +63,7 @@ struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
         self.title = try container.decode(String.self, forKey: .title)
         self.icon = try container.decode(String.self, forKey: .icon)
         self.count = try container.decodeIfPresent(Int.self, forKey: .count)
-        self.isSearchFilter = try container.decodeIfPresent(Bool.self, forKey: .count) ?? false
+        self.isSearchFilter = try container.decodeIfPresent(Bool.self, forKey: .isSearchFilter) ?? false
     }
 }
 
