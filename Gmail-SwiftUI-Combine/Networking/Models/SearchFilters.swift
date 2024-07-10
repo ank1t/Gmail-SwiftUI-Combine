@@ -37,20 +37,32 @@ struct SearchFilter: Codable, Identifiable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
-        title = try container.decode(String.self, forKey: .title)
-        isDropdown = try container.decode(Bool.self, forKey: .isDropdown)
-        attachmentLabelOptions = try container.decodeIfPresent([AttachmentLabelOptions].self, forKey: .attachmentLabelOptions)
-        fromToOptions = try container.decodeIfPresent([FromToOptions].self, forKey: .fromToOptions)
-        dateOptions = try container.decodeIfPresent([String].self, forKey: .dateOptions)
+        self.id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        self.title = try container.decode(String.self, forKey: .title)
+        self.isDropdown = try container.decode(Bool.self, forKey: .isDropdown)
+        self.attachmentLabelOptions = try container.decodeIfPresent([AttachmentLabelOptions].self, forKey: .attachmentLabelOptions)
+        self.fromToOptions = try container.decodeIfPresent([FromToOptions].self, forKey: .fromToOptions)
+        self.dateOptions = try container.decodeIfPresent([String].self, forKey: .dateOptions)
     }
 }
 
 struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
-    let id = UUID()
+    let id: UUID
     let title: String
     let icon: String
     let count: Int?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, title, icon, count
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        self.title = try container.decode(String.self, forKey: .title)
+        self.icon = try container.decode(String.self, forKey: .icon)
+        self.count = try container.decodeIfPresent(Int.self, forKey: .count)
+    }
 }
 
 struct FromToOptions: Codable, ImageTitleSubtitle, Identifiable {
