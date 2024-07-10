@@ -24,23 +24,37 @@ struct SearchFilters: Codable {
 }
 
 struct SearchFilter: Codable, Identifiable {
-    var id = UUID()
+    let id: UUID
     let title: String
     let isDropdown: Bool
     let attachmentLabelOptions: [AttachmentLabelOptions]?
     let fromToOptions: [FromToOptions]?
     let dateOptions: [String]?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, title, isDropdown, attachmentLabelOptions, fromToOptions, dateOptions
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        title = try container.decode(String.self, forKey: .title)
+        isDropdown = try container.decode(Bool.self, forKey: .isDropdown)
+        attachmentLabelOptions = try container.decodeIfPresent([AttachmentLabelOptions].self, forKey: .attachmentLabelOptions)
+        fromToOptions = try container.decodeIfPresent([FromToOptions].self, forKey: .fromToOptions)
+        dateOptions = try container.decodeIfPresent([String].self, forKey: .dateOptions)
+    }
 }
 
 struct AttachmentLabelOptions: Codable, TitleImageName, Identifiable {
-    var id = UUID()
+    let id = UUID()
     let title: String
     let icon: String
     let count: Int?
 }
 
 struct FromToOptions: Codable, ImageTitleSubtitle, Identifiable {
-    var id = UUID()
+    let id = UUID()
     let name: String
     let email: String
     let icon: String
