@@ -11,6 +11,8 @@ import SwiftUI
 struct SlidingMenuRowView: View {
     let icon: String
     let title: String
+    let count: Int?
+    
     var isSelected: Bool = false
     
     var body: some View {
@@ -23,6 +25,14 @@ struct SlidingMenuRowView: View {
             
             Text(title)
                 .padding(.leading, Constants.Spacing.spacing20)
+            
+            Spacer()
+            
+            if let count {
+                Text("\(count)")
+                    .font(.footnote)
+                    .padding(.trailing, Constants.Padding.padding15)
+            }
         }
     }
 }

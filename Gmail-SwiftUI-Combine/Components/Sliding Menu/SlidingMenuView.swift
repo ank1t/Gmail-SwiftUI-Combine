@@ -36,14 +36,30 @@ struct SlidingMenuView: View {
                         VStack {
                             if let options = searchFilters?.filters.first?.attachmentLabelOptions {
                                 ForEach(options, id: \.id) { option in
-                                    HStack {
-                                        if optio
-                                        SlidingMenuRowView(icon: option.icon,
-                                                           title: option.title)
-                                        .padding(.leading, Constants.Padding.padding20)
-                                        .padding(.vertical, Constants.Padding.padding10)
-                                        
-                                        Spacer()
+                                    VStack {
+                                        if option.isCustom {
+                                            Divider()
+                                                .padding(.leading, Constants.Padding.padding25)
+                                            
+                                            HStack {
+                                                Text("Labels".uppercased())
+                                                    .font(.footnote)
+                                                    .padding(.horizontal, Constants.Padding.padding25)
+                                                    .padding(.vertical, Constants.Padding.padding10)
+                                                
+                                                Spacer()
+                                            }
+                                        }
+                                        HStack {
+                                            
+                                            SlidingMenuRowView(icon: option.icon,
+                                                               title: option.title,
+                                                               count: option.count)
+                                            .padding(.leading, Constants.Padding.padding20)
+                                            .padding(.vertical, Constants.Padding.padding10)
+                                            
+                                            Spacer()
+                                        }
                                     }
                                 }
                             }
