@@ -63,12 +63,39 @@ struct SlidingMenuView: View {
                                     }
                                 }
                             }
+                            Divider()
+                                .padding(.leading, Constants.Padding.padding25)
+                            
+                            HStack {
+                                Image(systemName: ImageName.add.rawValue)
+                                    .resizable()
+                                    .frame(width: Constants.Frame.size15,
+                                           height: Constants.Frame.size15)
+                                
+                                Text("Create new")
+                                    .padding(.leading, Constants.Spacing.spacing20)
+                                
+                                Spacer()
+                            }
+                            .padding(.leading, Constants.Padding.padding20)
+                            .padding(.vertical, Constants.Padding.padding10)
+                            
+                            Divider()
+                                .padding(.leading, Constants.Padding.padding25)
                         }
+                        
                     }
                 }
             }
             .frame(width: Utility.screenSize.width * 0.85)
             Spacer()
+        }
+    }
+    
+    private func addRequiredRows() -> VStack {
+        VStack {
+            
+            
         }
     }
 }
