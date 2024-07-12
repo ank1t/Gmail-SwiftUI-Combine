@@ -80,26 +80,22 @@
                 {
                     "icon": "tag.circle",
                     "title": "Custom Label 2",
-                    "isSearchFilter": true,
-                    "isCustom": true
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
                     "title": "Custom Label 3",
-                    "isSearchFilter": true,
-                    "isCustom": true
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
                     "title": "Custom Label 4",
-                    "isSearchFilter": true,
-                    "isCustom": true
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",
                     "title": "Custom Label 5",
-                    "isSearchFilter": true,
-                    "isCustom": true
+                    "isSearchFilter": true
                 },
                 {
                     "icon": "tag.circle",

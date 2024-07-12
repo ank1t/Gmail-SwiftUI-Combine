@@ -37,6 +37,7 @@ struct SlidingMenuView: View {
                             if let options = searchFilters?.filters.first?.attachmentLabelOptions {
                                 ForEach(options, id: \.id) { option in
                                     HStack {
+                                        if optio
                                         SlidingMenuRowView(icon: option.icon,
                                                            title: option.title)
                                         .padding(.leading, Constants.Padding.padding20)
