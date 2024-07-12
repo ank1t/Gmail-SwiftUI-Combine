@@ -9,11 +9,20 @@
 import SwiftUI
 
 struct SlidingMenuRowView: View {
-    let icon: ImageName = .star
-    let title: String = "Inbox"
+    let icon: String
+    let title: String
     var isSelected: Bool = false
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: icon)
+                .resizable()
+                .frame(width: Constants.Frame.size15,
+                       height: Constants.Frame.size15)
+            
+            
+            Text(title)
+                .padding(.leading, Constants.Spacing.spacing20)
+        }
     }
 }

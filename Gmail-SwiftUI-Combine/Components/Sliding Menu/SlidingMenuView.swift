@@ -32,14 +32,16 @@ struct SlidingMenuView: View {
                         Divider()
                     }
                     .padding(.top, Constants.Spacing.spacing40)
-                    ScrollView {
+                    ScrollView(showsIndicators: false) {
                         VStack {
                             if let options = searchFilters?.filters.first?.attachmentLabelOptions {
                                 ForEach(options, id: \.id) { option in
                                     HStack {
-                                        Spacer()
-                                        SlidingMenuRowView()
-                                        Text(option.title)
+                                        SlidingMenuRowView(icon: option.icon,
+                                                           title: option.title)
+                                        .padding(.leading, Constants.Padding.padding20)
+                                        .padding(.vertical, Constants.Padding.padding10)
+                                        
                                         Spacer()
                                     }
                                 }
