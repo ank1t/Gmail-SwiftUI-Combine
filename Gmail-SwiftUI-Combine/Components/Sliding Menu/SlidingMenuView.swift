@@ -34,6 +34,8 @@ struct SlidingMenuView: View {
                     .padding(.top, Constants.Spacing.spacing40)
                     ScrollView(showsIndicators: false) {
                         VStack {
+                            addRequiredRows(ImageName.inbox.rawValue, "Inbox", true)
+                            
                             if let options = searchFilters?.filters.first?.attachmentLabelOptions {
                                 ForEach(options, id: \.id) { option in
                                     VStack {
@@ -66,22 +68,7 @@ struct SlidingMenuView: View {
                             Divider()
                                 .padding(.leading, Constants.Padding.padding25)
                             
-                            HStack {
-                                Image(systemName: ImageName.add.rawValue)
-                                    .resizable()
-                                    .frame(width: Constants.Frame.size15,
-                                           height: Constants.Frame.size15)
-                                
-                                Text("Create new")
-                                    .padding(.leading, Constants.Spacing.spacing20)
-                                
-                                Spacer()
-                            }
-                            .padding(.leading, Constants.Padding.padding20)
-                            .padding(.vertical, Constants.Padding.padding10)
-                            
-                            Divider()
-                                .padding(.leading, Constants.Padding.padding25)
+                            addRequiredRows(ImageName.add.rawValue, "Create new")
                         }
                         
                     }
@@ -92,10 +79,28 @@ struct SlidingMenuView: View {
         }
     }
     
-    private func addRequiredRows() -> VStack {
-        VStack {
+    private func addRequiredRows(_ icon: String,
+                                 _ title: String,
+                                 _ showDivider: Bool = false) -> AnyView {
+        AnyView(VStack {
+            HStack {
+                Image(systemName: icon)
+                    .resizable()
+                    .frame(width: Constants.Frame.size15,
+                           height: Constants.Frame.size15)
+                
+                Text(title)
+                    .padding(.leading, Constants.Spacing.spacing20)
+                
+                Spacer()
+            }
+            .padding(.leading, Constants.Padding.padding20)
+            .padding(.vertical, Constants.Padding.padding10)
             
-            
-        }
+            if showDivider {
+                Divider()
+                    .padding(.leading, Constants.Padding.padding20)
+            }
+        })
     }
 }

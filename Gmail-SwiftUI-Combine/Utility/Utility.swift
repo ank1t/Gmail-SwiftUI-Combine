@@ -32,6 +32,7 @@ struct Utility {
         case check = "checkmark.circle"
         case gmail
         case add = "plus"
+        case inbox = "mail.stack"
         
         var icon: Image {
             guard let image = UIImage(named: self.rawValue) else {
