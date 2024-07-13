@@ -68,7 +68,10 @@ struct SlidingMenuView: View {
                             Divider()
                                 .padding(.leading, Constants.Padding.padding25)
                             
-                            addRequiredRows(ImageName.add.rawValue, "Create new")
+                            addRequiredRows(ImageName.add.rawValue, "Create new", true)
+                            addRequiredRows(ImageName.settings.rawValue, "Settings")
+                            addRequiredRows(ImageName.sendFeedback.rawValue, "Send feedback")
+                            addRequiredRows(ImageName.help.rawValue, "Help")
                         }
                         
                     }
@@ -101,6 +104,9 @@ struct SlidingMenuView: View {
                 Divider()
                     .padding(.leading, Constants.Padding.padding20)
             }
+            
+            Spacer()
+                .frame(height: Constants.Frame.size10)
         })
     }
 }
