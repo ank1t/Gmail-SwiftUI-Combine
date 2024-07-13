@@ -10,6 +10,8 @@
 		840C0E8A2C376CF30096CFCE /* SlidingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0E892C376CF30096CFCE /* SlidingMenuView.swift */; };
 		840C0E8C2C37724A0096CFCE /* SlidingMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0E8B2C37724A0096CFCE /* SlidingMenuRowView.swift */; };
 		8413F1C82C3E17670045D0E5 /* GCCHomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F1C72C3E17670045D0E5 /* GCCHomePageVM.swift */; };
+		8413F1CC2C420BD90045D0E5 /* ReadEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F1CB2C420BD90045D0E5 /* ReadEmailView.swift */; };
+		8413F1CE2C420BE90045D0E5 /* ComposeEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F1CD2C420BE90045D0E5 /* ComposeEmailView.swift */; };
 		841B38A82C2664D8006E4495 /* SlidingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38A72C2664D8006E4495 /* SlidingMenu.swift */; };
 		841B38AB2C27AEAC006E4495 /* FullScreenEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */; };
 		841B38AE2C2900B3006E4495 /* NewLabelPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */; };
@@ -81,6 +83,8 @@
 		840C0E8B2C37724A0096CFCE /* SlidingMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuRowView.swift; sourceTree = "<group>"; };
 		840C0E8D2C3773990096CFCE /* menu_options.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = menu_options.json; sourceTree = "<group>"; };
 		8413F1C72C3E17670045D0E5 /* GCCHomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCHomePageVM.swift; sourceTree = "<group>"; };
+		8413F1CB2C420BD90045D0E5 /* ReadEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadEmailView.swift; sourceTree = "<group>"; };
+		8413F1CD2C420BE90045D0E5 /* ComposeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeEmailView.swift; sourceTree = "<group>"; };
 		841B38A72C2664D8006E4495 /* SlidingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenu.swift; sourceTree = "<group>"; };
 		841B38AA2C27AEAC006E4495 /* FullScreenEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenEmailView.swift; sourceTree = "<group>"; };
 		841B38AD2C2900B3006E4495 /* NewLabelPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabelPopup.swift; sourceTree = "<group>"; };
@@ -159,6 +163,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8413F1C92C420BB20045D0E5 /* ReadEmail */ = {
+			isa = PBXGroup;
+			children = (
+				8413F1CB2C420BD90045D0E5 /* ReadEmailView.swift */,
+			);
+			path = ReadEmail;
+			sourceTree = "<group>";
+		};
+		8413F1CA2C420BBD0045D0E5 /* ComposeEmail */ = {
+			isa = PBXGroup;
+			children = (
+				8413F1CD2C420BE90045D0E5 /* ComposeEmailView.swift */,
+			);
+			path = ComposeEmail;
+			sourceTree = "<group>";
+		};
 		841B38A62C2664C5006E4495 /* Sliding Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +242,8 @@
 		845F8B0F2BCB5E6F00BEAD4C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8413F1CA2C420BBD0045D0E5 /* ComposeEmail */,
+				8413F1C92C420BB20045D0E5 /* ReadEmail */,
 				841B38AC2C290094006E4495 /* NewLabelPopup */,
 				841B38A92C27AE93006E4495 /* FullScreenEmailView */,
 				841B38A62C2664C5006E4495 /* Sliding Menu */,
@@ -602,6 +624,7 @@
 			files = (
 				840C0E8A2C376CF30096CFCE /* SlidingMenuView.swift in Sources */,
 				84B2DE872C0011A300A61906 /* SearchOptionsChip.swift in Sources */,
+				8413F1CE2C420BE90045D0E5 /* ComposeEmailView.swift in Sources */,
 				84285C2C2C152BAC00670F68 /* SearchViewVM.swift in Sources */,
 				845F8B152BCB64B600BEAD4C /* GCCHomePage.swift in Sources */,
 				845F8B2D2BD491EE00BEAD4C /* GCCTabbarVM.swift in Sources */,
@@ -617,6 +640,7 @@
 				845193582C06B7FC00B1F6AD /* IconTitleSubtitleView.swift in Sources */,
 				845F8B3C2BDC8D6800BEAD4C /* Extensions+View.swift in Sources */,
 				845F8B412BE3048F00BEAD4C /* OffsetObservingScrollView.swift in Sources */,
+				8413F1CC2C420BD90045D0E5 /* ReadEmailView.swift in Sources */,
 				84B2DE8B2C00246B00A61906 /* RecentSearchItem.swift in Sources */,
 				845F8B132BCB646400BEAD4C /* Utility.swift in Sources */,
 				841B38AB2C27AEAC006E4495 /* FullScreenEmailView.swift in Sources */,

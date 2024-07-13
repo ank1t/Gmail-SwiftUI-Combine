@@ -74,8 +74,6 @@ struct GCCEmailView: View {
                             } label: {
                                 GCCEmailRow()
                             }
-
-                            
                         }
                     }
                                .padding(.horizontal, Constants.Padding.padding20)
