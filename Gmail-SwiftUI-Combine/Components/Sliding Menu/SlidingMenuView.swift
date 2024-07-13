@@ -82,10 +82,11 @@ struct SlidingMenuView: View {
         }
     }
     
+    @ViewBuilder
     private func addRequiredRows(_ icon: String,
                                  _ title: String,
-                                 _ showDivider: Bool = false) -> AnyView {
-        AnyView(VStack {
+                                 _ showDivider: Bool = false) -> some View {
+        VStack {
             HStack {
                 Image(systemName: icon)
                     .resizable()
@@ -107,6 +108,6 @@ struct SlidingMenuView: View {
             
             Spacer()
                 .frame(height: Constants.Frame.size10)
-        })
+        }
     }
 }
