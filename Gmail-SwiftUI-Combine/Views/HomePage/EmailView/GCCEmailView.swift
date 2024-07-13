@@ -17,6 +17,7 @@ struct GCCEmailView: View {
     @State private var shouldShowSearchView: Bool = false
     @Binding var slidingMenuIsShowing: Bool
     @Binding var searchBarFrame: CGRect
+    @State var navLinkShown: Bool = false
     let edgeTransition: AnyTransition = .move(edge: .top)
     let searchFilters: SearchFilters?
     
@@ -76,7 +77,7 @@ struct GCCEmailView: View {
                             }
                         }
                     }
-                               .padding(.horizontal, Constants.Padding.padding20)
+                    .padding(.horizontal, Constants.Padding.padding20)
                 }
                 .onChange(of: scrollOffset) { newValue in
                     if previousYOffset < newValue.y {
@@ -135,6 +136,12 @@ struct GCCEmailView: View {
                     Spacer(minLength: !shouldShowSearchView ?
                            Utility.screenSize.height - (searchBarFrame.origin.y + searchBarFrame.size.height + 10) : 0)
                 }
+            }
+            .onAppear {
+                immersiveReading = false
+            }
+            .onDisappear {
+                immersiveReading = true
             }
         }
     }
