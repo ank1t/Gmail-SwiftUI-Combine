@@ -71,7 +71,7 @@ struct GCCEmailView: View {
                         
                         ForEach(0..<50) { _ in
                             NavigationLink {
-                                Text("Link")
+                                ReadEmailView()
                             } label: {
                                 GCCEmailRow()
                             }
