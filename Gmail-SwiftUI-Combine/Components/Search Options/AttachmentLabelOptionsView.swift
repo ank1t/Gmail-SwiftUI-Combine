@@ -53,6 +53,9 @@ struct AttachmentLabelOptionsView: View {
                                 IconTitleView(icon: option.icon,
                                               title: option.title)
                             }
+                        } else {
+                            IconTitleView(icon: option.icon,
+                                          title: option.title)
                         }
                     }
                     Spacer()
