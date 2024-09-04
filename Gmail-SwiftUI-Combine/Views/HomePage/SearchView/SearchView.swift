@@ -200,10 +200,6 @@ struct SearchView: View {
                         .presentationDragIndicator(.hidden)
                     )
                 }
-            case .isRead:
-                break
-            case .excludesCalendarUpdates:
-                break
             default:
                 break
         }
