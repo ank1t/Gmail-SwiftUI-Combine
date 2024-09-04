@@ -18,6 +18,7 @@ struct GCCEmailView: View {
     @Binding var slidingMenuIsShowing: Bool
     @Binding var searchBarFrame: CGRect
     @State var navLinkShown: Bool = false
+    @State private var isComposeViewShown: Bool = false
     let edgeTransition: AnyTransition = .move(edge: .top)
     let searchFilters: SearchFilters?
     
@@ -101,6 +102,9 @@ struct GCCEmailView: View {
                             Text("Compose")
                                 .font(.subheadline)
                                 .fontWeight(.medium)
+                                .onTapGesture {
+                                    isComposeViewShown.toggle()
+                                }
                         }
                     }
                     .padding(.vertical, Constants.Padding.padding15)
@@ -137,6 +141,7 @@ struct GCCEmailView: View {
                            Utility.screenSize.height - (searchBarFrame.origin.y + searchBarFrame.size.height + 10) : 0)
                 }
             }
+            .fullScreenCover(isPresented: $isComposeViewShown, content: ComposeEmailView.init)
             .onAppear {
                 immersiveReading = false
             }
